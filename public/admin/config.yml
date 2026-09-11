@@ -1,0 +1,72 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
+backend:
+  name: github
+  repo: barrack3030-wq/NAKAMA-DIGITAL-UPGRADE
+  branch: main
+  auth_methods: [token]
+
+media_folder: /public/assets
+public_folder: /assets
+
+collections:
+  - name: site
+    label: Site Settings
+    icon: settings
+    files:
+      - name: site
+        label: Logo & Brand
+        file: data/site.json
+        format: json
+        fields:
+          - name: brandName
+            label: Brand Name
+            widget: string
+          - name: logoPath
+            label: Logo
+            widget: image
+            media_folder: /public/assets/logo
+            public_folder: /assets/logo
+          - name: logoWidth
+            label: Logo Width (px)
+            widget: number
+            min: 50
+            max: 320
+            value_type: int
+
+  - name: portfolio
+    label: Portfolio
+    icon: work
+    files:
+      - name: items
+        label: Portfolio Items
+        file: data/portfolio.json
+        format: json
+        fields:
+          - name: items
+            label: Projects
+            widget: list
+            summary: "{{fields.titleEn}}"
+            fields:
+              - name: id
+                label: ID
+                widget: string
+              - name: titleId
+                label: Title (Indonesia)
+                widget: string
+              - name: titleEn
+                label: Title (English)
+                widget: string
+              - name: categoryId
+                label: Category (Indonesia)
+                widget: string
+              - name: categoryEn
+                label: Category (English)
+                widget: string
+              - name: image
+                label: Portfolio Image
+                widget: image
+              - name: link
+                label: External Website URL
+                widget: string
+                required: false
