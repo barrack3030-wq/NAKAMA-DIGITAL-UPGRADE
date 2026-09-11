@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, Globe } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
-import { siteConfig } from '../data/siteConfig';
+import { siteConfig as defaultSiteConfig, SiteConfig } from '../data/siteConfig';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [siteConfig, setSiteConfig] = useState<SiteConfig>(defaultSiteConfig);
   const { lang, t, setLanguage } = useLanguage();
   const asset = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`;
 
@@ -14,6 +15,13 @@ export default function Navbar() {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    fetch(`${import.meta.env.BASE_URL}data/site.json?${Date.now()}`)
+      .then((r) => r.ok ? r.json() : Promise.reject(new Error('site.json unavailable')))
+      .then((data: SiteConfig) => setSiteConfig({ ...defaultSiteConfig, ...data }))
+      .catch(() => undefined);
   }, []);
 
   const navLinks = [
