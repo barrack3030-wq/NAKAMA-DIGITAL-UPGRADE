@@ -1,14 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 import { ArrowUpRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
-import { portfolioData } from '../data/portfolio';
+import { portfolioData as defaultPortfolioData, PortfolioItem } from '../data/portfolio';
 import { Language } from '../locales';
 
 export default function Portfolio() {
   const { t, language } = useLanguage();
   const currentLang = language as Language;
+  const [portfolioData, setPortfolioData] = useState<PortfolioItem[]>(defaultPortfolioData);
   const asset = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`;
+
+  useEffect(() => {
+    fetch(`${import.meta.env.BASE_URL}data/portfolio.json?${Date.now()}`)
+      .then((r) => r.ok ? r.json() : Promise.reject(new Error('portfolio.json unavailable')))
+      .then((data) => {
+        if (!Array.isArray(data?.items)) return;
+        const mapped: PortfolioItem[] = data.items.map((item: any, index: number) => ({
+          id: item.id || `portfolio-${index}`,
+          title: { id: item.titleId || item.titleEn || 'Project', en: item.titleEn || item.titleId || 'Project' },
+          category: { id: item.categoryId || item.categoryEn || 'Website', en: item.categoryEn || item.categoryId || 'Website' },
+          color: item.color || 'from-blue-500/20 to-brand-500/5',
+          image: item.image || undefined,
+          link: item.link || undefined,
+        }));
+        setPortfolioData(mapped);
+      })
+      .catch(() => undefined);
+  }, []);
 
   return <section id="portfolio" className="relative py-16 lg:py-24 border-y border-white/50 bg-white/20 backdrop-blur-sm">
     <div className="absolute top-1/2 left-0 w-[600px] h-[600px] bg-brand-400/10 blur-[150px] rounded-full pointer-events-none -z-10" />
