@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  
+  --color-brand-50: #F7FAFF;
+  --color-brand-100: #E0EBFF;
+  --color-brand-200: #C2D6FF;
+  --color-brand-300: #94B8FF;
+  --color-brand-400: #6092FF;
+  --color-brand-500: #2563EB;
+  --color-brand-600: #1769FF;
+  --color-brand-700: #0A3DFF;
+  --color-brand-800: #002BCC;
+  --color-brand-900: #0B1220;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}

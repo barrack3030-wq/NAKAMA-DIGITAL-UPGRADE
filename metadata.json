@@ -1,0 +1,6 @@
+{
+  "name": "Nakama Digital",
+  "description": "Premium digital agency specializing in professional website design and development.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
