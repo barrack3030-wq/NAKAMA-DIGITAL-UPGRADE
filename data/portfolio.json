@@ -1,38 +1,40 @@
-[
-  {
-    "id": "fintech-corp",
-    "titleId": "Fintech Corporate Profile",
-    "titleEn": "Fintech Corporate Profile",
-    "categoryId": "Company Profile",
-    "categoryEn": "Company Profile",
-    "image": "",
-    "link": ""
-  },
-  {
-    "id": "artisan-coffee",
-    "titleId": "Artisan Coffee Shop",
-    "titleEn": "Artisan Coffee Shop",
-    "categoryId": "UMKM",
-    "categoryEn": "SME",
-    "image": "",
-    "link": ""
-  },
-  {
-    "id": "international-school",
-    "titleId": "International School",
-    "titleEn": "International School",
-    "categoryId": "Sekolah",
-    "categoryEn": "School",
-    "image": "",
-    "link": ""
-  },
-  {
-    "id": "bali-luxury",
-    "titleId": "Bali Luxury Tours",
-    "titleEn": "Bali Luxury Tours",
-    "categoryId": "Travel",
-    "categoryEn": "Travel",
-    "image": "",
-    "link": ""
-  }
-]
+{
+  "items": [
+    {
+      "id": "fintech-corp",
+      "titleId": "Fintech Corporate Profile",
+      "titleEn": "Fintech Corporate Profile",
+      "categoryId": "Company Profile",
+      "categoryEn": "Company Profile",
+      "image": "",
+      "link": ""
+    },
+    {
+      "id": "artisan-coffee",
+      "titleId": "Artisan Coffee Shop",
+      "titleEn": "Artisan Coffee Shop",
+      "categoryId": "UMKM",
+      "categoryEn": "SME",
+      "image": "",
+      "link": ""
+    },
+    {
+      "id": "international-school",
+      "titleId": "International School",
+      "titleEn": "International School",
+      "categoryId": "Sekolah",
+      "categoryEn": "School",
+      "image": "",
+      "link": ""
+    },
+    {
+      "id": "bali-luxury",
+      "titleId": "Bali Luxury Tours",
+      "titleEn": "Bali Luxury Tours",
+      "categoryId": "Travel",
+      "categoryEn": "Travel",
+      "image": "",
+      "link": ""
+    }
+  ]
+}
