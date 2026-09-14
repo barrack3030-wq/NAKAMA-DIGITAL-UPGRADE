@@ -6,6 +6,6 @@ export interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   brandName: 'Nakama Digital',
-  logoPath: 'uploads/logo/logo.svg',
-  logoWidth: 150,
+  logoPath: 'assets/logo/logo.svg',
+  logoWidth: 120,
 };
