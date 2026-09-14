@@ -9,7 +9,13 @@ export default function Portfolio() {
   const { t, language } = useLanguage();
   const currentLang = language as Language;
   const [portfolioData, setPortfolioData] = useState<PortfolioItem[]>(defaultPortfolioData);
-  const asset = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`;
+
+  // Keep absolute image URLs external. Only local asset paths should receive
+  // Vite's GitHub Pages base path.
+  const asset = (path: string) => {
+    if (/^https?:\/\//i.test(path)) return path;
+    return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
+  };
 
   useEffect(() => {
     fetch(`${import.meta.env.BASE_URL}data/portfolio.json?${Date.now()}`)
