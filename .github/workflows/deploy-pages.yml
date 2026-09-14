@@ -28,6 +28,18 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Install ImageMagick
+        run: sudo apt-get update && sudo apt-get install -y imagemagick
+      - name: Prepare transparent PNG logo
+        run: |
+          mkdir -p public/images/logo
+          convert public/images/logo/logo.png \
+            -alpha on \
+            -fuzz 8% \
+            -fill none \
+            -draw "matte 0,0 floodfill" \
+            -trim +repage \
+            public/images/logo/logo-web.png
       - name: Install dependencies
         run: npm install
       - name: Build
