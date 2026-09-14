@@ -16,7 +16,7 @@ concurrency:
 
 env:
   VITE_SUPABASE_URL: https://efgstmzapyytidkhkxfh.supabase.co
-  VITE_SUPABASE_PUBLISHABLE_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVmZ3N0bXphcHl5dGlka2hreGZoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODkzMjYwMTMsImV4cCI6MjEwNDkwMjAxM30.JtXVfW8mOEHg6E58tV3ft32LM2z3JZaL6hKG440Fwk
+  VITE_SUPABASE_PUBLISHABLE_KEY: sb_publishable_9lub8q-JZm7sUMcBLGFRyw_KMFrrj4Q
 
 jobs:
   build:
