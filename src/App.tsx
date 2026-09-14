@@ -19,14 +19,14 @@ import Admin from './pages/Admin';
 import { WorkflowLayout } from './workflow/components/WorkflowLayout';
 import { WorkflowLogin } from './workflow/pages/WorkflowLogin';
 import WorkflowDashboard from './workflow/pages/WorkflowDashboard';
-import Customers from './workflow/pages/Customers';
-import CustomerForm from './workflow/pages/CustomerForm';
-import CustomerDetail from './workflow/pages/CustomerDetail';
-import Projects from './workflow/pages/Projects';
-import ProjectForm from './workflow/pages/ProjectForm';
-import ProjectDetail from './workflow/pages/ProjectDetail';
-import Tasks from './workflow/pages/Tasks';
-import Settings from './workflow/pages/Settings';
+import { Customers } from './workflow/pages/Customers';
+import { CustomerForm } from './workflow/pages/CustomerForm';
+import { CustomerDetail } from './workflow/pages/CustomerDetail';
+import { Projects } from './workflow/pages/Projects';
+import { ProjectForm } from './workflow/pages/ProjectForm';
+import { ProjectDetail } from './workflow/pages/ProjectDetail';
+import { Tasks } from './workflow/pages/Tasks';
+import { Settings } from './workflow/pages/Settings';
 
 function PageContent() {
   return (
