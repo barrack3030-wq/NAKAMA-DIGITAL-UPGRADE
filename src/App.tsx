@@ -16,6 +16,18 @@ import CTA from './components/CTA';
 import Footer from './components/Footer';
 import Admin from './pages/Admin';
 
+import { WorkflowLayout } from './workflow/components/WorkflowLayout';
+import { WorkflowLogin } from './workflow/pages/WorkflowLogin';
+import WorkflowDashboard from './workflow/pages/WorkflowDashboard';
+import Customers from './workflow/pages/Customers';
+import CustomerForm from './workflow/pages/CustomerForm';
+import CustomerDetail from './workflow/pages/CustomerDetail';
+import Projects from './workflow/pages/Projects';
+import ProjectForm from './workflow/pages/ProjectForm';
+import ProjectDetail from './workflow/pages/ProjectDetail';
+import Tasks from './workflow/pages/Tasks';
+import Settings from './workflow/pages/Settings';
+
 function PageContent() {
   return (
     <>
@@ -40,6 +52,25 @@ function PageContent() {
   );
 }
 
+function WorkflowRoutes() {
+  return (
+    <Routes>
+      <Route path="/workflow/login" element={<WorkflowLogin />} />
+      <Route path="/workflow" element={<WorkflowLayout />}>
+        <Route index element={<WorkflowDashboard />} />
+        <Route path="customers" element={<Customers />} />
+        <Route path="customers/new" element={<CustomerForm />} />
+        <Route path="customers/:id" element={<CustomerDetail />} />
+        <Route path="projects" element={<Projects />} />
+        <Route path="projects/new" element={<ProjectForm />} />
+        <Route path="projects/:id" element={<ProjectDetail />} />
+        <Route path="tasks" element={<Tasks />} />
+        <Route path="settings" element={<Settings />} />
+      </Route>
+    </Routes>
+  );
+}
+
 export default function App() {
   return (
     <LanguageProvider>
@@ -51,6 +82,7 @@ export default function App() {
         </div>
         <div className="relative z-10 flex flex-col min-h-screen">
           <Routes>
+            <Route path="/workflow/*" element={<WorkflowRoutes />} />
             <Route path="/" element={<PageContent />} />
             <Route path="/en" element={<PageContent />} />
             <Route path="/admin" element={<Admin />} />
