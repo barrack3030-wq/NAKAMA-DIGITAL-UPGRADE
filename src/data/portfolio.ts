@@ -5,59 +5,95 @@ export interface PortfolioItem {
   title: Record<Language, string>;
   category: Record<Language, string>;
   color: string;
-  image?: string; // Path to the image in assets/portfolio (optional)
-  link?: string; // URL to view the live website (optional)
+  image?: string;
+  link?: string;
 }
 
+// Live projects. The image URLs use live website screenshots so the portfolio
+// stays visually representative without requiring manual image uploads.
 export const portfolioData: PortfolioItem[] = [
   {
-    id: 'fintech-corp',
+    id: 'pelita-dental-luwuk',
     title: {
-      id: 'Fintech Corporate Profile',
-      en: 'Fintech Corporate Profile'
+      id: 'Pelita Dental Luwuk',
+      en: 'Pelita Dental Luwuk'
     },
     category: {
-      id: 'Company Profile',
-      en: 'Company Profile'
+      id: 'Website Klinik',
+      en: 'Dental Clinic Website'
     },
-    color: 'from-blue-500/20 to-brand-500/5',
-    // image: '/assets/portfolio/fintech.jpg', // Example of how to add an image later
-    // link: 'https://example.com' // Example of how to add a clickable link later
+    color: 'from-blue-500/20 to-cyan-500/5',
+    image: 'https://image.thum.io/get/width/1400/crop/900/https://barrack3030-wq.github.io/pelita-dental-luwuk/',
+    link: 'https://barrack3030-wq.github.io/pelita-dental-luwuk/'
   },
   {
-    id: 'artisan-coffee',
+    id: 'british-propolis-toili',
     title: {
-      id: 'Artisan Coffee Shop',
-      en: 'Artisan Coffee Shop'
+      id: 'British Propolis Toili',
+      en: 'British Propolis Toili'
     },
     category: {
-      id: 'UMKM',
-      en: 'SME'
+      id: 'Website Bisnis',
+      en: 'Business Website'
     },
-    color: 'from-amber-500/20 to-orange-500/5'
+    color: 'from-amber-500/20 to-orange-500/5',
+    image: 'https://image.thum.io/get/width/1400/crop/900/https://agenbptoili.my.id/',
+    link: 'https://agenbptoili.my.id/'
   },
   {
-    id: 'international-school',
+    id: 'banggai-wonderland',
     title: {
-      id: 'International School',
-      en: 'International School'
+      id: 'Banggai Wonderland',
+      en: 'Banggai Wonderland'
     },
     category: {
-      id: 'Sekolah',
-      en: 'School'
+      id: 'Website Travel',
+      en: 'Travel Website'
     },
-    color: 'from-emerald-500/20 to-teal-500/5'
+    color: 'from-cyan-500/20 to-blue-500/5',
+    image: 'https://image.thum.io/get/width/1400/crop/900/https://www.banggaiwonderland.my.id/',
+    link: 'https://www.banggaiwonderland.my.id/'
   },
   {
-    id: 'bali-luxury',
+    id: 'the-common-cafe',
     title: {
-      id: 'Bali Luxury Tours',
-      en: 'Bali Luxury Tours'
+      id: 'The Common Cafe',
+      en: 'The Common Cafe'
     },
     category: {
-      id: 'Travel',
-      en: 'Travel'
+      id: 'Website Cafe',
+      en: 'Cafe Website'
     },
-    color: 'from-cyan-500/20 to-blue-500/5'
+    color: 'from-stone-500/20 to-amber-500/5',
+    image: 'https://image.thum.io/get/width/1400/crop/900/https://barrack3030-wq.github.io/tHE-COMMON-CAFE/',
+    link: 'https://barrack3030-wq.github.io/tHE-COMMON-CAFE/'
+  },
+  {
+    id: 'osaka-residence',
+    title: {
+      id: 'Osaka Residence',
+      en: 'Osaka Residence'
+    },
+    category: {
+      id: 'Website Properti',
+      en: 'Property Website'
+    },
+    color: 'from-slate-500/20 to-blue-500/5',
+    image: 'https://image.thum.io/get/width/1400/crop/900/https://barrack3030-wq.github.io/osaka-residence/',
+    link: 'https://barrack3030-wq.github.io/osaka-residence/'
+  },
+  {
+    id: 'deho-cafe',
+    title: {
+      id: 'DEHO Cafe',
+      en: 'DEHO Cafe'
+    },
+    category: {
+      id: 'Website Restoran',
+      en: 'Restaurant Website'
+    },
+    color: 'from-rose-500/20 to-orange-500/5',
+    image: 'https://image.thum.io/get/width/1400/crop/900/https://barrack3030-wq.github.io/DEHO-CAFE-/',
+    link: 'https://barrack3030-wq.github.io/DEHO-CAFE-/#home'
   }
 ];
