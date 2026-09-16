@@ -95,5 +95,19 @@ export const portfolioData: PortfolioItem[] = [
     color: 'from-rose-500/20 to-orange-500/5',
     image: 'https://image.thum.io/get/width/1400/crop/900/https://barrack3030-wq.github.io/DEHO-CAFE-/',
     link: 'https://barrack3030-wq.github.io/DEHO-CAFE-/#home'
+  },
+  {
+    id: 'bmt-al-muhajirin',
+    title: {
+      id: 'BMT Al-Muhajirin',
+      en: 'BMT Al-Muhajirin'
+    },
+    category: {
+      id: 'Website Koperasi Syariah',
+      en: 'Islamic Cooperative Website'
+    },
+    color: 'from-emerald-500/20 to-lime-500/5',
+    image: 'https://image.thum.io/get/width/1400/crop/900/https://barrack3030-wq.github.io/BMT01/#/beranda',
+    link: 'https://barrack3030-wq.github.io/BMT01/#/beranda'
   }
 ];
