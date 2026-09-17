@@ -86,7 +86,8 @@ function AppShell() {
           </Route>
           <Route path="/client-intake" element={<CustomerIntake />} />
           <Route path="/jasa-pembuatan-website-sintang/" element={<SintangLanding />} />
-          <Route path="/" element={<PublicPage />} />
+          <Route path="/" element={<SintangLanding />} />
+          <Route path="/home" element={<PublicPage />} />
           <Route path="/en" element={<PublicPage english />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="*" element={<Navigate to="/" replace />} />
