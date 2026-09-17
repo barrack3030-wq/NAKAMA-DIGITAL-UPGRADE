@@ -16,6 +16,7 @@ import CTA from './components/CTA';
 import Footer from './components/Footer';
 import Admin from './pages/Admin';
 import CustomerIntake from './pages/CustomerIntake';
+import SintangLanding from './pages/SintangLanding';
 
 import { WorkflowLayout } from './workflow/components/WorkflowLayout';
 import { WorkflowLogin } from './workflow/pages/WorkflowLogin';
@@ -84,6 +85,7 @@ function AppShell() {
             <Route path="settings" element={<Settings />} />
           </Route>
           <Route path="/client-intake" element={<CustomerIntake />} />
+          <Route path="/jasa-pembuatan-website-sintang/" element={<SintangLanding />} />
           <Route path="/" element={<PublicPage />} />
           <Route path="/en" element={<PublicPage english />} />
           <Route path="/admin" element={<Admin />} />
