@@ -12,6 +12,8 @@ export type LocalSeoCity = {
   intro: string;
   localContext: string;
   localHighlights: string[];
+  locationLabel: string;
+  serviceFocus: string[];
   services: { title: string; description: string; anchor: string }[];
   faqs: { q: string; a: string }[];
 };
@@ -24,6 +26,8 @@ type CityConfig = {
   intro: string;
   context: string;
   highlights: string[];
+  locationLabel: string;
+  serviceFocus: string[];
 };
 
 const buildCity = (config: CityConfig): LocalSeoCity => ({
@@ -44,6 +48,8 @@ const buildCity = (config: CityConfig): LocalSeoCity => ({
   intro: config.intro,
   localContext: config.context,
   localHighlights: config.highlights,
+  locationLabel: config.locationLabel,
+  serviceFocus: config.serviceFocus,
   services: [
     { title: 'Website UMKM & Toko', description: 'Produk, katalog, lokasi, dan WhatsApp.', anchor: 'umkm' },
     { title: 'Company Profile', description: 'Profil perusahaan, layanan, dan portofolio.', anchor: 'company-profile' },
