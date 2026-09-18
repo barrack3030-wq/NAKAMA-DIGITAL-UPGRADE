@@ -3,43 +3,57 @@ import path from 'node:path';
 
 const root = process.cwd();
 const dist = path.join(root, 'dist');
+const configPath = path.join(root, 'src', 'data', 'localSeoCities.json');
 
-const cities = [
-  {
-    slug: 'luwuk',
-    city: 'Luwuk',
-    region: 'Banggai',
-    title: 'Jasa Pembuatan Website Luwuk | Nakama Digital',
-    description: 'Jasa pembuatan website untuk UMKM, jasa, hotel, travel, sekolah, dan perusahaan di Luwuk. Website profesional, mobile-friendly, SEO-ready, dan terhubung WhatsApp.',
-  },
-  {
-    slug: 'sintang',
-    city: 'Sintang',
-    region: 'Kalimantan Barat',
-    title: 'Jasa Pembuatan Website Sintang | Nakama Digital',
-    description: 'Jasa pembuatan website untuk UMKM, toko, jasa, sekolah, yayasan, perusahaan, dan organisasi di Sintang. Website profesional, mobile-friendly, SEO-ready, dan terhubung WhatsApp.',
-  },
-  {
-    slug: 'surabaya',
-    city: 'Surabaya',
-    region: 'Jawa Timur',
-    title: 'Jasa Pembuatan Website Surabaya | Nakama Digital',
-    description: 'Jasa pembuatan website untuk UMKM, perusahaan, jasa profesional, properti, sekolah, klinik, dan organisasi di Surabaya. Website profesional, mobile-friendly, SEO-ready, dan terhubung WhatsApp.',
-  },
-];
+const cities = JSON.parse(fs.readFileSync(configPath, 'utf8'));
 
 const source = path.join(dist, 'index.html');
 if (!fs.existsSync(source)) throw new Error('dist/index.html tidak ditemukan setelah vite build.');
 
 const baseHtml = fs.readFileSync(source, 'utf8');
 
-function upsert(html, pattern, replacement) {
-  if (!pattern.test(html)) return html.replace('</head>', replacement + '\n</head>');
-  return html.replace(pattern, replacement);
+function faqItems(city) {
+  return [
+    {
+      '@type': 'Question',
+      name: `Apakah Nakama Digital melayani pembuatan website untuk bisnis di ${city.city}?`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `Ya. Website dapat dibuat untuk berbagai jenis bisnis dan organisasi yang beroperasi di ${city.city} dan membutuhkan kehadiran digital profesional.`,
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Apakah website bisa terhubung ke WhatsApp?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Ya. Tombol WhatsApp dapat ditempatkan pada bagian strategis agar calon pelanggan dapat menghubungi bisnis secara langsung.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Apakah website bisa muncul di Google?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Website dapat dibuat dengan struktur teknis dan konten yang SEO-friendly. Namun, posisi tertentu di hasil pencarian Google tidak dapat dijamin karena ranking dipengaruhi banyak faktor.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Apakah website bisa dibuka melalui HP?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Ya. Website dirancang responsive agar nyaman digunakan pada smartphone, tablet, dan desktop.',
+      },
+    },
+  ];
 }
 
 for (const city of cities) {
   const cityUrl = `https://nakamadigital.biz.id/${city.slug}/`;
+  const title = `Jasa Pembuatan Website ${city.city} | Nakama Digital`;
+  const description = `Jasa pembuatan website untuk bisnis, UMKM, jasa, sekolah, yayasan, perusahaan, dan organisasi di ${city.city}. Website profesional, mobile-friendly, SEO-ready, dan terhubung WhatsApp.`;
+
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
@@ -59,22 +73,45 @@ for (const city of cities) {
     url: cityUrl,
   };
 
-  const html = baseHtml
-    .replace(/<title>.*?<\/title>/i, `<title>${city.title}</title>`)
-    .replace(/<meta name="description"[^>]*>/i, `<meta name="description" content="${city.description}">`)
-    .replace(/<link rel="canonical"[^>]*>/i, `<link rel="canonical" href="${cityUrl}">`)
-    .replace(/<meta name="robots"[^>]*>/i, '<meta name="robots" content="index,follow">')
-    .replace(
-      '</head>',
-      `<link rel="canonical" href="${cityUrl}">
-<meta name="robots" content="index,follow">
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqItems(city),
+  };
+
+  let html = baseHtml
+    .replace(/<title>.*?<\/title>/i, `<title>${title}</title>`)
+    .replace(/<meta name="description"[^>]*>/i, `<meta name="description" content="${description}">`)
+    .replace('</head>', `<meta name="robots" content="index,follow">
+<link rel="canonical" href="${cityUrl}">
+<meta property="og:title" content="${title}">
+<meta property="og:description" content="${description}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="${cityUrl}">
 <script type="application/ld+json">${JSON.stringify(serviceSchema)}</script>
-</head>`,
-    );
+<script type="application/ld+json">${JSON.stringify(faqSchema)}</script>
+</head>`);
 
   const dir = path.join(dist, city.slug);
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, 'index.html'), html);
 }
 
-console.log(`Generated ${cities.length} static city pages.`);
+const sitemapUrls = [
+  'https://nakamadigital.biz.id/',
+  ...cities.map((city) => `https://nakamadigital.biz.id/${city.slug}/`),
+];
+
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${sitemapUrls.map((url) => `  <url><loc>${url}</loc></url>`).join('\n')}
+</urlset>
+`;
+
+fs.writeFileSync(path.join(dist, 'sitemap.xml'), sitemap);
+fs.writeFileSync(
+  path.join(dist, 'robots.txt'),
+  'User-agent: *\nAllow: /\n\nSitemap: https://nakamadigital.biz.id/sitemap.xml\n',
+);
+
+console.log(`Generated ${cities.length} static city pages, sitemap, and robots.txt.`);
