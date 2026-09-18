@@ -18,7 +18,11 @@
       "Website hotel, homestay, travel, dan pariwisata",
       "Company profile dan jasa profesional",
       "Website sekolah, yayasan, dan organisasi"
-    ]
+    ],
+    "seoHeading": "Jasa website untuk bisnis Luwuk dan wilayah Banggai",
+    "seoParagraph": "Pemilik usaha di Luwuk membutuhkan halaman resmi yang mudah dibagikan ketika calon pelanggan mencari profil bisnis, layanan, lokasi, atau kontak. Website dapat menjadi pusat informasi untuk UMKM, jasa profesional, hotel, travel, dan organisasi yang melayani pelanggan di Luwuk dan wilayah Banggai.",
+    "seoSecondHeading": "Jenis website yang dapat dikembangkan di Luwuk",
+    "seoSecondParagraph": "Struktur website dapat disesuaikan dengan tujuan bisnis: katalog dan WhatsApp untuk toko, company profile untuk perusahaan, halaman layanan untuk profesional, atau website informasi untuk sekolah dan yayasan. Fokusnya adalah membuat informasi penting mudah ditemukan dan mudah dihubungi."
   },
   {
     "slug": "sintang",
@@ -39,7 +43,11 @@
       "Company profile dan jasa lokal",
       "Website sekolah, madrasah, dan yayasan",
       "Website perusahaan dan organisasi"
-    ]
+    ],
+    "seoHeading": "Jasa website untuk bisnis dan organisasi di Sintang",
+    "seoParagraph": "Bisnis di Sintang dapat menggunakan website sebagai pusat informasi resmi yang menjelaskan produk, layanan, alamat, portofolio, dan kontak dalam satu tempat. Pendekatan ini cocok untuk UMKM, toko, kuliner, jasa, sekolah, madrasah, yayasan, perusahaan, dan organisasi di Kabupaten Sintang.",
+    "seoSecondHeading": "Website Sintang sesuai kebutuhan, bukan satu format untuk semua",
+    "seoSecondParagraph": "Website toko membutuhkan susunan produk dan tombol WhatsApp yang jelas, sedangkan company profile lebih menekankan profil, layanan, dan portofolio. Untuk sekolah atau yayasan, struktur dapat diarahkan pada program, fasilitas, informasi penerimaan, dan berita."
   },
   {
     "slug": "surabaya",
@@ -60,6 +68,10 @@
       "Company profile dan jasa profesional",
       "Website properti, hospitality, dan travel",
       "Website sekolah, klinik, dan organisasi"
-    ]
+    ],
+    "seoHeading": "Jasa website untuk bisnis dan perusahaan di Surabaya",
+    "seoParagraph": "Surabaya memiliki kebutuhan website yang beragam, mulai dari UMKM dan bisnis kuliner hingga perusahaan, properti, hospitality, jasa profesional, sekolah, dan klinik. Halaman lokal Nakama Digital diarahkan pada pencarian yang mencari jasa pembuatan website sekaligus kebutuhan nyata bisnis setelah calon pelanggan membuka situs.",
+    "seoSecondHeading": "Website Surabaya untuk branding, informasi, dan konversi",
+    "seoSecondParagraph": "Website dapat disusun untuk memperjelas layanan, menampilkan portfolio, membangun kredibilitas, dan mengarahkan pengunjung ke WhatsApp. Struktur konten, navigasi, dan tampilan dapat disesuaikan dengan karakter brand dan tujuan bisnis."
   }
 ]
