@@ -22,6 +22,7 @@ const staticCityContent = (city) => `
   <main>
     <section>
       <p>Jasa pembuatan website ${escapeHtml(city.city)}</p>
+      <p>${escapeHtml(city.locationLabel)}</p>
       <h1>${escapeHtml(city.headline)}</h1>
       <p>${escapeHtml(city.intro)}</p>
       <a href="https://wa.me/6285820830530?text=${encodeURIComponent(`Halo Nakama Digital, saya ingin konsultasi website untuk bisnis saya di ${city.city}.`)}">Konsultasi Website Gratis</a>
@@ -29,8 +30,9 @@ const staticCityContent = (city) => `
     <section>
       <h2>Website untuk bisnis dan organisasi di ${escapeHtml(city.city)}</h2>
       <p>${escapeHtml(city.context)}</p>
+      <h3>Kebutuhan bisnis yang relevan</h3>
       <ul>
-        ${city.highlights.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}
+        ${city.serviceFocus.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}
       </ul>
     </section>
     <section>
@@ -95,7 +97,7 @@ function faqItems(city) {
 for (const city of cities) {
   const cityUrl = `https://nakamadigital.biz.id/${city.slug}/`;
   const title = `Jasa Pembuatan Website ${city.city} | Nakama Digital`;
-  const description = `Jasa pembuatan website untuk bisnis, UMKM, jasa, sekolah, yayasan, perusahaan, dan organisasi di ${city.city}. Website profesional, mobile-friendly, SEO-ready, dan terhubung WhatsApp.`;
+  const description = `Jasa pembuatan website untuk bisnis, UMKM, jasa, sekolah, yayasan, perusahaan, dan organisasi di ${city.locationLabel}. Website profesional, mobile-friendly, SEO-ready, dan terhubung WhatsApp.`;
 
   const serviceSchema = {
     '@context': 'https://schema.org',
