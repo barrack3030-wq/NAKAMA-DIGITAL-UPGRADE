@@ -28,27 +28,14 @@ const staticCityContent = (city) => `
       <a href="https://wa.me/6285820830530?text=${encodeURIComponent(`Halo Nakama Digital, saya ingin konsultasi website untuk bisnis saya di ${city.city}.`)}">Konsultasi Website Gratis</a>
     </section>
     <section>
-      <h2>Website untuk bisnis dan organisasi di ${escapeHtml(city.city)}</h2>
+      <h2>Website untuk bisnis di ${escapeHtml(city.city)}</h2>
       <p>${escapeHtml(city.context)}</p>
-      <h3>Kebutuhan bisnis lokal</h3>
-      <ul>
-        ${city.highlights.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}
-      </ul>
-      <h2>${escapeHtml(city.seoHeading)}</h2>
-      <p>${escapeHtml(city.seoParagraph)}</p>
-      <h2>${escapeHtml(city.seoSecondHeading)}</h2>
-      <p>${escapeHtml(city.seoSecondParagraph)}</p>
-      <h3>Kebutuhan bisnis yang relevan</h3>
-      <ul>
-        ${city.serviceFocus.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}
-      </ul>
-    </section>
-    <section>
-      <h2>Layanan yang sering dicari di ${escapeHtml(city.city)}</h2>
-      <p>${escapeHtml(city.keywordCoverage)}</p>
+      <h3>Jenis bisnis</h3>
+      <ul>${city.highlights.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
     </section>
     <section>
       <h2>Layanan website di ${escapeHtml(city.city)}</h2>
+      <p>Butuh jasa website ${escapeHtml(city.city)}, jasa web design, atau jasa desain website? Struktur dan fitur dapat disesuaikan dengan kebutuhan bisnis.</p>
       <ul>
         <li>Website UMKM &amp; Toko</li>
         <li>Company Profile</li>
@@ -57,55 +44,56 @@ const staticCityContent = (city) => `
       </ul>
     </section>
     <section>
-      <h2>Pertanyaan umum</h2>
+      <h2>FAQ ${escapeHtml(city.city)}</h2>
       <dl>
+        <dt>Apakah Nakama Digital melayani pembuatan website untuk bisnis di ${escapeHtml(city.city)}?</dt>
+        <dd>Ya. Website dapat dibuat untuk berbagai jenis bisnis dan organisasi yang beroperasi di ${escapeHtml(city.city)}.</dd>
         <dt>Apakah tersedia jasa web design dan desain website di ${escapeHtml(city.city)}?</dt>
-        <dd>Ya. Kebutuhan desain website dapat disesuaikan dengan jenis bisnis, gaya brand, struktur halaman, dan tujuan website.</dd>
+        <dd>Ya. Desain dapat disesuaikan dengan jenis bisnis, gaya brand, struktur halaman, dan tujuan website.</dd>
         <dt>Berapa biaya pembuatan website di ${escapeHtml(city.city)}?</dt>
         <dd>Biaya disesuaikan dengan jenis website, jumlah halaman, fitur, dan ruang lingkup proyek.</dd>
-        <dt>Apakah Nakama Digital melayani pembuatan website di ${escapeHtml(city.city)}?</dt>
-        <dd>Ya. Website dapat dibuat untuk berbagai jenis bisnis dan organisasi yang beroperasi di ${escapeHtml(city.city)}.</dd>
         <dt>Apakah website bisa terhubung ke WhatsApp?</dt>
         <dd>Ya. Tombol WhatsApp dapat ditempatkan pada bagian strategis agar calon pelanggan dapat menghubungi bisnis secara langsung.</dd>
+        <dt>Apakah website bisa muncul di Google?</dt>
+        <dd>Website dapat dibuat dengan struktur teknis dan konten yang SEO-friendly, tetapi posisi tertentu di Google tidak dapat dijamin.</dd>
+        <dt>Apakah website bisa dibuka melalui HP?</dt>
+        <dd>Ya. Website dirancang responsive untuk smartphone, tablet, dan desktop.</dd>
       </dl>
     </section>
   </main>
 `;
-
 
 function faqItems(city) {
   return [
     {
       '@type': 'Question',
       name: `Apakah Nakama Digital melayani pembuatan website untuk bisnis di ${city.city}?`,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: `Ya. Website dapat dibuat untuk berbagai jenis bisnis dan organisasi yang beroperasi di ${city.city} dan membutuhkan kehadiran digital profesional.`,
-      },
+      acceptedAnswer: { '@type': 'Answer', text: `Ya. Website dapat dibuat untuk berbagai jenis bisnis dan organisasi yang beroperasi di ${city.city}.` },
+    },
+    {
+      '@type': 'Question',
+      name: `Apakah tersedia jasa web design dan desain website di ${city.city}?`,
+      acceptedAnswer: { '@type': 'Answer', text: `Ya. Desain dapat disesuaikan dengan jenis bisnis, gaya brand, struktur halaman, dan tujuan website.` },
+    },
+    {
+      '@type': 'Question',
+      name: `Berapa biaya pembuatan website di ${city.city}?`,
+      acceptedAnswer: { '@type': 'Answer', text: 'Biaya disesuaikan dengan jenis website, jumlah halaman, fitur, dan ruang lingkup proyek.' },
     },
     {
       '@type': 'Question',
       name: 'Apakah website bisa terhubung ke WhatsApp?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Ya. Tombol WhatsApp dapat ditempatkan pada bagian strategis agar calon pelanggan dapat menghubungi bisnis secara langsung.',
-      },
+      acceptedAnswer: { '@type': 'Answer', text: 'Ya. Tombol WhatsApp dapat ditempatkan pada bagian strategis agar calon pelanggan dapat menghubungi bisnis secara langsung.' },
     },
     {
       '@type': 'Question',
       name: 'Apakah website bisa muncul di Google?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Website dapat dibuat dengan struktur teknis dan konten yang SEO-friendly. Namun, posisi tertentu di hasil pencarian Google tidak dapat dijamin karena ranking dipengaruhi banyak faktor.',
-      },
+      acceptedAnswer: { '@type': 'Answer', text: 'Website dapat dibuat dengan struktur teknis dan konten yang SEO-friendly, tetapi posisi tertentu di Google tidak dapat dijamin.' },
     },
     {
       '@type': 'Question',
       name: 'Apakah website bisa dibuka melalui HP?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Ya. Website dirancang responsive agar nyaman digunakan pada smartphone, tablet, dan desktop.',
-      },
+      acceptedAnswer: { '@type': 'Answer', text: 'Ya. Website dirancang responsive untuk smartphone, tablet, dan desktop.' },
     },
   ];
 }
