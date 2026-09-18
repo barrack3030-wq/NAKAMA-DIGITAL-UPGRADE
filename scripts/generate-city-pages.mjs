@@ -124,6 +124,45 @@ for (const city of cities) {
     mainEntity: faqItems(city),
   };
 
+  const webPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: title,
+    description,
+    url: cityUrl,
+    inLanguage: 'id-ID',
+    about: {
+      '@type': 'City',
+      name: city.city,
+      addressRegion: city.region,
+      addressCountry: 'ID',
+    },
+    isPartOf: {
+      '@type': 'WebSite',
+      name: 'Nakama Digital',
+      url: 'https://nakamadigital.biz.id/',
+    },
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Nakama Digital',
+        item: 'https://nakamadigital.biz.id/',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: `Website ${city.city}`,
+        item: cityUrl,
+      },
+    ],
+  };
+
   let html = baseHtml
     .replace(/<title>.*?<\/title>/i, `<title>${title}</title>`)
     .replace(/<meta name="description"[^>]*>/i, `<meta name="description" content="${description}">`)
@@ -136,6 +175,8 @@ for (const city of cities) {
 <meta property="og:url" content="${cityUrl}">
 <script type="application/ld+json">${JSON.stringify(serviceSchema)}</script>
 <script type="application/ld+json">${JSON.stringify(faqSchema)}</script>
+<script type="application/ld+json">${JSON.stringify(webPageSchema)}</script>
+<script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>
 </head>`);
 
   const dir = path.join(dist, city.slug);
