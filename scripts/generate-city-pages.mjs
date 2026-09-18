@@ -84,6 +84,11 @@ function faqItems(city) {
       name: 'Apakah website bisa dibuka melalui HP?',
       acceptedAnswer: { '@type': 'Answer', text: 'Ya. Website dirancang responsive untuk smartphone, tablet, dan desktop.' },
     },
+    {
+      '@type': 'Question',
+      name: 'Saya belum tahu website seperti apa yang saya butuhkan. Bagaimana?',
+      acceptedAnswer: { '@type': 'Answer', text: `Ceritakan jenis bisnis, layanan, dan target pelanggan Anda di ${city.city}. Kami akan membantu menentukan struktur website yang sesuai.` },
+    },
   ];
 }
 
