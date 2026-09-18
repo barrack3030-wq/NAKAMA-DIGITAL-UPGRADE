@@ -154,57 +154,24 @@ export default function CityLanding() {
             ].map(([title, text, Icon]) => <div key={title as string} className="rounded-2xl border border-slate-200 bg-slate-50/70 p-6"><div className="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-brand-100 text-brand-700"><Icon size={21} /></div><h3 className="font-bold">{title as string}</h3><p className="mt-2 text-sm leading-6 text-slate-600">{text as string}</p></div>)}
           </div>
 
-          <div className="mt-12 rounded-2xl border border-slate-200 bg-slate-50/60 p-7">
-            <p className="text-sm font-semibold uppercase tracking-[.16em] text-brand-600">Konteks bisnis lokal</p>
-            <h2 className="mt-3 text-2xl font-bold tracking-tight">Kebutuhan website yang relevan di {city.city}</h2>
-            <div className="mt-5 grid gap-3 sm:grid-cols-2">
-              {city.localHighlights.map((item) => (
-                <div key={item} className="rounded-xl border border-slate-200 bg-white px-4 py-4 text-sm leading-6 text-slate-700">
-                  {item}
-                </div>
-              ))}
+          <div id="kebutuhan" className="mt-16">
+            <div className="max-w-2xl">
+              <p className="text-sm font-semibold uppercase tracking-[.18em] text-brand-600">Layanan website</p>
+              <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Website yang disesuaikan dengan kebutuhan Anda di {city.city}.</h2>
+              <p className="mt-4 text-lg leading-8 text-slate-600">Butuh jasa website {city.city}, jasa web design, atau jasa desain website? Kami menyesuaikan struktur, tampilan, dan fitur dengan jenis bisnis serta tujuan website Anda.</p>
             </div>
-          </div>
 
-          <div className="mt-12 grid gap-8 lg:grid-cols-2">
-            <article className="rounded-2xl border border-slate-200 bg-white p-7">
-              <p className="text-sm font-semibold uppercase tracking-[.16em] text-brand-600">Intent lokal</p>
-              <h2 className="mt-3 text-2xl font-bold tracking-tight">{city.seoHeading}</h2>
-              <p className="mt-4 leading-7 text-slate-600">{city.seoParagraph}</p>
-            </article>
-            <article className="rounded-2xl border border-slate-200 bg-white p-7">
-              <p className="text-sm font-semibold uppercase tracking-[.16em] text-brand-600">Kebutuhan bisnis</p>
-              <h2 className="mt-3 text-2xl font-bold tracking-tight">{city.seoSecondHeading}</h2>
-              <p className="mt-4 leading-7 text-slate-600">{city.seoSecondParagraph}</p>
-            </article>
-          </div>
-
-          <div className="mt-12 rounded-2xl border border-brand-100 bg-brand-50/40 p-7">
-            <p className="text-sm font-semibold uppercase tracking-[.16em] text-brand-600">Layanan yang sering dicari</p>
-            <h2 className="mt-3 text-2xl font-bold tracking-tight">Website bisnis sesuai kebutuhan di {city.city}</h2>
-            <p className="mt-4 max-w-4xl leading-7 text-slate-600">{city.keywordCoverage}</p>
-          </div>
-
-          <div className="mt-10 rounded-2xl border border-slate-200 bg-white p-6">
-            <p className="text-sm font-semibold uppercase tracking-[.16em] text-brand-600">Fokus lokal</p>
-            <h3 className="mt-2 text-xl font-bold tracking-tight">Website untuk kebutuhan bisnis dan organisasi di {city.city}</h3>
-            <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-              {city.serviceFocus.map((item) => <div key={item} className="rounded-xl bg-slate-50 px-4 py-3 text-sm font-medium text-slate-700">{item}</div>)}
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-slate-50" id="kebutuhan">
-          <div className="mx-auto max-w-6xl px-5 py-16 lg:px-8">
-            <div className="max-w-2xl"><p className="text-sm font-semibold uppercase tracking-[.18em] text-brand-600">Kebutuhan website</p><h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Pilih website sesuai kebutuhan bisnis di {city.city}</h2></div>
             <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
               {city.services.map((service, index) => {
                 const Icon = icons[index % icons.length];
                 return <a key={service.title} href={whatsapp(`Halo Nakama Digital, saya tertarik dengan ${service.title} untuk bisnis saya di ${city.city}.`)} target="_blank" rel="noopener noreferrer" className="group rounded-2xl border border-slate-200 bg-white p-6 transition hover:-translate-y-1 hover:border-brand-200 hover:shadow-xl hover:shadow-brand-900/5"><Icon className="text-brand-600" size={25} /><h3 className="mt-5 font-bold">{service.title}</h3><p className="mt-2 text-sm leading-6 text-slate-600">{service.description}</p><span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-brand-600">Konsultasi <ArrowRight size={15} className="transition group-hover:translate-x-1" /></span></a>;
               })}
             </div>
+
+            <div className="mt-7 flex flex-wrap gap-2">
+              {city.localHighlights.map((item) => <span key={item} className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm text-slate-600">{item}</span>)}
+            </div>
           </div>
-        </section>
 
         <section id="portfolio" className="mx-auto max-w-6xl px-5 py-16 lg:px-8">
           <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end"><div className="max-w-2xl"><p className="text-sm font-semibold uppercase tracking-[.18em] text-brand-600">Portfolio</p><h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Pilih tampilan website yang sesuai dengan bisnis Anda</h2><p className="mt-3 leading-7 text-slate-600">Kami menyiapkan beberapa referensi template untuk membantu Anda menentukan arah website. Pilih template yang paling dekat dengan kebutuhan bisnis Anda, lalu kami sesuaikan isi, warna, foto, dan identitas brand Anda.</p></div><a href="/#portfolio" className="inline-flex shrink-0 items-center gap-2 font-semibold text-brand-600">Lihat portfolio lengkap <ArrowRight size={17} /></a></div>
