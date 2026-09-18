@@ -11,6 +11,13 @@
       "Hotel, homestay, travel, dan pariwisata",
       "Jasa, perusahaan, dan profesional",
       "Sekolah, yayasan, dan organisasi"
+    ],
+    "locationLabel": "Luwuk, Kabupaten Banggai, Sulawesi Tengah",
+    "serviceFocus": [
+      "Website UMKM dan toko lokal",
+      "Website hotel, homestay, travel, dan pariwisata",
+      "Company profile dan jasa profesional",
+      "Website sekolah, yayasan, dan organisasi"
     ]
   },
   {
@@ -25,6 +32,13 @@
       "Jasa dan usaha lokal",
       "Sekolah, madrasah, dan yayasan",
       "Perusahaan dan organisasi"
+    ],
+    "locationLabel": "Sintang, Kalimantan Barat",
+    "serviceFocus": [
+      "Website UMKM, toko, dan kuliner",
+      "Company profile dan jasa lokal",
+      "Website sekolah, madrasah, dan yayasan",
+      "Website perusahaan dan organisasi"
     ]
   },
   {
@@ -39,6 +53,13 @@
       "Company profile dan jasa profesional",
       "Properti, developer, dan hospitality",
       "Sekolah, klinik, dan organisasi"
+    ],
+    "locationLabel": "Surabaya, Jawa Timur",
+    "serviceFocus": [
+      "Website UMKM, toko, dan bisnis kuliner",
+      "Company profile dan jasa profesional",
+      "Website properti, hospitality, dan travel",
+      "Website sekolah, klinik, dan organisasi"
     ]
   }
 ]
