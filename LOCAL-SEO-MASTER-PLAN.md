@@ -84,6 +84,12 @@ Before adding another city, give it:
 
 The layout and component should remain shared so maintenance stays centralized.
 
+## Build-time SEO generation
+
+City SEO data has a single source of truth in `src/data/localSeoCities.json`. The production build reads that data and generates a dedicated `dist/<city>/index.html` for every configured city. Each generated city document receives city-specific title, meta description, canonical, robots, Open Graph metadata, Service schema, and FAQ schema. The same data also generates the XML sitemap and robots.txt.
+
+The React route remains available as the interactive application layer, while the generated HTML gives search engines a city-specific document at the initial request.
+
 ## Deployment
 
 GitHub Pages deployment is handled by:
