@@ -11,6 +11,49 @@ const source = path.join(dist, 'index.html');
 if (!fs.existsSync(source)) throw new Error('dist/index.html tidak ditemukan setelah vite build.');
 
 const baseHtml = fs.readFileSync(source, 'utf8');
+\nconst escapeHtml = (value) => String(value)
+  .replaceAll('&', '&amp;')
+  .replaceAll('<', '&lt;')
+  .replaceAll('>', '&gt;')
+  .replaceAll('"', '&quot;')
+  .replaceAll("'", '&#39;');
+
+const staticCityContent = (city) => `
+  <main>
+    <section>
+      <p>Jasa pembuatan website ${escapeHtml(city.city)}</p>
+      <h1>${escapeHtml(city.headline)}</h1>
+      <p>${escapeHtml(city.intro)}</p>
+      <a href="https://wa.me/6285820830530?text=${encodeURIComponent(`Halo Nakama Digital, saya ingin konsultasi website untuk bisnis saya di ${city.city}.`)}">Konsultasi Website Gratis</a>
+    </section>
+    <section>
+      <h2>Website untuk bisnis dan organisasi di ${escapeHtml(city.city)}</h2>
+      <p>${escapeHtml(city.context)}</p>
+      <ul>
+        ${city.highlights.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}
+      </ul>
+    </section>
+    <section>
+      <h2>Layanan website di ${escapeHtml(city.city)}</h2>
+      <ul>
+        <li>Website UMKM &amp; Toko</li>
+        <li>Company Profile</li>
+        <li>Landing Page</li>
+        <li>Sekolah &amp; Yayasan</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Pertanyaan umum</h2>
+      <dl>
+        <dt>Apakah Nakama Digital melayani pembuatan website di ${escapeHtml(city.city)}?</dt>
+        <dd>Ya. Website dapat dibuat untuk berbagai jenis bisnis dan organisasi yang beroperasi di ${escapeHtml(city.city)}.</dd>
+        <dt>Apakah website bisa terhubung ke WhatsApp?</dt>
+        <dd>Ya. Tombol WhatsApp dapat ditempatkan pada bagian strategis agar calon pelanggan dapat menghubungi bisnis secara langsung.</dd>
+      </dl>
+    </section>
+  </main>
+`;
+
 
 function faqItems(city) {
   return [
@@ -82,6 +125,7 @@ for (const city of cities) {
   let html = baseHtml
     .replace(/<title>.*?<\/title>/i, `<title>${title}</title>`)
     .replace(/<meta name="description"[^>]*>/i, `<meta name="description" content="${description}">`)
+    .replace('<div id="root"></div>', `<div id="root">${staticCityContent(city)}</div>`)
     .replace('</head>', `<meta name="robots" content="index,follow">
 <link rel="canonical" href="${cityUrl}">
 <meta property="og:title" content="${title}">
