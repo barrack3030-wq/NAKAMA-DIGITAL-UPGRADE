@@ -110,7 +110,14 @@ export default function CityLanding() {
       <main>
         <section className="relative overflow-hidden border-b border-slate-100">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,.16),transparent_42%),radial-gradient(circle_at_bottom_left,rgba(96,146,255,.12),transparent_38%)]" />
-          <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 lg:grid-cols-[1.08fr_.92fr] lg:px-8 lg:py-28">
+          <div className="relative mx-auto max-w-6xl px-5 pt-5 lg:px-8">
+            <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-slate-500">
+              <a href="/" className="hover:text-brand-700">Nakama Digital</a>
+              <span aria-hidden="true">/</span>
+              <span className="font-medium text-slate-700">Website {city.city}</span>
+            </nav>
+          </div>
+          <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 py-16 lg:grid-cols-[1.08fr_.92fr] lg:px-8 lg:py-28">
             <div>
               <p className="mb-5 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[.18em] text-brand-600"><MapPin size={15} />{city.eyebrow}</p>
               <h1 className="max-w-3xl text-balance text-4xl font-bold tracking-[-.04em] sm:text-5xl lg:text-6xl">{city.headline}</h1>
@@ -145,6 +152,18 @@ export default function CityLanding() {
               ['Meningkatkan Kepercayaan', 'Tampilkan profil, produk, portofolio, lokasi, dan kontak secara rapi.', Building2],
               ['Langsung ke WhatsApp', 'Permudah calon pelanggan menghubungi bisnis Anda.', MessageCircle],
             ].map(([title, text, Icon]) => <div key={title as string} className="rounded-2xl border border-slate-200 bg-slate-50/70 p-6"><div className="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-brand-100 text-brand-700"><Icon size={21} /></div><h3 className="font-bold">{title as string}</h3><p className="mt-2 text-sm leading-6 text-slate-600">{text as string}</p></div>)}
+          </div>
+
+          <div className="mt-12 rounded-2xl border border-slate-200 bg-slate-50/60 p-7">
+            <p className="text-sm font-semibold uppercase tracking-[.16em] text-brand-600">Konteks bisnis lokal</p>
+            <h2 className="mt-3 text-2xl font-bold tracking-tight">Kebutuhan website yang relevan di {city.city}</h2>
+            <div className="mt-5 grid gap-3 sm:grid-cols-2">
+              {city.localHighlights.map((item) => (
+                <div key={item} className="rounded-xl border border-slate-200 bg-white px-4 py-4 text-sm leading-6 text-slate-700">
+                  {item}
+                </div>
+              ))}
+            </div>
           </div>
 
           <div className="mt-12 grid gap-8 lg:grid-cols-2">
