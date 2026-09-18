@@ -6,7 +6,12 @@
     "headline": "Jasa Pembuatan Website di Luwuk untuk Bisnis yang Ingin Tampil Lebih Profesional",
     "intro": "Bangun website profesional untuk UMKM, jasa, hotel, travel, sekolah, dan perusahaan di Luwuk agar informasi bisnis lebih mudah diakses calon pelanggan.",
     "context": "Untuk bisnis di Luwuk dan wilayah Banggai, website dapat menjadi pusat informasi resmi yang menyatukan profil usaha, layanan, lokasi, portofolio, dan kontak WhatsApp.",
-    "highlights": ["UMKM, toko, dan usaha lokal", "Hotel, homestay, travel, dan pariwisata", "Jasa, perusahaan, dan profesional", "Sekolah, yayasan, dan organisasi"]
+    "highlights": [
+      "UMKM, toko, dan usaha lokal",
+      "Hotel, homestay, travel, dan pariwisata",
+      "Jasa, perusahaan, dan profesional",
+      "Sekolah, yayasan, dan organisasi"
+    ]
   },
   {
     "slug": "sintang",
@@ -15,7 +20,12 @@
     "headline": "Jasa Pembuatan Website di Sintang untuk UMKM, Sekolah, dan Bisnis Lokal",
     "intro": "Buat bisnis dan organisasi di Sintang memiliki website resmi yang rapi, cepat diakses, mobile-friendly, dan siap menjadi pusat informasi online.",
     "context": "Website untuk bisnis di Sintang dapat membantu menyajikan profil, produk, layanan, alamat, portofolio, dan jalur komunikasi dalam satu halaman resmi yang mudah dibagikan.",
-    "highlights": ["UMKM, toko, dan kuliner", "Jasa dan usaha lokal", "Sekolah, madrasah, dan yayasan", "Perusahaan dan organisasi"]
+    "highlights": [
+      "UMKM, toko, dan kuliner",
+      "Jasa dan usaha lokal",
+      "Sekolah, madrasah, dan yayasan",
+      "Perusahaan dan organisasi"
+    ]
   },
   {
     "slug": "surabaya",
@@ -24,6 +34,81 @@
     "headline": "Jasa Pembuatan Website di Surabaya untuk UMKM, Perusahaan, dan Layanan Profesional",
     "intro": "Tampilkan bisnis Anda di Surabaya dengan website profesional yang fokus pada kejelasan layanan, tampilan modern, mobile experience, dan kemudahan calon pelanggan menghubungi Anda.",
     "context": "Untuk pasar Surabaya yang beragam, website dapat disusun sebagai pusat informasi bisnis: menjelaskan layanan, menampilkan portofolio, memperkuat identitas brand, dan mengarahkan pengunjung ke WhatsApp.",
-    "highlights": ["UMKM, toko, dan bisnis kuliner", "Company profile dan jasa profesional", "Properti, developer, dan hospitality", "Sekolah, klinik, dan organisasi"]
+    "highlights": [
+      "UMKM, toko, dan bisnis kuliner",
+      "Company profile dan jasa profesional",
+      "Properti, developer, dan hospitality",
+      "Sekolah, klinik, dan organisasi"
+    ]
+  },
+  {
+    "slug": "manado",
+    "city": "Manado",
+    "region": "Sulawesi Utara",
+    "headline": "Jasa Pembuatan Website di Manado untuk UMKM, Perusahaan, dan Bisnis Lokal",
+    "intro": "Bangun website profesional untuk bisnis di Manado dengan tampilan modern, mobile-friendly, dan struktur informasi yang mudah dipahami calon pelanggan.",
+    "context": "Website dapat menjadi pusat informasi resmi bagi bisnis Manado untuk menampilkan layanan, produk, portofolio, lokasi, dan kontak WhatsApp dalam satu tempat.",
+    "highlights": [
+      "UMKM, toko, dan kuliner",
+      "Hotel, travel, dan hospitality",
+      "Jasa dan perusahaan profesional",
+      "Sekolah, klinik, dan organisasi"
+    ]
+  },
+  {
+    "slug": "gorontalo",
+    "city": "Gorontalo",
+    "region": "Gorontalo",
+    "headline": "Jasa Pembuatan Website di Gorontalo untuk UMKM, Jasa, dan Organisasi",
+    "intro": "Buat bisnis dan organisasi di Gorontalo memiliki website resmi yang profesional, cepat diakses, dan mudah dibagikan kepada calon pelanggan.",
+    "context": "Website untuk bisnis di Gorontalo dapat menyatukan profil usaha, produk, layanan, alamat, portofolio, dan jalur komunikasi dalam satu identitas online.",
+    "highlights": [
+      "UMKM, toko, dan kuliner",
+      "Jasa dan usaha lokal",
+      "Sekolah, yayasan, dan organisasi",
+      "Perusahaan dan profesional"
+    ]
+  },
+  {
+    "slug": "makassar",
+    "city": "Makassar",
+    "region": "Sulawesi Selatan",
+    "headline": "Jasa Pembuatan Website di Makassar untuk Bisnis, UMKM, dan Perusahaan",
+    "intro": "Tampilkan bisnis di Makassar dengan website profesional yang membantu calon pelanggan memahami layanan, melihat portofolio, dan menghubungi bisnis Anda.",
+    "context": "Untuk bisnis di Makassar, website dapat berfungsi sebagai pusat informasi digital yang memperkuat profil brand sekaligus memudahkan komunikasi dengan pelanggan.",
+    "highlights": [
+      "UMKM, toko, dan kuliner",
+      "Company profile dan jasa profesional",
+      "Properti, hospitality, dan travel",
+      "Sekolah, klinik, dan organisasi"
+    ]
+  },
+  {
+    "slug": "palu",
+    "city": "Palu",
+    "region": "Sulawesi Tengah",
+    "headline": "Jasa Pembuatan Website di Palu untuk UMKM, Jasa, dan Perusahaan",
+    "intro": "Miliki website profesional untuk bisnis di Palu agar profil, layanan, produk, lokasi, dan kontak bisnis dapat diakses dengan mudah dari perangkat apa pun.",
+    "context": "Website memberi bisnis di Palu ruang resmi untuk menjelaskan layanan, menampilkan portofolio, membangun kepercayaan, dan mengarahkan calon pelanggan ke WhatsApp.",
+    "highlights": [
+      "UMKM, toko, dan kuliner",
+      "Jasa dan kontraktor",
+      "Perusahaan dan profesional",
+      "Sekolah, yayasan, dan organisasi"
+    ]
+  },
+  {
+    "slug": "kendari",
+    "city": "Kendari",
+    "region": "Sulawesi Tenggara",
+    "headline": "Jasa Pembuatan Website di Kendari untuk UMKM, Perusahaan, dan Layanan Profesional",
+    "intro": "Bangun website profesional untuk bisnis di Kendari dengan struktur yang jelas, tampilan modern, mobile experience yang baik, dan kontak WhatsApp yang mudah ditemukan.",
+    "context": "Website dapat menjadi pusat informasi digital bagi bisnis Kendari untuk menampilkan layanan, produk, portofolio, lokasi, dan identitas usaha secara lebih terstruktur.",
+    "highlights": [
+      "UMKM, toko, dan kuliner",
+      "Jasa dan perusahaan",
+      "Properti, hotel, dan travel",
+      "Sekolah, klinik, dan organisasi"
+    ]
   }
 ]
