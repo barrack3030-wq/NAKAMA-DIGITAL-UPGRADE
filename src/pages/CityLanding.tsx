@@ -136,7 +136,7 @@ export default function CityLanding() {
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[.18em] text-brand-600">Kenapa website?</p>
             <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Bisnis Anda sudah ada. Sekarang beri tempat resminya di internet.</h2>
-            <p className="mt-5 text-lg leading-8 text-slate-600">{city.localContext}</p>
+            <p className="mt-3 text-sm font-medium text-brand-700">{city.locationLabel}</p><p className="mt-4 text-lg leading-8 text-slate-600">{city.localContext}</p>
           </div>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
@@ -145,6 +145,19 @@ export default function CityLanding() {
               ['Meningkatkan Kepercayaan', 'Tampilkan profil, produk, portofolio, lokasi, dan kontak secara rapi.', Building2],
               ['Langsung ke WhatsApp', 'Permudah calon pelanggan menghubungi bisnis Anda.', MessageCircle],
             ].map(([title, text, Icon]) => <div key={title as string} className="rounded-2xl border border-slate-200 bg-slate-50/70 p-6"><div className="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-brand-100 text-brand-700"><Icon size={21} /></div><h3 className="font-bold">{title as string}</h3><p className="mt-2 text-sm leading-6 text-slate-600">{text as string}</p></div>)}
+          </div>
+
+          <div className="mt-12 grid gap-8 lg:grid-cols-2">
+            <article className="rounded-2xl border border-slate-200 bg-white p-7">
+              <p className="text-sm font-semibold uppercase tracking-[.16em] text-brand-600">Intent lokal</p>
+              <h2 className="mt-3 text-2xl font-bold tracking-tight">{city.seoHeading}</h2>
+              <p className="mt-4 leading-7 text-slate-600">{city.seoParagraph}</p>
+            </article>
+            <article className="rounded-2xl border border-slate-200 bg-white p-7">
+              <p className="text-sm font-semibold uppercase tracking-[.16em] text-brand-600">Kebutuhan bisnis</p>
+              <h2 className="mt-3 text-2xl font-bold tracking-tight">{city.seoSecondHeading}</h2>
+              <p className="mt-4 leading-7 text-slate-600">{city.seoSecondParagraph}</p>
+            </article>
           </div>
 
           <div className="mt-10 rounded-2xl border border-slate-200 bg-white p-6">
