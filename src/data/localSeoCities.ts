@@ -18,6 +18,7 @@ export type LocalSeoCity = {
   seoParagraph: string;
   seoSecondHeading: string;
   seoSecondParagraph: string;
+  keywordCoverage: string;
   services: { title: string; description: string; anchor: string }[];
   faqs: { q: string; a: string }[];
 };
@@ -36,6 +37,7 @@ type CityConfig = {
   seoParagraph: string;
   seoSecondHeading: string;
   seoSecondParagraph: string;
+  keywordCoverage: string;
 };
 
 const buildCity = (config: CityConfig): LocalSeoCity => ({
@@ -62,6 +64,7 @@ const buildCity = (config: CityConfig): LocalSeoCity => ({
   seoParagraph: config.seoParagraph,
   seoSecondHeading: config.seoSecondHeading,
   seoSecondParagraph: config.seoSecondParagraph,
+  keywordCoverage: config.keywordCoverage,
   services: [
     { title: 'Website UMKM & Toko', description: 'Produk, katalog, lokasi, dan WhatsApp.', anchor: 'umkm' },
     { title: 'Company Profile', description: 'Profil perusahaan, layanan, dan portofolio.', anchor: 'company-profile' },

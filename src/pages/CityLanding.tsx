@@ -179,6 +179,12 @@ export default function CityLanding() {
             </article>
           </div>
 
+          <div className="mt-12 rounded-2xl border border-brand-100 bg-brand-50/40 p-7">
+            <p className="text-sm font-semibold uppercase tracking-[.16em] text-brand-600">Layanan yang sering dicari</p>
+            <h2 className="mt-3 text-2xl font-bold tracking-tight">Website bisnis sesuai kebutuhan di {city.city}</h2>
+            <p className="mt-4 max-w-4xl leading-7 text-slate-600">{city.keywordCoverage}</p>
+          </div>
+
           <div className="mt-10 rounded-2xl border border-slate-200 bg-white p-6">
             <p className="text-sm font-semibold uppercase tracking-[.16em] text-brand-600">Fokus lokal</p>
             <h3 className="mt-2 text-xl font-bold tracking-tight">Website untuk kebutuhan bisnis dan organisasi di {city.city}</h3>

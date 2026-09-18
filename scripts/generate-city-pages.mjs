@@ -44,6 +44,10 @@ const staticCityContent = (city) => `
       </ul>
     </section>
     <section>
+      <h2>Layanan yang sering dicari di ${escapeHtml(city.city)}</h2>
+      <p>${escapeHtml(city.keywordCoverage)}</p>
+    </section>
+    <section>
       <h2>Layanan website di ${escapeHtml(city.city)}</h2>
       <ul>
         <li>Website UMKM &amp; Toko</li>
