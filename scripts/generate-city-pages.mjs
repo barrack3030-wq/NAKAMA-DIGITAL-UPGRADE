@@ -11,7 +11,7 @@ const source = path.join(dist, 'index.html');
 if (!fs.existsSync(source)) throw new Error('dist/index.html tidak ditemukan setelah vite build.');
 
 const baseHtml = fs.readFileSync(source, 'utf8');
-\nconst escapeHtml = (value) => String(value)
+const escapeHtml = (value) => String(value)
   .replaceAll('&', '&amp;')
   .replaceAll('<', '&lt;')
   .replaceAll('>', '&gt;')
