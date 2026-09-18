@@ -15,6 +15,7 @@ import FAQ from './components/FAQ';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 import Admin from './pages/Admin';
+import { localSeoCities } from './data/localSeoCities';
 import CustomerIntake from './pages/CustomerIntake';
 import CityLanding from './pages/CityLanding';
 
@@ -62,11 +63,7 @@ function PageContent() {
               <p className="mt-4 leading-7 text-slate-600">Lihat halaman layanan lokal untuk memahami kebutuhan website yang kami siapkan bagi bisnis, organisasi, dan profesional di setiap kota.</p>
             </div>
             <div className="mt-8 grid gap-4 md:grid-cols-3">
-              {[
-                { city: 'Luwuk', region: 'Banggai', href: '/luwuk/' },
-                { city: 'Sintang', region: 'Kalimantan Barat', href: '/sintang/' },
-                { city: 'Surabaya', region: 'Jawa Timur', href: '/surabaya/' },
-              ].map((item) => (
+              {Object.values(localSeoCities).map((item) => (
                 <a key={item.city} href={item.href} className="group rounded-2xl border border-slate-200 bg-slate-50/70 p-6 transition hover:-translate-y-1 hover:border-brand-200 hover:bg-white hover:shadow-xl hover:shadow-brand-900/5">
                   <span className="text-sm font-semibold text-brand-600">Website {item.city}</span>
                   <h3 className="mt-2 text-xl font-bold tracking-tight">{item.city}</h3>
