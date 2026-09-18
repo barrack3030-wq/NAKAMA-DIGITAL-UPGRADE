@@ -59,6 +59,10 @@ const staticCityContent = (city) => `
     <section>
       <h2>Pertanyaan umum</h2>
       <dl>
+        <dt>Apakah tersedia jasa web design dan desain website di ${escapeHtml(city.city)}?</dt>
+        <dd>Ya. Kebutuhan desain website dapat disesuaikan dengan jenis bisnis, gaya brand, struktur halaman, dan tujuan website.</dd>
+        <dt>Berapa biaya pembuatan website di ${escapeHtml(city.city)}?</dt>
+        <dd>Biaya disesuaikan dengan jenis website, jumlah halaman, fitur, dan ruang lingkup proyek.</dd>
         <dt>Apakah Nakama Digital melayani pembuatan website di ${escapeHtml(city.city)}?</dt>
         <dd>Ya. Website dapat dibuat untuk berbagai jenis bisnis dan organisasi yang beroperasi di ${escapeHtml(city.city)}.</dd>
         <dt>Apakah website bisa terhubung ke WhatsApp?</dt>
