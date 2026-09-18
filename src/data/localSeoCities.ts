@@ -66,16 +66,18 @@ const buildCity = (config: CityConfig): LocalSeoCity => ({
   seoSecondParagraph: config.seoSecondParagraph,
   keywordCoverage: config.keywordCoverage,
   services: [
-    { title: 'Website UMKM & Toko', description: 'Produk, katalog, lokasi, dan WhatsApp.', anchor: 'umkm' },
-    { title: 'Company Profile', description: 'Profil perusahaan, layanan, dan portofolio.', anchor: 'company-profile' },
-    { title: 'Landing Page', description: 'Fokus promosi satu produk, jasa, atau campaign.', anchor: 'landing-page' },
-    { title: 'Sekolah & Yayasan', description: 'Profil lembaga, program, fasilitas, dan informasi.', anchor: 'sekolah' },
+    { title: 'Website UMKM & Toko', description: 'Website UMKM, toko online, katalog produk, lokasi, dan WhatsApp.', anchor: 'umkm' },
+    { title: 'Company Profile', description: 'Jasa pembuatan website company profile untuk profil, layanan, dan portofolio.', anchor: 'company-profile' },
+    { title: 'Landing Page', description: 'Landing page untuk promosi satu produk, jasa, atau campaign.', anchor: 'landing-page' },
+    { title: 'Sekolah & Yayasan', description: 'Website sekolah dan yayasan untuk profil lembaga, program, fasilitas, dan informasi.', anchor: 'sekolah' },
   ],
   faqs: [
     { q: `Apakah Nakama Digital melayani pembuatan website untuk bisnis di ${config.city}?`, a: `Ya. Website dapat dibuat untuk berbagai jenis bisnis dan organisasi yang beroperasi di ${config.city} dan membutuhkan kehadiran digital profesional.` },
     { q: 'Apakah website bisa terhubung ke WhatsApp?', a: 'Ya. Tombol WhatsApp dapat ditempatkan pada bagian strategis agar calon pelanggan dapat menghubungi bisnis secara langsung.' },
     { q: 'Apakah website bisa muncul di Google?', a: 'Website dapat dibuat dengan struktur teknis dan konten yang SEO-friendly. Namun, posisi tertentu di hasil pencarian Google tidak dapat dijamin karena ranking dipengaruhi banyak faktor.' },
     { q: 'Apakah website bisa dibuka melalui HP?', a: 'Ya. Website dirancang responsive agar nyaman digunakan pada smartphone, tablet, dan desktop.' },
+    { q: `Apakah tersedia jasa web design dan desain website di ${config.city}?`, a: `Ya. Kebutuhan jasa web design dan desain website dapat disesuaikan dengan jenis bisnis, gaya brand, struktur halaman, dan tujuan website di ${config.city}.` },
+    { q: `Berapa biaya pembuatan website di ${config.city}?`, a: `Biaya disesuaikan dengan jenis website, jumlah halaman, fitur, dan ruang lingkup proyek. Konsultasi dapat digunakan untuk menentukan kebutuhan terlebih dahulu.` },
     { q: 'Saya belum tahu website seperti apa yang saya butuhkan. Bagaimana?', a: `Ceritakan jenis bisnis, layanan, dan target pelanggan Anda di ${config.city}. Kami akan membantu menentukan struktur website yang sesuai.` },
   ],
 });
