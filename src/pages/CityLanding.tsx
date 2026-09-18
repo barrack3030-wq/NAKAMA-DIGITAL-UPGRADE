@@ -218,7 +218,7 @@ export default function CityLanding() {
             <div className="mt-5 flex flex-wrap gap-3">
               {['luwuk', 'sintang', 'surabaya'].filter((slug) => slug !== city.slug).map((slug) => {
                 const label = slug.charAt(0).toUpperCase() + slug.slice(1);
-                return <a key={slug} href={\`/${slug}/\`} className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-800 transition hover:border-brand-300 hover:text-brand-700">Website {label} <ArrowRight size={15} /></a>;
+                return <a key={slug} href={`/${slug}/`} className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-800 transition hover:border-brand-300 hover:text-brand-700">Website {label} <ArrowRight size={15} /></a>;
               })}
             </div>
           </div>
