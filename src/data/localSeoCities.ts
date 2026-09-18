@@ -14,6 +14,10 @@ export type LocalSeoCity = {
   localHighlights: string[];
   locationLabel: string;
   serviceFocus: string[];
+  seoHeading: string;
+  seoParagraph: string;
+  seoSecondHeading: string;
+  seoSecondParagraph: string;
   services: { title: string; description: string; anchor: string }[];
   faqs: { q: string; a: string }[];
 };
@@ -28,6 +32,10 @@ type CityConfig = {
   highlights: string[];
   locationLabel: string;
   serviceFocus: string[];
+  seoHeading: string;
+  seoParagraph: string;
+  seoSecondHeading: string;
+  seoSecondParagraph: string;
 };
 
 const buildCity = (config: CityConfig): LocalSeoCity => ({
@@ -50,6 +58,10 @@ const buildCity = (config: CityConfig): LocalSeoCity => ({
   localHighlights: config.highlights,
   locationLabel: config.locationLabel,
   serviceFocus: config.serviceFocus,
+  seoHeading: config.seoHeading,
+  seoParagraph: config.seoParagraph,
+  seoSecondHeading: config.seoSecondHeading,
+  seoSecondParagraph: config.seoSecondParagraph,
   services: [
     { title: 'Website UMKM & Toko', description: 'Produk, katalog, lokasi, dan WhatsApp.', anchor: 'umkm' },
     { title: 'Company Profile', description: 'Profil perusahaan, layanan, dan portofolio.', anchor: 'company-profile' },
