@@ -46,19 +46,8 @@ const staticCityContent = (city) => `
     <section>
       <h2>FAQ ${escapeHtml(city.city)}</h2>
       <dl>
-        <dt>Apakah Nakama Digital melayani pembuatan website untuk bisnis di ${escapeHtml(city.city)}?</dt>
-        <dd>Ya. Website dapat dibuat untuk berbagai jenis bisnis dan organisasi yang beroperasi di ${escapeHtml(city.city)}.</dd>
-        <dt>Apakah tersedia jasa web design dan desain website di ${escapeHtml(city.city)}?</dt>
-        <dd>Ya. Desain dapat disesuaikan dengan jenis bisnis, gaya brand, struktur halaman, dan tujuan website.</dd>
-        <dt>Berapa biaya pembuatan website di ${escapeHtml(city.city)}?</dt>
-        <dd>Biaya disesuaikan dengan jenis website, jumlah halaman, fitur, dan ruang lingkup proyek.</dd>
-        <dt>Apakah website bisa terhubung ke WhatsApp?</dt>
-        <dd>Ya. Tombol WhatsApp dapat ditempatkan pada bagian strategis agar calon pelanggan dapat menghubungi bisnis secara langsung.</dd>
-        <dt>Apakah website bisa muncul di Google?</dt>
-        <dd>Website dapat dibuat dengan struktur teknis dan konten yang SEO-friendly, tetapi posisi tertentu di Google tidak dapat dijamin.</dd>
-        <dt>Apakah website bisa dibuka melalui HP?</dt>
-        <dd>Ya. Website dirancang responsive untuk smartphone, tablet, dan desktop.</dd>
-      </dl>
+        ${city.faqs.map(({ q, a }) => `<dt>${escapeHtml(q)}</dt><dd>${escapeHtml(a)}</dd>`).join("")}
+      </dl>l>
     </section>
   </main>
 `;
@@ -170,6 +159,8 @@ for (const city of cities) {
   let html = baseHtml
     .replace(/<title>.*?<\/title>/i, `<title>${title}</title>`)
     .replace(/<meta name="description"[^>]*>/i, `<meta name="description" content="${description}">`)
+    .replace(/<meta property="og:title"[^>]*>/i, `<meta property="og:title" content="${title}">`)
+    .replace(/<meta property="og:description"[^>]*>/i, `<meta property="og:description" content="${description}">`)
     .replace('<div id="root"></div>', `<div id="root">${staticCityContent(city)}</div>`)
     .replace('</head>', `<meta name="robots" content="index,follow">
 <link rel="canonical" href="${cityUrl}">
