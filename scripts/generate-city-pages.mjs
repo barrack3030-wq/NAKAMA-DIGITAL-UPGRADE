@@ -30,6 +30,10 @@ const staticCityContent = (city) => `
     <section>
       <h2>Website untuk bisnis dan organisasi di ${escapeHtml(city.city)}</h2>
       <p>${escapeHtml(city.context)}</p>
+      <h2>${escapeHtml(city.seoHeading)}</h2>
+      <p>${escapeHtml(city.seoParagraph)}</p>
+      <h2>${escapeHtml(city.seoSecondHeading)}</h2>
+      <p>${escapeHtml(city.seoSecondParagraph)}</p>
       <h3>Kebutuhan bisnis yang relevan</h3>
       <ul>
         ${city.serviceFocus.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}
