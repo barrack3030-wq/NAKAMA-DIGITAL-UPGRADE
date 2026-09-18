@@ -179,33 +179,32 @@ export default function CityLanding() {
               { name: 'Nesto', category: 'Property · Developer', url: 'https://demos.sitepad.com/Nesto/' },
               { name: 'Therapeutic', category: 'Clinic · Doctor · Healthcare', url: 'https://demos.sitepad.com/Therapeutic/' },
             ].map((demo) => (
-              <article key={demo.name} className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
-                <div className="aspect-[16/10] overflow-hidden bg-slate-100">
-                  <iframe
-                    src={demo.url}
-                    title={`${demo.name} website demo`}
+              <a
+                key={demo.name}
+                href={demo.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+              >
+                <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
+                  <img
+                    src={`https://image.thum.io/get/width/1200/crop/750/noanimate/${demo.url}`}
+                    alt={`${demo.name} website demo preview`}
                     loading="lazy"
-                    className="h-full w-full border-0 bg-white"
-                    referrerPolicy="strict-origin-when-cross-origin"
+                    className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-[1.02]"
                   />
-                </div>
-                <div className="flex items-center justify-between gap-4 p-5">
-                  <div>
-                    <h3 className="font-bold tracking-tight">{demo.name}</h3>
-                    <p className="mt-1 text-sm text-slate-500">{demo.category}</p>
+                  <div className="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-slate-950/80 to-transparent px-5 pb-4 pt-10">
+                    <span className="text-xs font-semibold uppercase tracking-[.15em] text-white/85">Live Demo</span>
+                    <span className="rounded-full bg-white px-3 py-1.5 text-xs font-bold text-slate-900">Buka ↗</span>
                   </div>
-                  <a
-                    href={demo.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="shrink-0 rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-brand-300 hover:text-brand-700"
-                  >
-                    Buka Demo
-                  </a>
                 </div>
-              </article>
+                <div className="p-5">
+                  <h3 className="font-bold tracking-tight">{demo.name}</h3>
+                  <p className="mt-1 text-sm text-slate-500">{demo.category}</p>
+                </div>
+              </a>
             ))}
-          </div>
+          </div></div>
         </section>
 
         <section className="bg-slate-950 text-white">
