@@ -64,7 +64,7 @@ function PageContent() {
             </div>
             <div className="mt-8 grid gap-4 md:grid-cols-3">
               {Object.values(localSeoCities).map((item) => (
-                <a key={item.city} href={item.href} className="group rounded-2xl border border-slate-200 bg-slate-50/70 p-6 transition hover:-translate-y-1 hover:border-brand-200 hover:bg-white hover:shadow-xl hover:shadow-brand-900/5">
+                <a key={item.city} href={`/${item.slug}/`} className="group rounded-2xl border border-slate-200 bg-slate-50/70 p-6 transition hover:-translate-y-1 hover:border-brand-200 hover:bg-white hover:shadow-xl hover:shadow-brand-900/5">
                   <span className="text-sm font-semibold text-brand-600">Website {item.city}</span>
                   <h3 className="mt-2 text-xl font-bold tracking-tight">{item.city}</h3>
                   <p className="mt-1 text-sm text-slate-500">{item.region}</p>
