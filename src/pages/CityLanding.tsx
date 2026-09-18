@@ -146,6 +146,14 @@ export default function CityLanding() {
               ['Langsung ke WhatsApp', 'Permudah calon pelanggan menghubungi bisnis Anda.', MessageCircle],
             ].map(([title, text, Icon]) => <div key={title as string} className="rounded-2xl border border-slate-200 bg-slate-50/70 p-6"><div className="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-brand-100 text-brand-700"><Icon size={21} /></div><h3 className="font-bold">{title as string}</h3><p className="mt-2 text-sm leading-6 text-slate-600">{text as string}</p></div>)}
           </div>
+
+          <div className="mt-10 rounded-2xl border border-slate-200 bg-white p-6">
+            <p className="text-sm font-semibold uppercase tracking-[.16em] text-brand-600">Fokus lokal</p>
+            <h3 className="mt-2 text-xl font-bold tracking-tight">Website untuk kebutuhan bisnis dan organisasi di {city.city}</h3>
+            <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              {city.localHighlights.map((item) => <div key={item} className="rounded-xl bg-slate-50 px-4 py-3 text-sm font-medium text-slate-700">{item}</div>)}
+            </div>
+          </div>
         </section>
 
         <section className="bg-slate-50" id="kebutuhan">
@@ -169,6 +177,19 @@ export default function CityLanding() {
 
         <section className="bg-slate-950 text-white">
           <div className="mx-auto max-w-6xl px-5 py-16 lg:px-8"><div className="max-w-2xl"><p className="text-sm font-semibold uppercase tracking-[.18em] text-brand-300">Proses sederhana</p><h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Dari ide sampai website online.</h2></div><div className="mt-10 grid gap-8 md:grid-cols-4">{[['01','Konsultasi','Ceritakan bisnis dan kebutuhan Anda.'],['02','Kami Buat','Struktur dan desain disesuaikan dengan bisnis Anda.'],['03','Review','Anda melihat hasil dan memberikan masukan.'],['04','Online','Website siap digunakan untuk bisnis Anda.']].map(([n,title,text]) => <div key={n}><span className="text-sm font-semibold text-brand-300">{n}</span><h3 className="mt-3 text-xl font-bold">{title}</h3><p className="mt-2 text-sm leading-6 text-slate-400">{text}</p></div>)}</div></div>
+        </section>
+
+        <section className="mx-auto max-w-6xl px-5 py-16 lg:px-8">
+          <div className="rounded-2xl border border-slate-200 bg-slate-50 p-7 sm:p-8">
+            <p className="text-sm font-semibold uppercase tracking-[.18em] text-brand-600">Kota lain</p>
+            <h2 className="mt-3 text-2xl font-bold tracking-tight">Lihat layanan Nakama Digital di kota lain</h2>
+            <div className="mt-5 flex flex-wrap gap-3">
+              {['luwuk', 'sintang', 'surabaya'].filter((slug) => slug !== city.slug).map((slug) => {
+                const label = slug.charAt(0).toUpperCase() + slug.slice(1);
+                return <a key={slug} href={\`/${slug}/\`} className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-800 transition hover:border-brand-300 hover:text-brand-700">Website {label} <ArrowRight size={15} /></a>;
+              })}
+            </div>
+          </div>
         </section>
 
         <section className="mx-auto max-w-4xl px-5 py-16 lg:px-8" id="faq">
