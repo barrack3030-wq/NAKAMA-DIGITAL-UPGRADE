@@ -48,6 +48,7 @@ const buildCity = (city: string, region: string): LocalSeoCity => ({
 export const localSeoCities: Record<string, LocalSeoCity> = {
   luwuk: buildCity('Luwuk', 'Banggai'),
   sintang: buildCity('Sintang', 'Kalimantan Barat'),
+  surabaya: buildCity('Surabaya', 'Jawa Timur'),
 };
 
 export const getLocalSeoCity = (slug: string) => localSeoCities[slug.toLowerCase()];
