@@ -1,0 +1,29 @@
+[
+  {
+    "slug": "luwuk",
+    "city": "Luwuk",
+    "region": "Banggai",
+    "headline": "Jasa Pembuatan Website di Luwuk untuk Bisnis yang Ingin Tampil Lebih Profesional",
+    "intro": "Bangun website profesional untuk UMKM, jasa, hotel, travel, sekolah, dan perusahaan di Luwuk agar informasi bisnis lebih mudah diakses calon pelanggan.",
+    "context": "Untuk bisnis di Luwuk dan wilayah Banggai, website dapat menjadi pusat informasi resmi yang menyatukan profil usaha, layanan, lokasi, portofolio, dan kontak WhatsApp.",
+    "highlights": ["UMKM, toko, dan usaha lokal", "Hotel, homestay, travel, dan pariwisata", "Jasa, perusahaan, dan profesional", "Sekolah, yayasan, dan organisasi"]
+  },
+  {
+    "slug": "sintang",
+    "city": "Sintang",
+    "region": "Kalimantan Barat",
+    "headline": "Jasa Pembuatan Website di Sintang untuk UMKM, Sekolah, dan Bisnis Lokal",
+    "intro": "Buat bisnis dan organisasi di Sintang memiliki website resmi yang rapi, cepat diakses, mobile-friendly, dan siap menjadi pusat informasi online.",
+    "context": "Website untuk bisnis di Sintang dapat membantu menyajikan profil, produk, layanan, alamat, portofolio, dan jalur komunikasi dalam satu halaman resmi yang mudah dibagikan.",
+    "highlights": ["UMKM, toko, dan kuliner", "Jasa dan usaha lokal", "Sekolah, madrasah, dan yayasan", "Perusahaan dan organisasi"]
+  },
+  {
+    "slug": "surabaya",
+    "city": "Surabaya",
+    "region": "Jawa Timur",
+    "headline": "Jasa Pembuatan Website di Surabaya untuk UMKM, Perusahaan, dan Layanan Profesional",
+    "intro": "Tampilkan bisnis Anda di Surabaya dengan website profesional yang fokus pada kejelasan layanan, tampilan modern, mobile experience, dan kemudahan calon pelanggan menghubungi Anda.",
+    "context": "Untuk pasar Surabaya yang beragam, website dapat disusun sebagai pusat informasi bisnis: menjelaskan layanan, menampilkan portofolio, memperkuat identitas brand, dan mengarahkan pengunjung ke WhatsApp.",
+    "highlights": ["UMKM, toko, dan bisnis kuliner", "Company profile dan jasa profesional", "Properti, developer, dan hospitality", "Sekolah, klinik, dan organisasi"]
+  }
+]
