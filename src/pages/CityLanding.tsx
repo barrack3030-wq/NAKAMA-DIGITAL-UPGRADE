@@ -204,7 +204,7 @@ export default function CityLanding() {
                 </div>
               </a>
             ))}
-          </div></div>
+          </div>
         </section>
 
         <section className="bg-slate-950 text-white">
