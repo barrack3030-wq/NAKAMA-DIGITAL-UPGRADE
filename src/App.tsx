@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { LanguageProvider } from './context/LanguageContext';
 
@@ -14,22 +14,22 @@ import Contact from './components/Contact';
 import FAQ from './components/FAQ';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
-import Admin from './pages/Admin';
 import { localSeoCities } from './data/localSeoCities';
-import CustomerIntake from './pages/CustomerIntake';
 import CityLanding from './pages/CityLanding';
 
-import { WorkflowLayout } from './workflow/components/WorkflowLayout';
-import { WorkflowLogin } from './workflow/pages/WorkflowLogin';
-import WorkflowDashboard from './workflow/pages/WorkflowDashboard';
-import { Customers } from './workflow/pages/Customers';
-import { CustomerForm } from './workflow/pages/CustomerForm';
-import { CustomerDetail } from './workflow/pages/CustomerDetail';
-import { Projects } from './workflow/pages/Projects';
-import { ProjectForm } from './workflow/pages/ProjectForm';
-import { ProjectDetail } from './workflow/pages/ProjectDetail';
-import { Tasks } from './workflow/pages/Tasks';
-import { Settings } from './workflow/pages/Settings';
+const Admin = lazy(() => import('./pages/Admin'));
+const CustomerIntake = lazy(() => import('./pages/CustomerIntake'));
+const WorkflowLayout = lazy(() => import('./workflow/components/WorkflowLayout').then((module) => ({ default: module.WorkflowLayout })));
+const WorkflowLogin = lazy(() => import('./workflow/pages/WorkflowLogin').then((module) => ({ default: module.WorkflowLogin })));
+const WorkflowDashboard = lazy(() => import('./workflow/pages/WorkflowDashboard'));
+const Customers = lazy(() => import('./workflow/pages/Customers').then((module) => ({ default: module.Customers })));
+const CustomerForm = lazy(() => import('./workflow/pages/CustomerForm').then((module) => ({ default: module.CustomerForm })));
+const CustomerDetail = lazy(() => import('./workflow/pages/CustomerDetail').then((module) => ({ default: module.CustomerDetail })));
+const Projects = lazy(() => import('./workflow/pages/Projects').then((module) => ({ default: module.Projects })));
+const ProjectForm = lazy(() => import('./workflow/pages/ProjectForm').then((module) => ({ default: module.ProjectForm })));
+const ProjectDetail = lazy(() => import('./workflow/pages/ProjectDetail').then((module) => ({ default: module.ProjectDetail })));
+const Tasks = lazy(() => import('./workflow/pages/Tasks').then((module) => ({ default: module.Tasks })));
+const Settings = lazy(() => import('./workflow/pages/Settings').then((module) => ({ default: module.Settings })));
 
 function PublicPage({ english = false }: { english?: boolean }) {
   return (
@@ -93,21 +93,23 @@ function AppShell() {
       </div>
       <div className="relative z-10 flex flex-col min-h-screen">
         <Routes>
-          <Route path="/workflow/login" element={<WorkflowLogin />} />
-          <Route path="/workflow" element={<WorkflowLayout />}>
-            <Route index element={<WorkflowDashboard />} />
-            <Route path="customers" element={<Customers />} />
-            <Route path="customers/new" element={<CustomerForm />} />
-            <Route path="customers/:id" element={<CustomerDetail />} />
-            <Route path="projects" element={<Projects />} />
-            <Route path="projects/new" element={<ProjectForm />} />
-            <Route path="projects/:id" element={<ProjectDetail />} />
-            <Route path="tasks" element={<Tasks />} />
-            <Route path="settings" element={<Settings />} />
+          <Route element={<Suspense fallback={<div className="min-h-screen bg-white" aria-busy="true" />} />}>
+            <Route path="/workflow/login" element={<WorkflowLogin />} />
+            <Route path="/workflow" element={<WorkflowLayout />}>
+              <Route index element={<WorkflowDashboard />} />
+              <Route path="customers" element={<Customers />} />
+              <Route path="customers/new" element={<CustomerForm />} />
+              <Route path="customers/:id" element={<CustomerDetail />} />
+              <Route path="projects" element={<Projects />} />
+              <Route path="projects/new" element={<ProjectForm />} />
+              <Route path="projects/:id" element={<ProjectDetail />} />
+              <Route path="tasks" element={<Tasks />} />
+              <Route path="settings" element={<Settings />} />
+            </Route>
+            <Route path="/client-intake" element={<CustomerIntake />} />
+            <Route path="/admin" element={<Admin />} />
           </Route>
-          <Route path="/client-intake" element={<CustomerIntake />} />
           <Route path="/en" element={<PublicPage english />} />
-          <Route path="/admin" element={<Admin />} />
           <Route path="/:citySlug" element={<CityLanding />} />
           <Route path="/" element={<PublicPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
