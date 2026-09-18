@@ -151,7 +151,7 @@ export default function CityLanding() {
             <p className="text-sm font-semibold uppercase tracking-[.16em] text-brand-600">Fokus lokal</p>
             <h3 className="mt-2 text-xl font-bold tracking-tight">Website untuk kebutuhan bisnis dan organisasi di {city.city}</h3>
             <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-              {city.localHighlights.map((item) => <div key={item} className="rounded-xl bg-slate-50 px-4 py-3 text-sm font-medium text-slate-700">{item}</div>)}
+              {city.serviceFocus.map((item) => <div key={item} className="rounded-xl bg-slate-50 px-4 py-3 text-sm font-medium text-slate-700">{item}</div>)}
             </div>
           </div>
         </section>
