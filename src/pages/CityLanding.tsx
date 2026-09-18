@@ -172,12 +172,12 @@ export default function CityLanding() {
           <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end"><div className="max-w-2xl"><p className="text-sm font-semibold uppercase tracking-[.18em] text-brand-600">Portfolio</p><h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Pilih tampilan website yang sesuai dengan bisnis Anda</h2><p className="mt-3 leading-7 text-slate-600">Kami menyiapkan beberapa referensi template untuk membantu Anda menentukan arah website. Pilih template yang paling dekat dengan kebutuhan bisnis Anda, lalu kami sesuaikan isi, warna, foto, dan identitas brand Anda.</p></div><a href="/#portfolio" className="inline-flex shrink-0 items-center gap-2 font-semibold text-brand-600">Lihat portfolio lengkap <ArrowRight size={17} /></a></div>
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {[
-              { name: 'LuxeNest', category: 'Interior · Architecture', url: 'https://demos.sitepad.com/LuxeNest/' },
-              { name: 'Mansion', category: 'Property · Hotel · Villa', url: 'https://demos.sitepad.com/Mansion/' },
-              { name: 'Travio', category: 'Travel · Tour Agency', url: 'https://demos.sitepad.com/Travio/' },
-              { name: 'Zentro', category: 'Restaurant · Café', url: 'https://demos.sitepad.com/ZENTRO/' },
-              { name: 'Nesto', category: 'Property · Developer', url: 'https://demos.sitepad.com/Nesto/' },
-              { name: 'Therapeutic', category: 'Clinic · Doctor · Healthcare', url: 'https://demos.sitepad.com/Therapeutic/' },
+              { name: 'LuxeNest', category: 'Interior · Architecture', slug: 'luxenest', url: 'https://demos.sitepad.com/LuxeNest/' },
+              { name: 'Mansion', category: 'Property · Hotel · Villa', slug: 'mansion', url: 'https://demos.sitepad.com/Mansion/' },
+              { name: 'Travio', category: 'Travel · Tour Agency', slug: 'travio', url: 'https://demos.sitepad.com/Travio/' },
+              { name: 'Zentro', category: 'Restaurant · Café', slug: 'zentro', url: 'https://demos.sitepad.com/ZENTRO/' },
+              { name: 'Nesto', category: 'Property · Developer', slug: 'nesto', url: 'https://demos.sitepad.com/Nesto/' },
+              { name: 'Therapeutic', category: 'Clinic · Doctor · Healthcare', slug: 'therapeutic', url: 'https://demos.sitepad.com/Therapeutic/' },
             ].map((demo) => (
               <a
                 key={demo.name}
@@ -188,7 +188,7 @@ export default function CityLanding() {
               >
                 <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
                   <img
-                    src={`https://image.thum.io/get/width/1200/crop/750/noanimate/${demo.url}`}
+                    src={`https://s5.softaculous.com/a/sitepad/files/themes/${demo.slug}/screenshot.jpg`}
                     alt={`${demo.name} website demo preview`}
                     loading="lazy"
                     className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-[1.02]"
