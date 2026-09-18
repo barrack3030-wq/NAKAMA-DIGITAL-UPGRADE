@@ -134,8 +134,8 @@ export default function CityLanding() {
 
         <section className="mx-auto max-w-6xl px-5 py-16 lg:px-8">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[.18em] text-brand-600">Nakama Digital di {city.city}</p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Website untuk bisnis yang melayani pelanggan di {city.city}</h2>
+            <p className="text-sm font-semibold uppercase tracking-[.18em] text-brand-600">Kenapa website?</p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Bisnis Anda sudah ada. Sekarang beri tempat resminya di internet.</h2>
             <p className="mt-5 text-lg leading-8 text-slate-600">{city.localContext}</p>
           </div>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -161,7 +161,7 @@ export default function CityLanding() {
         </section>
 
         <section id="portfolio" className="mx-auto max-w-6xl px-5 py-16 lg:px-8">
-          <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end"><div className="max-w-2xl"><p className="text-sm font-semibold uppercase tracking-[.18em] text-brand-600">Portfolio</p><h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Contoh website untuk berbagai kebutuhan</h2><p className="mt-3 leading-7 text-slate-600">Lihat portfolio Nakama Digital untuk membandingkan pendekatan desain dan kebutuhan bisnis.</p></div><a href="/#portfolio" className="inline-flex shrink-0 items-center gap-2 font-semibold text-brand-600">Lihat portfolio lengkap <ArrowRight size={17} /></a></div>
+          <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end"><div className="max-w-2xl"><p className="text-sm font-semibold uppercase tracking-[.18em] text-brand-600">Portfolio</p><h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Pilih tampilan website yang sesuai dengan bisnis Anda</h2><p className="mt-3 leading-7 text-slate-600">Kami menyiapkan beberapa referensi template untuk membantu Anda menentukan arah website. Pilih template yang paling dekat dengan kebutuhan bisnis Anda, lalu kami sesuaikan isi, warna, foto, dan identitas brand Anda.</p></div><a href="/#portfolio" className="inline-flex shrink-0 items-center gap-2 font-semibold text-brand-600">Lihat portfolio lengkap <ArrowRight size={17} /></a></div>
           <div className="mt-10 grid gap-4 sm:grid-cols-3">
             {['Company Profile', 'UMKM & Toko', 'Landing Page'].map((item) => <a key={item} href="/#portfolio" className="group overflow-hidden rounded-2xl border border-slate-200 bg-slate-50"><div className="flex aspect-[4/3] items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200 p-8"><div className="w-full rounded-xl bg-white p-5 shadow-xl transition group-hover:-translate-y-1"><div className="h-2 w-20 rounded bg-brand-600" /><div className="mt-4 h-3 w-3/4 rounded bg-slate-200" /><div className="mt-2 h-3 w-1/2 rounded bg-slate-100" /><div className="mt-7 grid grid-cols-3 gap-2"><span className="h-12 rounded bg-slate-100" /><span className="h-12 rounded bg-slate-100" /><span className="h-12 rounded bg-slate-100" /></div></div></div><div className="p-5 font-semibold">{item} <span className="float-right text-brand-600">↗</span></div></a>)}
           </div>
