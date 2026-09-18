@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { ArrowRight, Check, ChevronDown, Globe2, MessageCircle, Search, Smartphone, Store, Building2, GraduationCap, BriefcaseBusiness, MapPin } from 'lucide-react';
 import { useParams } from 'react-router-dom';
-import { getLocalSeoCity } from '../data/localSeoCities';
+import { getLocalSeoCity, localSeoCities } from '../data/localSeoCities';
 
 const WHATSAPP_NUMBER = '6285820830530';
 
@@ -216,10 +216,9 @@ export default function CityLanding() {
             <p className="text-sm font-semibold uppercase tracking-[.18em] text-brand-600">Kota lain</p>
             <h2 className="mt-3 text-2xl font-bold tracking-tight">Lihat layanan Nakama Digital di kota lain</h2>
             <div className="mt-5 flex flex-wrap gap-3">
-              {['luwuk', 'sintang', 'surabaya'].filter((slug) => slug !== city.slug).map((slug) => {
-                const label = slug.charAt(0).toUpperCase() + slug.slice(1);
-                return <a key={slug} href={`/${slug}/`} className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-800 transition hover:border-brand-300 hover:text-brand-700">Website {label} <ArrowRight size={15} /></a>;
-              })}
+              {Object.values(localSeoCities).filter((item) => item.slug !== city.slug).map((item) => (
+                <a key={item.slug} href={`/${item.slug}/`} className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-800 transition hover:border-brand-300 hover:text-brand-700">Website {item.city} <ArrowRight size={15} /></a>
+              ))}
             </div>
           </div>
         </section>
