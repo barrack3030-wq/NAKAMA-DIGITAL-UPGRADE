@@ -12,21 +12,21 @@ export const dict = {
       cta: 'Mulai Konsultasi'
     },
     hero: {
-      eyebrow: 'DIGITAL AGENCY • WEBSITE • DESIGN • DEVELOPMENT',
+      eyebrow: 'For businesses that want a clearer presence online',
       title1: 'Jasa pembuatan website untuk\nbisnis & UMKM',
-      titleHighlight: 'yang lebih profesional.',
-      desc: 'Kami membantu bisnis, UMKM, sekolah, travel, dan perusahaan melalui pembuatan website, web design, dan pengembangan website yang rapi, cepat, responsif, dan mudah dipahami calon pelanggan.',
-      cta1: 'Mulai Konsultasi',
-      cta2: 'Lihat Portfolio'
+      titleHighlight: 'yang sesuai dengan cara bisnis Anda berjalan.',
+      desc: 'Kami bantu menyusun tampilan, isi, dan alur website supaya calon pelanggan cepat tahu Anda siapa, menjual apa, dan harus menghubungi ke mana.',
+      cta1: 'Ceritakan Kebutuhan Anda',
+      cta2: 'Lihat Contoh Website'
     },
     stats: [
-      { label: 'Website & Project', value: '100+' },
+      { label: 'Website & proyek', value: '100+' },
       { label: 'Waktu Pengerjaan', value: '3–7 Hari' },
       { label: 'Responsif', value: '100%' },
       { label: 'Fondasi Teknis', value: 'SEO Ready' },
     ],
     services: {
-      title: 'Layanan website untuk kebutuhan bisnis Anda.',
+      title: 'Jenis website yang paling sering dibutuhkan bisnis.',
       items: [
         { title: 'Website Company Profile' },
         { title: 'Website UMKM' },
@@ -39,28 +39,28 @@ export const dict = {
       ]
     },
     experience: {
-      title1: 'Bukan sekadar website.',
-      title2: 'Sebuah pengalaman digital.'
+      title1: 'Website yang langsung menjelaskan bisnis Anda.',
+      title2: 'Tanpa bikin pengunjung menebak-nebak.'
     },
     features: {
-      title1: 'Didesain terlihat premium.',
-      title2: 'Dibuat untuk performa.',
+      title1: 'Yang orang lihat pertama kali.',
+      title2: 'Lalu alasan mereka lanjut.',
       items: [
-        'Desain Premium',
-        'Performa Cepat',
-        'Mobile First',
-        'SEO Ready',
-        'Mudah Dikelola',
-        'Fokus pada Konversi'
+        'Struktur yang jelas',
+        'Cepat dibuka',
+        'Nyaman di mobile',
+        'Mudah ditemukan',
+        'Mudah diperbarui',
+        'Arah CTA yang jelas'
       ]
     },
     portfolio: {
-      title: 'Karya Terpilih',
-      desc: 'Lihat beberapa proyek dan referensi website yang dirancang untuk kebutuhan bisnis yang berbeda.',
+      title: 'Contoh website yang bisa kami sesuaikan',
+      desc: 'Lihat beberapa contoh tampilan. Struktur, warna, isi, dan gaya visualnya bisa disesuaikan dengan bisnis Anda.',
       viewAll: 'Lihat Semua Portfolio'
     },
     process: {
-      title: 'Proses yang disempurnakan.',
+      title: 'Dari kebutuhan bisnis sampai website siap dipakai.',
       items: [
         { id: '01', title: 'Discover', desc: 'Memahami bisnis, tujuan, dan target audiens Anda.' },
         { id: '02', title: 'Design', desc: 'Merancang pengalaman visual yang premium dan berpusat pada pengguna.' },
@@ -69,8 +69,8 @@ export const dict = {
       ]
     },
     contact: {
-      title: 'Mulai proyek Anda.',
-      desc: 'Ceritakan kebutuhan website Anda. Kami akan menghubungi Anda untuk membahas detailnya.',
+      title: 'Ceritakan dulu kebutuhan Anda.',
+      desc: 'Tidak perlu sudah tahu semua detail. Ceritakan bisnis dan kebutuhan Anda, lalu kita susun arah websitenya.',
       name: 'Nama',
       whatsapp: 'Nomor WhatsApp',
       business: 'Nama Bisnis',
@@ -83,7 +83,7 @@ export const dict = {
       budgetOptions: ['Di bawah Rp2 juta', 'Rp2–5 juta', 'Rp5–10 juta', 'Di atas Rp10 juta', 'Belum tahu']
     },
     faq: {
-      title: 'Pertanyaan Umum (FAQ)',
+      title: 'Sebelum mulai, ini yang sering ditanyakan',
       items: [
         { q: 'Berapa lama website dibuat?', a: 'Waktu pengerjaan bervariasi tergantung kompleksitas. Umumnya memakan waktu 3–7 hari kerja untuk website standar, dan 2-4 minggu untuk website custom.' },
         { q: 'Apakah bisa menggunakan domain sendiri?', a: 'Tentu. Anda bisa menggunakan domain yang sudah ada, atau kami bisa membantu mendaftarkan domain baru untuk Anda.' },
@@ -94,13 +94,13 @@ export const dict = {
       ]
     },
     cta: {
-      title1: 'Website Anda berikutnya',
-      title2: 'harus menjadi yang terbaik.',
-      desc: 'Bangun kehadiran digital yang terlihat profesional dan membuat bisnis lebih mudah dipercaya.',
-      btn: 'Mulai Konsultasi'
+      title1: 'Punya rencana bikin website?',
+      title2: 'Kita mulai dari kebutuhan bisnisnya.',
+      desc: 'Tidak harus sudah punya brief. Ceritakan bisnis Anda di WhatsApp, kami bantu menentukan langkah berikutnya.',
+      btn: 'Konsultasi via WhatsApp'
     },
     footer: {
-      desc: 'Nakama Digital membantu bisnis membangun website profesional, dari company profile dan UMKM hingga landing page, sekolah, travel, dan website custom.',
+      desc: 'Kami membantu bisnis, UMKM, sekolah, travel, dan organisasi tampil lebih jelas di internet lewat website yang rapi, cepat, dan mudah digunakan.',
       nav: 'Navigasi',
       contact: 'Kontak',
       privacy: 'Kebijakan Privasi',
@@ -118,21 +118,21 @@ export const dict = {
       cta: 'Start Consultation'
     },
     hero: {
-      eyebrow: 'DIGITAL AGENCY • WEBSITE • DESIGN • DEVELOPMENT',
-      title1: 'Websites that make\nyour business look',
-      titleHighlight: 'more professional.',
-      desc: 'We design modern, fast, and professional websites that help businesses build trust and get more customers.',
-      cta1: 'Start Consultation',
-      cta2: 'View Portfolio'
+      eyebrow: 'For businesses that want a clearer presence online',
+      title1: 'Websites that make\nyour business easier to understand',
+      titleHighlight: 'and easier to trust.',
+      desc: 'We shape the design, content, and flow so visitors quickly understand what you do, what you offer, and how to contact you.',
+      cta1: 'Tell Us What You Need',
+      cta2: 'See Website Examples'
     },
     stats: [
-      { label: 'Websites & Projects', value: '100+' },
+      { label: 'Websites & projects', value: '100+' },
       { label: 'Typical Delivery', value: '3–7 Days' },
       { label: 'Responsive', value: '100%' },
       { label: 'Technical Foundation', value: 'SEO Ready' },
     ],
     services: {
-      title: 'Everything your business needs to grow online.',
+      title: 'Website types businesses most often need.',
       items: [
         { title: 'Company Profile Website' },
         { title: 'SME Website' },
@@ -145,28 +145,28 @@ export const dict = {
       ]
     },
     experience: {
-      title1: 'Not just a website.',
-      title2: 'A digital experience.'
+      title1: 'A website that explains your business clearly.',
+      title2: 'Without making visitors guess.'
     },
     features: {
-      title1: 'Designed to look premium.',
-      title2: 'Built to perform.',
+      title1: 'What people notice first.',
+      title2: 'Then what makes them stay.',
       items: [
-        'Premium Design',
-        'Fast Performance',
-        'Mobile First',
-        'SEO Ready',
-        'Easy to Manage',
-        'Conversion Focused'
+        'Clear structure',
+        'Fast loading',
+        'Comfortable on mobile',
+        'Easy to find',
+        'Easy to update',
+        'Clear calls to action'
       ]
     },
     portfolio: {
-      title: 'Selected Work',
-      desc: 'A glimpse into our premium digital experiences crafted for businesses across industries.',
+      title: 'Website examples we can adapt',
+      desc: 'See a few examples of different website styles. Structure, colors, content, and visual direction can be adapted to your business.',
       viewAll: 'View All Portfolio'
     },
     process: {
-      title: 'A refined process.',
+      title: 'From business needs to a website ready to use.',
       items: [
         { id: '01', title: 'Discover', desc: 'Understanding your business, goals, and target audience.' },
         { id: '02', title: 'Design', desc: 'Crafting premium, user-centric visual experiences.' },
@@ -175,8 +175,8 @@ export const dict = {
       ]
     },
     contact: {
-      title: 'Start your project.',
-      desc: 'Tell us about your website needs. We will contact you to discuss the details.',
+      title: 'Tell us what you need first.',
+      desc: 'You do not need to have every detail figured out. Tell us about your business and goals, and we will help shape the website direction.',
       name: 'Name',
       whatsapp: 'WhatsApp Number',
       business: 'Business Name',
@@ -189,7 +189,7 @@ export const dict = {
       budgetOptions: ['Under Rp2 million', 'Rp2–5 million', 'Rp5–10 million', 'Above Rp10 million', 'Not sure yet']
     },
     faq: {
-      title: 'Frequently Asked Questions',
+      title: 'Before we start, here are common questions',
       items: [
         { q: 'How long does it take to build a website?', a: 'Development time varies depending on complexity. It generally takes 3–7 working days for a standard website, and 2-4 weeks for custom websites.' },
         { q: 'Can I use my own domain?', a: 'Certainly. You can use an existing domain, or we can help register a new domain for you.' },
@@ -200,13 +200,13 @@ export const dict = {
       ]
     },
     cta: {
-      title1: 'Your next website',
-      title2: 'should be your best one.',
-      desc: 'Build a digital presence that looks professional and makes your business more trustworthy.',
-      btn: 'Start Consultation'
+      title1: 'Planning a new website?',
+      title2: 'Let’s start with what your business needs.',
+      desc: 'You do not need a finished brief. Tell us about your business on WhatsApp and we will help define the next step.',
+      btn: 'Talk on WhatsApp'
     },
     footer: {
-      desc: 'Premium digital agency specializing in professional website design and development.',
+      desc: 'We help businesses, SMEs, schools, travel companies, and organizations build clear, practical websites.',
       nav: 'Navigation',
       contact: 'Contact',
       privacy: 'Privacy Policy',
