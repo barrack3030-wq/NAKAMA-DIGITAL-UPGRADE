@@ -10,7 +10,7 @@ export default function Hero() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative pt-28 pb-8 lg:pt-36 lg:pb-12 overflow-hidden">
+    <section className="relative pt-24 pb-6 lg:pt-28 lg:pb-8 overflow-hidden">
       {/* Diffused electric-blue light */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-500/15 blur-[120px] rounded-full pointer-events-none -z-10" />
       
@@ -73,7 +73,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
           style={{ y, opacity }}
-          className="mt-12 md:mt-16 relative max-w-5xl mx-auto"
+          className="mt-8 md:mt-12 relative max-w-5xl mx-auto"
         >
           {/* Subtle blue glow behind device */}
           <div className="absolute inset-0 bg-brand-400/30 blur-[100px] rounded-full" />
