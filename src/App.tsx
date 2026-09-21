@@ -4,17 +4,7 @@ import { LanguageProvider, useLanguage } from './context/LanguageContext';
 
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Stats from './components/Stats';
-import Services from './components/Services';
-import ProductExperience from './components/ProductExperience';
-import Features from './components/Features';
-import Portfolio from './components/Portfolio';
-import Process from './components/Process';
-import Contact from './components/Contact';
-import FAQ from './components/FAQ';
-import CTA from './components/CTA';
 import Footer from './components/Footer';
-import { localSeoCities } from './data/localSeoCities';
 import CityLanding from './pages/CityLanding';
 import ServiceLanding from './pages/ServiceLanding';
 import BlogIndex from './pages/BlogIndex';
@@ -34,7 +24,7 @@ const ProjectDetail = lazy(() => import('./workflow/pages/ProjectDetail').then((
 const Tasks = lazy(() => import('./workflow/pages/Tasks').then((module) => ({ default: module.Tasks })));
 const Settings = lazy(() => import('./workflow/pages/Settings').then((module) => ({ default: module.Settings })));
 
-function PublicPage({ english = false }: { english?: boolean }) {
+function PublicPage() {
   return (
     <LanguageProvider>
       <PageContent />
