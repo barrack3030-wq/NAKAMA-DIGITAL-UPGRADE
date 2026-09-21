@@ -17,6 +17,8 @@ import Footer from './components/Footer';
 import { localSeoCities } from './data/localSeoCities';
 import CityLanding from './pages/CityLanding';
 import ServiceLanding from './pages/ServiceLanding';
+import BlogIndex from './pages/BlogIndex';
+import BlogArticle from './pages/BlogArticle';
 
 const Admin = lazy(() => import('./pages/Admin'));
 const CustomerIntake = lazy(() => import('./pages/CustomerIntake'));
@@ -137,6 +139,29 @@ function PageContent() {
         <FAQ />
         <CTA />
 
+        <section id="blog" className="border-t border-slate-100 bg-white">
+          <div className="mx-auto max-w-6xl px-5 py-14 lg:px-8">
+            <div className="max-w-2xl">
+              <p className="text-sm font-semibold uppercase tracking-[.18em] text-brand-600">Panduan website</p>
+              <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Panduan memilih dan membuat website</h2>
+              <p className="mt-4 leading-7 text-slate-600">Baca panduan praktis sebelum menentukan jenis website, struktur halaman, dan kebutuhan proyek bisnis Anda.</p>
+            </div>
+            <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {[
+                { slug: 'berapa-biaya-membuat-website-untuk-bisnis', title: 'Berapa biaya membuat website untuk bisnis?' },
+                { slug: 'website-umkm-perlu-apa-saja', title: 'Website UMKM perlu apa saja?' },
+                { slug: 'company-profile-vs-landing-page', title: 'Company profile vs landing page' },
+              ].map((post) => (
+                <a key={post.slug} href={`/blog/${post.slug}/`} className="group rounded-2xl border border-slate-200 bg-white p-6 transition hover:-translate-y-1 hover:border-brand-200 hover:shadow-lg">
+                  <h3 className="text-xl font-bold tracking-tight">{post.title}</h3>
+                  <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-600">Baca panduan <span aria-hidden="true" className="transition group-hover:translate-x-1">→</span></span>
+                </a>
+              ))}
+            </div>
+            <a href="/blog/" className="mt-7 inline-flex items-center gap-2 font-semibold text-brand-700">Lihat semua panduan <span aria-hidden="true">→</span></a>
+          </div>
+        </section>
+
         <section className="border-t border-slate-100 bg-white">
           <div className="mx-auto max-w-6xl px-5 py-14 lg:px-8">
             <div className="max-w-2xl">
@@ -197,6 +222,8 @@ function AppShell() {
           <Route path="/landing-page/" element={<ServiceLanding />} />
           <Route path="/website-sekolah/" element={<ServiceLanding />} />
           <Route path="/website-travel/" element={<ServiceLanding />} />
+          <Route path="/blog/" element={<BlogIndex />} />
+          <Route path="/blog/:slug/" element={<BlogArticle />} />
           <Route path="/:citySlug" element={<CityLanding />} />
           <Route path="/" element={<PublicPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
