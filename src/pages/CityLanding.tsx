@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { ArrowRight, Check, ChevronDown, Globe2, MessageCircle, Search, Smartphone, Store, Building2, GraduationCap, BriefcaseBusiness, MapPin } from 'lucide-react';
 import { useParams } from 'react-router-dom';
 import { getLocalSeoCity, localSeoCities } from '../data/localSeoCities';
+import Footer from '../components/Footer';
 
 const WHATSAPP_NUMBER = '6285820830530';
 
@@ -246,6 +247,7 @@ export default function CityLanding() {
       </main>
 
       <footer className="border-t border-slate-200 bg-white"><div className="mx-auto flex max-w-6xl flex-col gap-3 px-5 py-8 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between lg:px-8"><span>© {new Date().getFullYear()} Nakama Digital · {city.city}</span><a href="/" className="font-medium text-slate-700 hover:text-brand-600">Kembali ke website utama</a></div></footer>
+      <Footer />
     </div>
   );
 }
