@@ -14,7 +14,6 @@ import Contact from './components/Contact';
 import FAQ from './components/FAQ';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
-import { localSeoCities } from './data/localSeoCities';
 import CityLanding from './pages/CityLanding';
 import ServiceLanding from './pages/ServiceLanding';
 import BlogIndex from './pages/BlogIndex';
@@ -139,48 +138,6 @@ function PageContent() {
         <FAQ />
         <CTA />
 
-        <section id="blog" className="border-t border-slate-100 bg-white">
-          <div className="mx-auto max-w-6xl px-5 py-14 lg:px-8">
-            <div className="max-w-2xl">
-              <p className="text-sm font-semibold uppercase tracking-[.18em] text-brand-600">Panduan website</p>
-              <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Panduan memilih dan membuat website</h2>
-              <p className="mt-4 leading-7 text-slate-600">Baca panduan praktis sebelum menentukan jenis website, struktur halaman, dan kebutuhan proyek bisnis Anda.</p>
-            </div>
-            <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              {[
-                { slug: 'berapa-biaya-membuat-website-untuk-bisnis', title: 'Berapa biaya membuat website untuk bisnis?' },
-                { slug: 'website-umkm-perlu-apa-saja', title: 'Website UMKM perlu apa saja?' },
-                { slug: 'company-profile-vs-landing-page', title: 'Company profile vs landing page' },
-              ].map((post) => (
-                <a key={post.slug} href={`/blog/${post.slug}/`} className="group rounded-2xl border border-slate-200 bg-white p-6 transition hover:-translate-y-1 hover:border-brand-200 hover:shadow-lg">
-                  <h3 className="text-xl font-bold tracking-tight">{post.title}</h3>
-                  <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-600">Baca panduan <span aria-hidden="true" className="transition group-hover:translate-x-1">→</span></span>
-                </a>
-              ))}
-            </div>
-            <a href="/blog/" className="mt-7 inline-flex items-center gap-2 font-semibold text-brand-700">Lihat semua panduan <span aria-hidden="true">→</span></a>
-          </div>
-        </section>
-
-        <section className="border-t border-slate-100 bg-white">
-          <div className="mx-auto max-w-6xl px-5 py-14 lg:px-8">
-            <div className="max-w-2xl">
-              <p className="text-sm font-semibold uppercase tracking-[.18em] text-brand-600">Area layanan</p>
-              <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Jasa website Nakama Digital berdasarkan kota</h2>
-              <p className="mt-4 leading-7 text-slate-600">Lihat halaman layanan lokal untuk memahami kebutuhan website yang kami siapkan bagi bisnis, organisasi, dan profesional di setiap kota.</p>
-            </div>
-            <div className="mt-8 grid gap-4 md:grid-cols-3">
-              {Object.values(localSeoCities).map((item) => (
-                <a key={item.city} href={`/${item.slug}/`} className="group rounded-2xl border border-slate-200 bg-slate-50/70 p-6 transition hover:-translate-y-1 hover:border-brand-200 hover:bg-white hover:shadow-xl hover:shadow-brand-900/5">
-                  <span className="text-sm font-semibold text-brand-600">Website {item.city}</span>
-                  <h3 className="mt-2 text-xl font-bold tracking-tight">{item.city}</h3>
-                  <p className="mt-1 text-sm text-slate-500">{item.region}</p>
-                  <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-600">Lihat layanan <span aria-hidden="true" className="transition group-hover:translate-x-1">→</span></span>
-                </a>
-              ))}
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
       <a href="https://wa.me/6285820830530?text=Halo%20Nakama%20Digital,%20saya%20ingin%20konsultasi%20website." target="_blank" rel="noopener noreferrer" className="md:hidden fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full shadow-xl flex items-center justify-center z-50" aria-label="Chat on WhatsApp">
