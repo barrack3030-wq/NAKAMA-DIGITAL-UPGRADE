@@ -116,7 +116,7 @@ export default function BlogArticle() {
     <div className="bg-white text-brand-900">
       <header className="border-b border-slate-200 bg-white">
         <div className="mx-auto flex max-w-4xl items-center justify-between px-5 py-5 lg:px-8">
-          <a href="/" className="inline-flex items-center" aria-label="Nakama Digital"><img src="/images/logo/logo-web.png" alt="Nakama Digital" className="h-9 w-auto object-contain" /></a>
+          <a href="/" className="inline-flex items-center" aria-label="Nakama Digital"><img src="/images/logo/logo.png" alt="Nakama Digital" className="h-9 w-auto object-contain" /></a>
           <a href={whatsapp} target="_blank" rel="noopener noreferrer" className="rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white">Konsultasi</a>
         </div>
       </header>
