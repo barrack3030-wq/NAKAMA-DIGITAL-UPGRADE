@@ -97,6 +97,8 @@ const localizedMeta = (html, locale, title, description, canonical) => html
   .replace(/<html lang="[^"]*"/i, '<html lang="' + locale + '"')
   .replace(/<title>.*?<\/title>/i, '<title>' + escapeHtml(title) + '</title>')
   .replace(/<meta name="description"[^>]*>/i, '<meta name="description" content="' + escapeHtml(description) + '">')
+  .replace(/<meta name="robots"[^>]*>/i, '<meta name="robots" content="index,follow">')
+  .replace(/<link rel="canonical"[^>]*>/i, '<link rel="canonical" href="' + canonical + '">')
   .replace(/<meta property="og:title"[^>]*>/i, '<meta property="og:title" content="' + escapeHtml(title) + '">')
   .replace(/<meta property="og:description"[^>]*>/i, '<meta property="og:description" content="' + escapeHtml(description) + '">')
   .replace(/<meta property="og:url"[^>]*>/i, '<meta property="og:url" content="' + canonical + '">')
