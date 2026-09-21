@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Hero() {
@@ -15,15 +15,16 @@ export default function Hero() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-500/15 blur-[120px] rounded-full pointer-events-none -z-10" />
       
       <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center relative z-10">
-        <motion.div
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50/80 backdrop-blur-md border border-brand-100/50 text-brand-600 text-xs font-semibold tracking-wide uppercase mb-8 shadow-sm"
+          className="flex items-center justify-center gap-3 text-xs font-semibold tracking-[.16em] text-brand-600 uppercase mb-8"
         >
-          <Sparkles className="w-3 h-3" />
+          <span className="h-px w-8 bg-brand-300" />
           <span>{t.hero.eyebrow}</span>
-        </motion.div>
+          <span className="h-px w-8 bg-brand-300" />
+        </motion.p>
 
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
