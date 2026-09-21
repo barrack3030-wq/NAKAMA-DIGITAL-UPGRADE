@@ -1,12 +1,14 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import Navbar from '../components/Navbar';
+import { LanguageProvider } from '../context/LanguageContext';
 import Footer from '../components/Footer';
 import { blogSeoPosts } from '../data/blogSeoPosts';
 
 export default function BlogIndex() {
   return (
-    <div className="min-h-screen bg-[#FDFDFF] text-brand-900">
+    <LanguageProvider>
+      <div className="min-h-screen bg-[#FDFDFF] text-brand-900">
       <Navbar />
       <main className="relative overflow-hidden pt-28">
         <div className="absolute inset-x-0 top-0 h-[420px] bg-brand-50/70 pointer-events-none" />
@@ -42,6 +44,7 @@ export default function BlogIndex() {
         </div>
       </main>
       <Footer />
-    </div>
+      </div>
+    </LanguageProvider>
   );
 }
