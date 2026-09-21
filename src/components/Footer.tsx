@@ -23,7 +23,7 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-2 gap-8 md:gap-16">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
             <div>
               <h4 className="font-semibold text-brand-900 mb-4 text-sm uppercase tracking-wider">{t.footer.nav}</h4>
               <ul className="space-y-3">
@@ -32,6 +32,22 @@ export default function Footer() {
                     <a href={`#${item.toLowerCase()}`} className="text-sm text-gray-500 hover:text-brand-600 transition-colors">
                       {item}
                     </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold text-brand-900 mb-4 text-sm uppercase tracking-wider">Layanan</h4>
+              <ul className="space-y-3">
+                {[
+                  ['Website Company Profile', '/website-company-profile/'],
+                  ['Website UMKM', '/website-umkm/'],
+                  ['Landing Page', '/landing-page/'],
+                  ['Website Sekolah', '/website-sekolah/'],
+                  ['Website Travel', '/website-travel/'],
+                ].map(([label, href]) => (
+                  <li key={href}>
+                    <a href={href} className="text-sm text-gray-500 hover:text-brand-600 transition-colors">{label}</a>
                   </li>
                 ))}
               </ul>
