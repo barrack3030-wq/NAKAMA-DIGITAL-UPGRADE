@@ -123,15 +123,15 @@ for (const service of services) {
 
   const html = baseHtml
     .replace(/<html lang="[^"]*"/i, '<html lang="id"')
-    .replace(/<title>.*?<\/title>/i, `<title>${service.title}</title>`)
+    .replace(/<title>.*?<\/title>/i, `<title>${escapeHtml(service.title)}</title>`)
     .replace(/<meta name="description"[^>]*>/i, `<meta name="description" content="${escapeHtml(service.description)}">`)
+    .replace(/<meta name="robots"[^>]*>/i, '<meta name="robots" content="index,follow">')
+    .replace(/<link rel="canonical"[^>]*>/i, `<link rel="canonical" href="${serviceUrl}">`)
     .replace(/<meta property="og:title"[^>]*>/i, `<meta property="og:title" content="${escapeHtml(service.title)}">`)
     .replace(/<meta property="og:description"[^>]*>/i, `<meta property="og:description" content="${escapeHtml(service.description)}">`)
+    .replace(/<meta property="og:url"[^>]*>/i, `<meta property="og:url" content="${serviceUrl}">`)
     .replace('<div id="root"></div>', `<div id="root">${staticServiceContent(service)}</div>`)
-    .replace('</head>', `<meta name="robots" content="index,follow">
-<link rel="canonical" href="${serviceUrl}">
-<meta property="og:type" content="website">
-<meta property="og:url" content="${serviceUrl}">
+    .replace('</head>', `<meta property="og:type" content="website">
 <script type="application/ld+json">${JSON.stringify(serviceSchema)}</script>
 <script type="application/ld+json">${JSON.stringify(webpageSchema)}</script>
 <script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>
