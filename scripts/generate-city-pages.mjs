@@ -4,8 +4,10 @@ import path from 'node:path';
 const root = process.cwd();
 const dist = path.join(root, 'dist');
 const configPath = path.join(root, 'src', 'data', 'localSeoCities.json');
+const serviceConfigPath = path.join(root, 'src', 'data', 'serviceSeoPages.json');
 
 const cities = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+const services = JSON.parse(fs.readFileSync(serviceConfigPath, 'utf8'));
 
 const source = path.join(dist, 'index.html');
 if (!fs.existsSync(source)) throw new Error('dist/index.html tidak ditemukan setelah vite build.');
@@ -37,10 +39,7 @@ const staticCityContent = (city) => `
       <h2>Layanan website di ${escapeHtml(city.city)}</h2>
       <p>Butuh jasa website ${escapeHtml(city.city)}, jasa web design, atau jasa desain website? Struktur dan fitur dapat disesuaikan dengan kebutuhan bisnis.</p>
       <ul>
-        <li>Website UMKM &amp; Toko</li>
-        <li>Company Profile</li>
-        <li>Landing Page</li>
-        <li>Sekolah &amp; Yayasan</li>
+        ${services.map((service) => `<li><a href="/${escapeHtml(service.slug)}/">${escapeHtml(service.title)}</a></li>`).join('')}
       </ul>
     </section>
     <section>
