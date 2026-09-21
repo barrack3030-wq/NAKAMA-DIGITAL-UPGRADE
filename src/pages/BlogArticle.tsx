@@ -3,6 +3,7 @@ import Footer from '../components/Footer';
 import { ArrowRight, ChevronDown, MessageCircle } from 'lucide-react';
 import { useParams } from 'react-router-dom';
 import { getBlogSeoPost } from '../data/blogSeoPosts';
+import { LanguageProvider } from '../context/LanguageContext';
 
 const WHATSAPP = '6285820830530';
 
@@ -113,7 +114,8 @@ export default function BlogArticle() {
   const whatsapp = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(`Halo Nakama Digital, saya ingin konsultasi website setelah membaca artikel: ${post.headline}.`)}`;
 
   return (
-    <div className="bg-white text-brand-900">
+    <LanguageProvider>
+      <div className="bg-white text-brand-900">
       <header className="border-b border-slate-200 bg-white">
         <div className="mx-auto flex max-w-4xl items-center justify-between px-5 py-5 lg:px-8">
           <a href="/" className="inline-flex items-center" aria-label="Nakama Digital"><img src="/images/logo/logo.png" alt="Nakama Digital" className="h-9 w-auto object-contain" /></a>
@@ -180,6 +182,7 @@ export default function BlogArticle() {
       </main>
 
       <Footer />
-    </div>
+      </div>
+    </LanguageProvider>
   );
 }
