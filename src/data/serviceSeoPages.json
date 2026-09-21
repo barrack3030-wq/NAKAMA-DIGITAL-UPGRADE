@@ -45,7 +45,8 @@
         "q": "Berapa biaya website company profile?",
         "a": "Biaya bergantung pada jumlah halaman, fitur, desain, dan ruang lingkup proyek. Kebutuhan dapat dibahas sebelum pembuatan dimulai."
       }
-    ]
+    ],
+    "seoCoverage": "Kebutuhan dapat mencakup jasa web design untuk perusahaan, pembuatan website profil perusahaan, website organisasi, website yayasan, dan website koperasi. Struktur halaman disusun untuk membantu pengunjung memahami profil, layanan, portofolio, dan kontak bisnis."
   },
   {
     "slug": "website-umkm",
@@ -93,7 +94,8 @@
         "q": "Berapa biaya website UMKM?",
         "a": "Biaya disesuaikan dengan jumlah halaman, kebutuhan katalog, fitur, desain, dan ruang lingkup proyek."
       }
-    ]
+    ],
+    "seoCoverage": "Untuk UMKM, kebutuhan website dapat mencakup website bisnis lokal, katalog produk, website toko, halaman layanan, lokasi usaha, dan tombol WhatsApp. Desain dan struktur dibuat agar pelanggan mudah melihat informasi penting tanpa harus membuka banyak kanal."
   },
   {
     "slug": "landing-page",
@@ -141,7 +143,8 @@
         "q": "Berapa biaya landing page?",
         "a": "Biaya bergantung pada struktur halaman, desain, integrasi, dan kebutuhan konten."
       }
-    ]
+    ],
+    "seoCoverage": "Landing page dapat digunakan untuk promosi produk atau jasa, campaign, iklan digital, event, dan penawaran tertentu. Fokus halaman adalah menyampaikan manfaat dengan cepat dan mengarahkan pengunjung ke satu tindakan yang jelas."
   },
   {
     "slug": "website-sekolah",
@@ -189,7 +192,8 @@
         "q": "Berapa biaya website sekolah?",
         "a": "Biaya bergantung pada jumlah halaman, kebutuhan berita atau konten, fitur, desain, dan ruang lingkup proyek."
       }
-    ]
+    ],
+    "seoCoverage": "Kebutuhan dapat mencakup website sekolah, website madrasah, website yayasan pendidikan, informasi PPDB, program sekolah, fasilitas, berita, dan kontak. Struktur halaman disusun berdasarkan informasi yang memang dibutuhkan siswa dan orang tua."
   },
   {
     "slug": "website-travel",
@@ -237,6 +241,7 @@
         "q": "Berapa biaya website travel?",
         "a": "Biaya disesuaikan dengan jumlah paket, halaman, galeri, fitur, desain, dan ruang lingkup proyek."
       }
-    ]
+    ],
+    "seoCoverage": "Website travel dapat digunakan untuk agen perjalanan, tour operator, private trip, dan bisnis pariwisata lokal. Informasi paket, destinasi, itinerary, durasi, fasilitas, galeri, dan kontak reservasi dapat ditempatkan dalam struktur yang mudah dipahami."
   }
 ]
