@@ -47,6 +47,14 @@ const staticServiceContent = (service) => `
       <ul>${service.benefits.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
     </section>
     <section>
+      <h2>Layanan website lainnya</h2>
+      <p>Kebutuhan website bisa berkembang. Lihat layanan lain yang mungkin relevan dengan bisnis atau organisasi Anda.</p>
+      <ul>
+        ${services.filter((item) => item.slug !== service.slug).map((item) => `<li><a href="/${escapeHtml(item.slug)}/">${escapeHtml(item.title)}</a></li>`).join('')}
+      </ul>
+    </section>
+
+    <section>
       <h2>Area layanan</h2>
       <ul>
         ${cities.map((city) => `<li><a href="/${escapeHtml(city.slug)}/">Website ${escapeHtml(city.city)}</a></li>`).join('')}
