@@ -248,6 +248,7 @@ export default function ServiceLanding() {
                 { slug: 'landing-page', title: 'Landing Page' },
                 { slug: 'website-sekolah', title: 'Website Sekolah' },
                 { slug: 'website-travel', title: 'Website Travel' },
+                { slug: 'website-toko-online', title: 'Toko Online' },
               ].filter((item) => item.slug !== service.slug).map((item) => (
                 <a key={item.slug} href={`/${item.slug}/`} className="rounded-2xl border border-slate-200 bg-white p-5 transition hover:-translate-y-1 hover:border-brand-200 hover:shadow-lg">
                   <h3 className="font-bold">{item.title}</h3>
