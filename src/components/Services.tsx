@@ -16,14 +16,14 @@ const serviceLinks = [
 ];
 
 const serviceImages = [
-  'https://googleusercontent.com/image_collection/image_retrieval/3523246122229302131',
-  'https://googleusercontent.com/image_collection/image_retrieval/3093959644445808768',
-  null,
-  'https://googleusercontent.com/image_collection/image_retrieval/15610234606796284367',
-  'https://googleusercontent.com/image_collection/image_retrieval/6987060406260346344',
-  'https://googleusercontent.com/image_collection/image_retrieval/8706098038136712166',
-  'https://googleusercontent.com/image_collection/image_retrieval/5058012867991231009',
-  'https://googleusercontent.com/image_collection/image_retrieval/7732252359747007027'
+  'https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=1400&q=82',
+  'https://images.unsplash.com/photo-1770386291952-e1347d13d947?auto=format&fit=crop&w=1400&q=82',
+  'https://images.unsplash.com/photo-1712903276026-9a2381d3b464?auto=format&fit=crop&w=1400&q=82',
+  'https://images.unsplash.com/photo-1729799959058-bda08177a84c?auto=format&fit=crop&w=1400&q=82',
+  'https://images.unsplash.com/photo-1683610960458-2ea0a7877cee?auto=format&fit=crop&w=1400&q=82',
+  'https://images.unsplash.com/photo-1688561807381-05137151978f?auto=format&fit=crop&w=1400&q=82',
+  'https://images.unsplash.com/photo-1674027001834-719c347d1eca?auto=format&fit=crop&w=1400&q=82',
+  'https://images.unsplash.com/photo-1780253256194-34e5867ccb8c?auto=format&fit=crop&w=1400&q=82'
 ]
 
 export default function Services() {
@@ -69,7 +69,7 @@ export default function Services() {
                   className="group relative block aspect-[4/3] overflow-hidden rounded-[1.8rem] bg-slate-900 shadow-xl shadow-slate-900/10"
                 >
                   <img
-                    src={serviceImages[index] ?? 'https://image.thum.io/get/width/1400/crop/900/https://barrack3030-wq.github.io/DEHO-CAFE-/'}
+                    src={serviceImages[index]}
                     alt={service.title}
                     loading={index < 2 ? 'eager' : 'lazy'}
                     className="absolute inset-0 h-full w-full object-cover object-top transition duration-700 group-hover:scale-105"
