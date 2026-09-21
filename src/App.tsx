@@ -17,6 +17,8 @@ import CityLanding from './pages/CityLanding';
 import ServiceLanding from './pages/ServiceLanding';
 import BlogIndex from './pages/BlogIndex';
 import BlogArticle from './pages/BlogArticle';
+import { blogSeoPosts } from './data/blogSeoPosts';
+import { localSeoCities } from './data/localSeoCities';
 import PortfolioPage from './pages/PortfolioPage';
 
 const Admin = lazy(() => import('./pages/Admin'));
@@ -135,6 +137,50 @@ function PageContent() {
         <Process />
         <Contact />
         <CTA />
+
+        <section id="blog" className="border-t border-slate-100 bg-white">
+          <div className="mx-auto max-w-6xl px-6 py-12 lg:px-8 lg:py-14">
+            <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+              <div className="max-w-2xl">
+                <p className="text-xs font-semibold uppercase tracking-[.18em] text-brand-600">Panduan website</p>
+                <h2 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">Sebelum bikin website, lihat dulu panduannya.</h2>
+                <p className="mt-3 text-base leading-7 text-slate-600">Artikel singkat tentang jenis website, struktur halaman, dan hal yang perlu disiapkan sebelum mulai.</p>
+              </div>
+              <a href="/blog/" className="inline-flex items-center gap-2 text-sm font-semibold text-brand-700">Lihat semua artikel <span aria-hidden="true">→</span></a>
+            </div>
+
+            <div className="mt-7 grid gap-4 md:grid-cols-3">
+              {blogSeoPosts.slice(0, 3).map((post) => (
+                <a key={post.slug} href={`/blog/${post.slug}/`} className="group rounded-2xl border border-slate-200 bg-slate-50/60 p-5 transition hover:-translate-y-1 hover:border-brand-200 hover:bg-white hover:shadow-lg">
+                  <p className="text-xs font-semibold uppercase tracking-[.12em] text-brand-600">{post.keyword}</p>
+                  <h3 className="mt-2 text-lg font-bold tracking-tight text-brand-900">{post.headline}</h3>
+                  <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-700">Baca artikel <span className="transition group-hover:translate-x-1">→</span></span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="border-t border-slate-100 bg-white">
+          <div className="mx-auto max-w-6xl px-6 py-12 lg:px-8 lg:py-14">
+            <div className="max-w-2xl">
+              <p className="text-xs font-semibold uppercase tracking-[.18em] text-brand-600">Area layanan</p>
+              <h2 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">Jasa website berdasarkan kota.</h2>
+              <p className="mt-3 text-base leading-7 text-slate-600">Lihat halaman lokal untuk kebutuhan website bisnis, UMKM, sekolah, dan organisasi di kota yang sudah kami siapkan.</p>
+            </div>
+
+            <div className="mt-7 grid gap-4 md:grid-cols-3">
+              {Object.values(localSeoCities).map((item) => (
+                <a key={item.city} href={`/${item.slug}/`} className="group rounded-2xl border border-slate-200 bg-slate-50/60 p-5 transition hover:-translate-y-1 hover:border-brand-200 hover:bg-white hover:shadow-lg">
+                  <span className="text-xs font-semibold uppercase tracking-[.12em] text-brand-600">Website {item.city}</span>
+                  <h3 className="mt-2 text-lg font-bold tracking-tight text-brand-900">{item.city}</h3>
+                  <p className="mt-1 text-sm text-slate-500">{item.region}</p>
+                  <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-700">Lihat layanan <span className="transition group-hover:translate-x-1">→</span></span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
 
       </main>
       <Footer />
