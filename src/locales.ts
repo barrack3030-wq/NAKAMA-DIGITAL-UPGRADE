@@ -12,12 +12,12 @@ export const dict = {
       cta: 'Mulai Konsultasi'
     },
     hero: {
-      eyebrow: 'WEBSITE UNTUK BISNIS YANG INGIN TERLIHAT SERIUS',
+      eyebrow: 'DIGITAL AGENCY • WEBSITE • DESIGN • DEVELOPMENT',
       title1: 'Jasa pembuatan website untuk\nbisnis & UMKM',
       titleHighlight: 'yang lebih profesional.',
-      desc: 'Website yang rapi, cepat, dan responsif untuk membuat bisnis lebih mudah ditemukan, dipahami, dan dihubungi calon pelanggan.',
+      desc: 'Kami membantu bisnis, UMKM, sekolah, travel, dan perusahaan melalui pembuatan website, web design, dan pengembangan website yang rapi, cepat, responsif, dan mudah dipahami calon pelanggan.',
       cta1: 'Mulai Konsultasi',
-      cta2: 'Lihat Layanan'
+      cta2: 'Lihat Portfolio'
     },
     stats: [
       { label: 'Website & Project', value: '100+' },
@@ -118,12 +118,12 @@ export const dict = {
       cta: 'Start Consultation'
     },
     hero: {
-      eyebrow: 'WEBSITES FOR BUSINESSES THAT TAKE THEIR PRESENCE SERIOUSLY',
+      eyebrow: 'DIGITAL AGENCY • WEBSITE • DESIGN • DEVELOPMENT',
       title1: 'Websites that make\nyour business look',
       titleHighlight: 'more professional.',
-      desc: 'Fast, responsive websites that make your business easier to understand, trust, and contact.',
+      desc: 'We design modern, fast, and professional websites that help businesses build trust and get more customers.',
       cta1: 'Start Consultation',
-      cta2: 'View Services'
+      cta2: 'View Portfolio'
     },
     stats: [
       { label: 'Websites & Projects', value: '100+' },
