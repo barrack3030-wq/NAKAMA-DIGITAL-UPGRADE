@@ -38,35 +38,34 @@ export default function Navbar() {
             loading="eager"
           />
         </a>
-        <div className="hidden md:flex items-center rounded-full bg-gradient-to-r from-[#0b4f8a] via-brand-600 to-[#a27bc8] p-1.5 shadow-lg shadow-brand-900/10">
-          <div className="flex items-center gap-0.5">
-            {navLinks.map(link => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="inline-flex items-center rounded-full px-5 py-2.5 text-sm font-medium text-white/95 transition-all hover:bg-white/10 hover:text-white"
-              >
-                {link.name}
-              </a>
-            ))}
-          </div>
+        <div className="hidden md:flex items-center gap-8">
+          {navLinks.map(link => (
+            <a
+              key={link.name}
+              href={link.href}
+              className="text-sm font-medium text-slate-600 transition-colors hover:text-brand-900"
+            >
+              {link.name}
+            </a>
+          ))}
+        </div>
+        <div className="hidden md:flex items-center gap-5 ml-auto">
+          <button
+            onClick={toggleLanguage}
+            aria-label={lang === 'id' ? 'Switch to English' : 'Ganti ke Bahasa Indonesia'}
+            className="inline-flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-brand-900"
+          >
+            <Globe className="w-5 h-5" />
+            <span>{lang === 'id' ? 'EN' : 'ID'}</span>
+          </button>
           <a
             href="https://wa.me/6285820830530?text=Halo%20Nakama%20Digital,%20saya%20ingin%20konsultasi%20website."
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-1 inline-flex items-center rounded-full bg-brand-900 px-5 py-2.5 text-xs font-semibold text-white shadow-sm transition-all hover:bg-slate-950"
+            className="inline-flex items-center rounded-full bg-[#0b1020] px-6 py-3 text-sm font-semibold text-white shadow-sm transition-all hover:bg-black"
           >
             {lang === 'id' ? 'Mulai Konsultasi' : 'Start Consultation'}
           </a>
-        </div>
-        <div className="hidden md:flex items-center ml-3">
-          <button
-            onClick={toggleLanguage}
-            aria-label={lang === 'id' ? 'Switch to English' : 'Ganti ke Bahasa Indonesia'}
-            className="flex h-9 min-w-9 items-center justify-center rounded-full border border-gray-200 bg-white/80 px-3 text-xs font-semibold text-gray-600 shadow-sm backdrop-blur-md transition hover:border-gray-300 hover:text-brand-900"
-          >
-            {lang === 'id' ? 'EN' : 'ID'}
-          </button>
         </div>
         <div className="md:hidden flex items-center gap-4">
           <button onClick={toggleLanguage} className="text-gray-600 hover:text-brand-600 transition-colors flex items-center gap-1 font-medium text-sm"><Globe className="w-4 h-4"/><span>{lang === 'id' ? 'EN' : 'ID'}</span></button>
