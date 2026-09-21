@@ -16,15 +16,15 @@ const serviceLinks = [
 ];
 
 const serviceImages = [
-  'https://image.thum.io/get/width/1400/crop/900/https://barrack3030-wq.github.io/pelita-dental-luwuk/',
-  'https://image.thum.io/get/width/1400/crop/900/https://agenbptoili.my.id/',
-  'https://image.thum.io/get/width/1400/crop/900/https://barrack3030-wq.github.io/DEHO-CAFE-/',
-  'https://images.unsplash.com/photo-1759643740737-9ba5a2e62332?auto=format&fit=crop&w=1400&q=80',
-  'https://image.thum.io/get/width/1400/crop/900/https://www.banggaiwonderland.my.id/',
-  'https://images.unsplash.com/photo-1642177977596-36c73531208d?auto=format&fit=crop&w=1400&q=80',
-  'https://images.unsplash.com/photo-1784729553968-07da5d7b7c99?auto=format&fit=crop&w=1400&q=80',
-  'https://image.thum.io/get/width/1400/crop/900/https://agenbptoili.my.id/',
-];
+  'https://googleusercontent.com/image_collection/image_retrieval/3523246122229302131',
+  'https://googleusercontent.com/image_collection/image_retrieval/3093959644445808768',
+  null,
+  'https://googleusercontent.com/image_collection/image_retrieval/15610234606796284367',
+  'https://googleusercontent.com/image_collection/image_retrieval/6987060406260346344',
+  'https://googleusercontent.com/image_collection/image_retrieval/8706098038136712166',
+  'https://googleusercontent.com/image_collection/image_retrieval/5058012867991231009',
+  'https://googleusercontent.com/image_collection/image_retrieval/7732252359747007027'
+]
 
 export default function Services() {
   const { t } = useLanguage();
@@ -69,11 +69,16 @@ export default function Services() {
                   className="group relative block aspect-[4/3] overflow-hidden rounded-[1.8rem] bg-slate-900 shadow-xl shadow-slate-900/10"
                 >
                   <img
-                    src={serviceImages[index]}
+                    src={serviceImages[index] ?? 'https://image.thum.io/get/width/1400/crop/900/https://barrack3030-wq.github.io/DEHO-CAFE-/'}
                     alt={service.title}
                     loading={index < 2 ? 'eager' : 'lazy'}
                     className="absolute inset-0 h-full w-full object-cover object-top transition duration-700 group-hover:scale-105"
                   />
+                  {index === 2 && (
+                    <div className="absolute inset-x-4 top-4 rounded-xl bg-slate-950/70 px-3 py-2 text-[10px] font-medium uppercase tracking-[.14em] text-white backdrop-blur-sm">
+                      Landing Page · Preview
+                    </div>
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
                   <div className="absolute left-5 top-5 flex items-center gap-2">
                     <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/90 text-brand-600 shadow-sm backdrop-blur">
