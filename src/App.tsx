@@ -18,6 +18,7 @@ import CityLanding from './pages/CityLanding';
 import ServiceLanding from './pages/ServiceLanding';
 import BlogIndex from './pages/BlogIndex';
 import BlogArticle from './pages/BlogArticle';
+import PortfolioPage from './pages/PortfolioPage';
 
 const Admin = lazy(() => import('./pages/Admin'));
 const CustomerIntake = lazy(() => import('./pages/CustomerIntake'));
@@ -132,7 +133,6 @@ function PageContent() {
         <Services />
         <ProductExperience />
         <Features />
-        <Portfolio />
         <Process />
         <Contact />
         <FAQ />
@@ -181,6 +181,7 @@ function AppShell() {
           <Route path="/website-travel/" element={<ServiceLanding />} />
           <Route path="/website-toko-online/" element={<ServiceLanding />} />
           <Route path="/blog/" element={<BlogIndex />} />
+          <Route path="/portfolio/" element={<PortfolioPage />} />
           <Route path="/blog/:slug/" element={<BlogArticle />} />
           <Route path="/:citySlug" element={<CityLanding />} />
           <Route path="/" element={<PublicPage />} />

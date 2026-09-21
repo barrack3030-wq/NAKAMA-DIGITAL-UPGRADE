@@ -17,11 +17,11 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: t.nav.home, href: '#' },
-    { name: t.nav.services, href: '#services' },
-    { name: t.nav.portfolio, href: '#portfolio' },
-    { name: t.nav.process, href: '#process' },
-    { name: t.nav.faq, href: '#faq' },
+    { name: t.nav.home, href: '/' },
+    { name: t.nav.services, href: '/#services' },
+    { name: t.nav.portfolio, href: '/portfolio/' },
+    { name: t.nav.process, href: '/#process' },
+    { name: t.nav.faq, href: '/#faq' },
     { name: t.nav.blog, href: '/blog/' },
   ];
   const toggleLanguage = () => setLanguage(lang === 'id' ? 'en' : 'id');
@@ -39,10 +39,21 @@ export default function Navbar() {
             loading="eager"
           />
         </a>
-        <div className="hidden md:flex items-center gap-8">{navLinks.map(link => <a key={link.name} href={link.href} className="text-sm font-medium text-gray-600 hover:text-brand-600 transition-colors">{link.name}</a>)}</div>
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-1 rounded-full border border-gray-200 bg-white/75 p-1 shadow-sm backdrop-blur-md">
+          {navLinks.map(link => (
+            <a
+              key={link.name}
+              href={link.href}
+              className="inline-flex items-center gap-1.5 rounded-full border border-transparent px-3.5 py-2 text-xs font-medium text-gray-600 transition-all hover:border-gray-200 hover:bg-white hover:text-brand-900"
+            >
+              {link.name === t.nav.home && <span className="h-1.5 w-1.5 rounded-full bg-brand-900" />}
+              {link.name}
+            </a>
+          ))}
+        </div>
+        <div className="hidden md:flex items-center gap-3">
           <button onClick={toggleLanguage} className="flex items-center gap-1.5 text-sm font-medium text-gray-600 hover:text-brand-600 transition-colors"><Globe className="w-4 h-4"/><span>{lang === 'id' ? 'EN' : 'ID'}</span></button>
-          <a href="#contact" className="px-5 py-2.5 bg-brand-900 hover:bg-brand-700 text-white text-sm font-medium rounded-full transition-all duration-300 transform hover:scale-105">{t.nav.cta}</a>
+          <a href="#contact" className="px-5 py-2.5 bg-brand-900 hover:bg-brand-800 text-white text-sm font-medium rounded-full transition-all duration-300 transform hover:scale-[1.02] shadow-sm">{t.nav.cta}</a>
         </div>
         <div className="md:hidden flex items-center gap-4">
           <button onClick={toggleLanguage} className="text-gray-600 hover:text-brand-600 transition-colors flex items-center gap-1 font-medium text-sm"><Globe className="w-4 h-4"/><span>{lang === 'id' ? 'EN' : 'ID'}</span></button>
@@ -50,6 +61,6 @@ export default function Navbar() {
         </div>
       </div>
     </motion.nav>
-    <AnimatePresence>{mobileMenuOpen && <motion.div initial={{opacity:0,y:-20}} animate={{opacity:1,y:0}} exit={{opacity:0,y:-20}} className="fixed inset-0 z-40 bg-white pt-24 px-6 md:hidden"><div className="flex flex-col gap-6 text-center">{navLinks.map(link => <a key={link.name} href={link.href} onClick={()=>setMobileMenuOpen(false)} className="text-2xl font-semibold text-gray-900">{link.name}</a>)}<a href="#contact" onClick={()=>setMobileMenuOpen(false)} className="mt-4 px-6 py-4 bg-brand-500 text-white font-semibold rounded-2xl w-full">{t.nav.cta}</a></div></motion.div>}</AnimatePresence>
+    <AnimatePresence>{mobileMenuOpen && <motion.div initial={{opacity:0,y:-20}} animate={{opacity:1,y:0}} exit={{opacity:0,y:-20}} className="fixed inset-0 z-40 bg-white/95 backdrop-blur-xl pt-24 px-6 md:hidden"><div className="mx-auto flex max-w-sm flex-col gap-2">{navLinks.map(link => <a key={link.name} href={link.href} onClick={()=>setMobileMenuOpen(false)} className="rounded-full border border-gray-200 px-5 py-3 text-center text-base font-medium text-gray-900 transition hover:border-brand-300 hover:bg-brand-50">{link.name}</a>)}<a href="https://wa.me/6285820830530?text=Halo%20Nakama%20Digital,%20saya%20ingin%20konsultasi%20website." target="_blank" rel="noopener noreferrer" onClick={()=>setMobileMenuOpen(false)} className="mt-3 rounded-full bg-brand-900 px-6 py-3.5 text-center text-base font-semibold text-white">{t.nav.cta}</a></div></motion.div>}</AnimatePresence>
   </>;
 }
