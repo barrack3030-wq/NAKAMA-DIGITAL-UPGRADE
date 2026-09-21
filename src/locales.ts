@@ -8,6 +8,7 @@ export const dict = {
       portfolio: 'Portfolio',
       process: 'Proses',
       faq: 'FAQ',
+      blog: 'Blog',
       cta: 'Mulai Konsultasi'
     },
     hero: {
@@ -113,6 +114,7 @@ export const dict = {
       portfolio: 'Portfolio',
       process: 'Process',
       faq: 'FAQ',
+      blog: 'Blog',
       cta: 'Start Consultation'
     },
     hero: {
