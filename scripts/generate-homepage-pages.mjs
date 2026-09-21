@@ -20,6 +20,36 @@ const escapeHtml = (value) => String(value)
 const rootUrl = 'https://nakamadigital.biz.id/';
 const enUrl = 'https://nakamadigital.biz.id/en/';
 
+const faqData = {
+  id: [
+    ['Berapa lama website dibuat?', 'Waktu pengerjaan bervariasi tergantung kompleksitas. Umumnya memakan waktu 3–7 hari kerja untuk website standar, dan 2-4 minggu untuk website custom.'],
+    ['Apakah bisa menggunakan domain sendiri?', 'Tentu. Anda bisa menggunakan domain yang sudah ada, atau kami bisa membantu mendaftarkan domain baru untuk Anda.'],
+    ['Apakah website responsive?', 'Ya, semua website yang kami buat dijamin 100% responsive dan akan terlihat sempurna di berbagai perangkat (desktop, tablet, maupun mobile).'],
+    ['Apakah saya bisa mengubah konten?', 'Kami menyediakan CMS (Content Management System) yang mudah digunakan sehingga Anda dapat mengubah teks, gambar, dan konten lainnya secara mandiri.'],
+    ['Apakah bisa membantu hosting dan domain?', 'Ya, kami menyediakan paket all-in-one yang sudah termasuk layanan hosting berkecepatan tinggi dan registrasi domain.'],
+    ['Bagaimana proses pembayarannya?', 'Pembayaran dapat dilakukan dalam dua tahap: DP (Down Payment) sebesar 50% untuk memulai proyek, dan pelunasan 50% setelah website selesai dan siap online.']
+  ],
+  en: [
+    ['How long does it take to build a website?', 'Development time varies depending on complexity. It generally takes 3–7 working days for a standard website, and 2-4 weeks for custom websites.'],
+    ['Can I use my own domain?', 'Certainly. You can use an existing domain, or we can help register a new domain for you.'],
+    ['Are the websites responsive?', 'Yes, all websites we build are guaranteed to be 100% responsive and will look perfect on various devices (desktop, tablet, and mobile).'],
+    ['Can I change the content myself?', 'We provide an easy-to-use CMS (Content Management System) so you can update text, images, and other content independently.'],
+    ['Do you help with hosting and domain?', 'Yes, we provide all-in-one packages that include high-speed hosting and domain registration.'],
+    ['How does the payment process work?', 'Payment can be made in two stages: a 50% DP (Down Payment) to start the project, and the remaining 50% upon completion when the website is ready to go live.']
+  ]
+};
+
+const faqSchema = (locale) => ({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqData[locale].map(([q, a]) => ({
+    '@type': 'Question',
+    name: q,
+    acceptedAnswer: { '@type': 'Answer', text: a },
+  })),
+});
+
+
 const homepageContent = [
   '<main>',
   '<section><p>Jasa pembuatan website untuk bisnis Anda</p>',
@@ -70,7 +100,7 @@ const localizedMeta = (html, locale, title, description, canonical) => html
   .replace(/<meta property="og:title"[^>]*>/i, '<meta property="og:title" content="' + escapeHtml(title) + '">')
   .replace(/<meta property="og:description"[^>]*>/i, '<meta property="og:description" content="' + escapeHtml(description) + '">')
   .replace(/<meta property="og:url"[^>]*>/i, '<meta property="og:url" content="' + canonical + '">')
-  .replace('</head>', '<link rel="alternate" hreflang="id" href="' + rootUrl + '"><link rel="alternate" hreflang="en" href="' + enUrl + '"><link rel="alternate" hreflang="x-default" href="' + rootUrl + '"></head>');
+  .replace('</head>', '<link rel="alternate" hreflang="id" href="' + rootUrl + '"><link rel="alternate" hreflang="en" href="' + enUrl + '"><link rel="alternate" hreflang="x-default" href="' + rootUrl + '"><script id="homepage-faq-schema" type="application/ld+json">' + JSON.stringify(faqSchema(locale === 'en' ? 'en' : 'id')) + '</script></head>');
 
 const idTitle = 'Jasa Pembuatan Website untuk Bisnis, UMKM & Perusahaan | Nakama Digital';
 const idDescription = 'Nakama Digital membantu bisnis, UMKM, sekolah, travel, dan perusahaan membuat website profesional yang cepat, responsif, dan siap mendukung pemasaran online.';
