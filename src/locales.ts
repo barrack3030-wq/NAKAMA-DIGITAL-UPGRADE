@@ -17,7 +17,7 @@ export const dict = {
       titleHighlight: 'yang lebih profesional.',
       desc: 'Kami membantu bisnis, UMKM, sekolah, travel, dan perusahaan melalui pembuatan website, web design, dan pengembangan website yang rapi, cepat, responsif, dan mudah dipahami calon pelanggan.',
       cta1: 'Mulai Konsultasi',
-      cta2: 'Lihat Portfolio'
+      cta2: 'Lihat Layanan'
     },
     stats: [
       { label: 'Website & Project', value: '100+' },
@@ -123,7 +123,7 @@ export const dict = {
       titleHighlight: 'more professional.',
       desc: 'We design modern, fast, and professional websites that help businesses build trust and get more customers.',
       cta1: 'Start Consultation',
-      cta2: 'View Portfolio'
+      cta2: 'View Services'
     },
     stats: [
       { label: 'Websites & Projects', value: '100+' },
