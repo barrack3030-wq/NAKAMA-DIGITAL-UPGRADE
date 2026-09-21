@@ -9,6 +9,7 @@ if (!fs.existsSync(source)) throw new Error('dist/index.html tidak ditemukan set
 const baseHtml = fs.readFileSync(source, 'utf8');
 const cities = JSON.parse(fs.readFileSync(path.join(root, 'src', 'data', 'localSeoCities.json'), 'utf8'));
 const services = JSON.parse(fs.readFileSync(path.join(root, 'src', 'data', 'serviceSeoPages.json'), 'utf8'));
+const posts = JSON.parse(fs.readFileSync(path.join(root, 'src', 'data', 'blogSeoPosts.json'), 'utf8'));
 
 const escapeHtml = (value) => String(value)
   .replaceAll('&', '&amp;')
@@ -64,6 +65,10 @@ const homepageContent = [
   '<section><h2>Website untuk bisnis di berbagai kota</h2>',
   '<p>Nakama Digital menyediakan halaman layanan lokal untuk membantu bisnis menemukan informasi website yang lebih relevan dengan wilayahnya.</p><ul>' +
   cities.map((city) => '<li><a href="/' + escapeHtml(city.slug) + '/">Jasa website ' + escapeHtml(city.city) + '</a> — ' + escapeHtml(city.locationLabel) + '</li>').join('') +
+  '</ul></section>',
+  '<section id="blog"><h2>Panduan Website untuk Bisnis</h2>',
+  '<p>Artikel praktis tentang biaya, struktur, dan pilihan jenis website sebelum memulai proyek.</p><ul>' +
+  posts.map((post) => '<li><a href="/blog/' + escapeHtml(post.slug) + '/">' + escapeHtml(post.title) + '</a></li>').join('') +
   '</ul></section>',
   '<section><h2>Website yang dibuat sesuai tujuan bisnis</h2>',
   '<p>Kami merancang struktur, tampilan, dan fitur berdasarkan jenis bisnis, target pelanggan, informasi yang perlu ditampilkan, dan tindakan yang ingin dilakukan pengunjung.</p>',
