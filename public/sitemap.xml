@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://nakamadigital.biz.id/</loc>
-  </url>
-  <url>
-    <loc>https://nakamadigital.biz.id/luwuk/</loc>
-  </url>
-  <url>
-    <loc>https://nakamadigital.biz.id/sintang/</loc>
-  </url>
-  <url>
-    <loc>https://nakamadigital.biz.id/surabaya/</loc>
-  </url>
+  <url><loc>https://nakamadigital.biz.id/</loc></url>
+  <url><loc>https://nakamadigital.biz.id/luwuk/</loc></url>
+  <url><loc>https://nakamadigital.biz.id/sintang/</loc></url>
+  <url><loc>https://nakamadigital.biz.id/surabaya/</loc></url>
+  <url><loc>https://nakamadigital.biz.id/website-company-profile/</loc></url>
+  <url><loc>https://nakamadigital.biz.id/website-umkm/</loc></url>
+  <url><loc>https://nakamadigital.biz.id/landing-page/</loc></url>
+  <url><loc>https://nakamadigital.biz.id/website-sekolah/</loc></url>
+  <url><loc>https://nakamadigital.biz.id/website-travel/</loc></url>
 </urlset>
