@@ -164,7 +164,15 @@ export default function CityLanding() {
             <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
               {city.services.map((service, index) => {
                 const Icon = icons[index % icons.length];
-                return <a key={service.title} href={whatsapp(`Halo Nakama Digital, saya tertarik dengan ${service.title} untuk bisnis saya di ${city.city}.`)} target="_blank" rel="noopener noreferrer" className="group rounded-2xl border border-slate-200 bg-white p-6 transition hover:-translate-y-1 hover:border-brand-200 hover:shadow-xl hover:shadow-brand-900/5"><Icon className="text-brand-600" size={25} /><h3 className="mt-5 font-bold">{service.title}</h3><p className="mt-2 text-sm leading-6 text-slate-600">{service.description}</p><span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-brand-600">Konsultasi <ArrowRight size={15} className="transition group-hover:translate-x-1" /></span></a>;
+                const serviceUrlMap: Record<string, string> = {
+                  umkm: '/website-umkm/',
+                  'company-profile': '/website-company-profile/',
+                  'landing-page': '/landing-page/',
+                  sekolah: '/website-sekolah/',
+                  travel: '/website-travel/',
+                };
+                const href = serviceUrlMap[service.anchor] ?? '#faq';
+                return <a key={service.title} href={href} className="group rounded-2xl border border-slate-200 bg-white p-6 transition hover:-translate-y-1 hover:border-brand-200 hover:shadow-xl hover:shadow-brand-900/5"><Icon className="text-brand-600" size={25} /><h3 className="mt-5 font-bold">{service.title}</h3><p className="mt-2 text-sm leading-6 text-slate-600">{service.description}</p><span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-brand-600">Lihat layanan <ArrowRight size={15} className="transition group-hover:translate-x-1" /></span></a>;
               })}
             </div>
 
