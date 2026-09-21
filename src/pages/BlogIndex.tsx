@@ -1,14 +1,15 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { blogSeoPosts } from '../data/blogSeoPosts';
+import Footer from '../components/Footer';
 
 export default function BlogIndex() {
   return (
     <div className="bg-white text-brand-900">
       <header className="border-b border-slate-200 bg-white">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-5 py-5 lg:px-8">
-          <a href="/" className="font-semibold tracking-tight">Nakama Digital</a>
-          <a href="/#contact" className="rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white">Konsultasi</a>
+          <a href="/" className="inline-flex items-center" aria-label="Nakama Digital"><img src="/images/logo/logo-web.png" alt="Nakama Digital" className="h-9 w-auto object-contain" /></a>
+          <a href="https://wa.me/6285820830530?text=Halo%20Nakama%20Digital,%20saya%20ingin%20konsultasi%20website." target="_blank" rel="noopener noreferrer" className="rounded-full bg-brand-900 px-4 py-2.5 text-sm font-semibold text-white">Konsultasi</a>
         </div>
       </header>
       <main className="mx-auto max-w-5xl px-5 py-14 lg:px-8 lg:py-20">
@@ -31,11 +32,7 @@ export default function BlogIndex() {
           ))}
         </div>
       </main>
-      <footer className="border-t border-slate-200 bg-white">
-        <div className="mx-auto max-w-5xl px-5 py-8 text-sm text-slate-500 lg:px-8">
-          <a href="/" className="font-medium text-slate-700 hover:text-brand-600">Kembali ke website utama</a>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
