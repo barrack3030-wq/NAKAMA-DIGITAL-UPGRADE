@@ -4,19 +4,47 @@
     "keyword": "jasa pembuatan website company profile",
     "title": "Jasa Pembuatan Website Company Profile | Nakama Digital",
     "description": "Jasa pembuatan website company profile untuk perusahaan, yayasan, koperasi, dan bisnis yang membutuhkan profil online profesional, cepat, responsif, dan mudah ditemukan.",
-    "headline": "Website Company Profile yang menjelaskan bisnis Anda dengan jelas",
+    "headline": "Jasa Pembuatan Website Company Profile untuk Perusahaan dan Organisasi",
     "intro": "Tampilkan profil perusahaan, layanan, portofolio, tim, lokasi, dan kontak dalam website yang rapi dan mudah dipahami calon pelanggan atau mitra.",
-    "audience": ["Perusahaan", "Yayasan dan organisasi", "Koperasi", "Bisnis jasa dan profesional"],
-    "benefits": ["Profil bisnis lebih mudah dibagikan", "Layanan dan portofolio tersusun rapi", "Calon pelanggan punya tempat resmi untuk mengenal bisnis", "Terhubung langsung ke WhatsApp dan kontak bisnis"],
+    "audience": [
+      "Perusahaan",
+      "Yayasan dan organisasi",
+      "Koperasi",
+      "Bisnis jasa dan profesional"
+    ],
+    "benefits": [
+      "Profil bisnis lebih mudah dibagikan",
+      "Layanan dan portofolio tersusun rapi",
+      "Calon pelanggan punya tempat resmi untuk mengenal bisnis",
+      "Terhubung langsung ke WhatsApp dan kontak bisnis"
+    ],
     "sections": [
-      {"heading":"Apa yang bisa ditampilkan?","text":"Struktur dapat mencakup halaman tentang perusahaan, layanan, proyek atau portofolio, tim, area layanan, FAQ, dan kontak. Isi disusun sesuai informasi yang memang penting bagi pengunjung."},
-      {"heading":"Bukan sekadar halaman profil","text":"Website company profile yang baik membantu pengunjung memahami siapa Anda, apa yang Anda kerjakan, siapa yang Anda layani, dan bagaimana cara menghubungi Anda tanpa harus mencari informasi di banyak tempat."}
+      {
+        "heading": "Apa yang bisa ditampilkan?",
+        "text": "Struktur dapat mencakup halaman tentang perusahaan, layanan, proyek atau portofolio, tim, area layanan, FAQ, dan kontak. Isi disusun sesuai informasi yang memang penting bagi pengunjung."
+      },
+      {
+        "heading": "Bukan sekadar halaman profil",
+        "text": "Website company profile yang baik membantu pengunjung memahami siapa Anda, apa yang Anda kerjakan, siapa yang Anda layani, dan bagaimana cara menghubungi Anda tanpa harus mencari informasi di banyak tempat."
+      }
     ],
     "faqs": [
-      {"q":"Apa itu website company profile?","a":"Website company profile adalah website resmi yang menjelaskan identitas, layanan, portofolio, dan informasi kontak suatu perusahaan atau organisasi."},
-      {"q":"Siapa yang cocok menggunakan website company profile?","a":"Perusahaan, yayasan, koperasi, organisasi, dan bisnis jasa yang membutuhkan profil resmi di internet."},
-      {"q":"Apakah website company profile bisa terhubung ke WhatsApp?","a":"Ya. Tombol WhatsApp dapat ditempatkan pada bagian strategis untuk memudahkan calon pelanggan atau mitra menghubungi bisnis."},
-      {"q":"Berapa biaya website company profile?","a":"Biaya bergantung pada jumlah halaman, fitur, desain, dan ruang lingkup proyek. Kebutuhan dapat dibahas sebelum pembuatan dimulai."}
+      {
+        "q": "Apa itu website company profile?",
+        "a": "Website company profile adalah website resmi yang menjelaskan identitas, layanan, portofolio, dan informasi kontak suatu perusahaan atau organisasi."
+      },
+      {
+        "q": "Siapa yang cocok menggunakan website company profile?",
+        "a": "Perusahaan, yayasan, koperasi, organisasi, dan bisnis jasa yang membutuhkan profil resmi di internet."
+      },
+      {
+        "q": "Apakah website company profile bisa terhubung ke WhatsApp?",
+        "a": "Ya. Tombol WhatsApp dapat ditempatkan pada bagian strategis untuk memudahkan calon pelanggan atau mitra menghubungi bisnis."
+      },
+      {
+        "q": "Berapa biaya website company profile?",
+        "a": "Biaya bergantung pada jumlah halaman, fitur, desain, dan ruang lingkup proyek. Kebutuhan dapat dibahas sebelum pembuatan dimulai."
+      }
     ]
   },
   {
@@ -24,19 +52,47 @@
     "keyword": "jasa pembuatan website UMKM",
     "title": "Jasa Pembuatan Website UMKM | Nakama Digital",
     "description": "Jasa pembuatan website UMKM untuk toko, kuliner, jasa, dan usaha lokal. Tampilkan produk, katalog, lokasi, layanan, dan WhatsApp dalam website profesional.",
-    "headline": "Website UMKM yang membantu pelanggan menemukan dan menghubungi bisnis Anda",
+    "headline": "Jasa Pembuatan Website UMKM untuk Toko, Kuliner, dan Bisnis Lokal",
     "intro": "Bangun tempat resmi untuk bisnis Anda menampilkan produk, katalog, layanan, lokasi, jam operasional, dan kontak WhatsApp dalam satu website.",
-    "audience": ["Toko dan usaha lokal", "Kuliner dan restoran", "Jasa profesional", "UMKM yang ingin membangun brand online"],
-    "benefits": ["Katalog produk dapat dilihat dari satu tautan", "Informasi lokasi dan kontak lebih mudah ditemukan", "Website bisa dibagikan dari media sosial dan WhatsApp", "Struktur halaman disesuaikan dengan jenis usaha"],
+    "audience": [
+      "Toko dan usaha lokal",
+      "Kuliner dan restoran",
+      "Jasa profesional",
+      "UMKM yang ingin membangun brand online"
+    ],
+    "benefits": [
+      "Katalog produk dapat dilihat dari satu tautan",
+      "Informasi lokasi dan kontak lebih mudah ditemukan",
+      "Website bisa dibagikan dari media sosial dan WhatsApp",
+      "Struktur halaman disesuaikan dengan jenis usaha"
+    ],
     "sections": [
-      {"heading":"Cocok untuk berbagai jenis UMKM","text":"Website dapat digunakan untuk toko, kuliner, jasa, produk rumahan, usaha kreatif, hingga bisnis lokal yang ingin memiliki tempat resmi di internet."},
-      {"heading":"Utamakan informasi yang dicari pelanggan","text":"Produk, harga atau katalog, layanan, lokasi, jam buka, cara pemesanan, dan WhatsApp dapat disusun agar pengunjung tidak perlu menebak langkah berikutnya."}
+      {
+        "heading": "Cocok untuk berbagai jenis UMKM",
+        "text": "Website dapat digunakan untuk toko, kuliner, jasa, produk rumahan, usaha kreatif, hingga bisnis lokal yang ingin memiliki tempat resmi di internet."
+      },
+      {
+        "heading": "Utamakan informasi yang dicari pelanggan",
+        "text": "Produk, harga atau katalog, layanan, lokasi, jam buka, cara pemesanan, dan WhatsApp dapat disusun agar pengunjung tidak perlu menebak langkah berikutnya."
+      }
     ],
     "faqs": [
-      {"q":"Apakah website UMKM bisa menampilkan katalog produk?","a":"Ya. Produk dapat ditampilkan dalam bentuk katalog, kategori, foto, deskripsi, dan informasi pemesanan sesuai kebutuhan."},
-      {"q":"Apakah website UMKM harus memakai sistem checkout?","a":"Tidak. Untuk banyak usaha lokal, katalog yang jelas dengan tombol WhatsApp sudah dapat menjadi awal yang lebih sederhana daripada toko online penuh."},
-      {"q":"Apakah website bisa digunakan dari Instagram dan WhatsApp?","a":"Ya. URL website dapat dibagikan melalui bio, posting, status, chat, dan berbagai kanal promosi lainnya."},
-      {"q":"Berapa biaya website UMKM?","a":"Biaya disesuaikan dengan jumlah halaman, kebutuhan katalog, fitur, desain, dan ruang lingkup proyek."}
+      {
+        "q": "Apakah website UMKM bisa menampilkan katalog produk?",
+        "a": "Ya. Produk dapat ditampilkan dalam bentuk katalog, kategori, foto, deskripsi, dan informasi pemesanan sesuai kebutuhan."
+      },
+      {
+        "q": "Apakah website UMKM harus memakai sistem checkout?",
+        "a": "Tidak. Untuk banyak usaha lokal, katalog yang jelas dengan tombol WhatsApp sudah dapat menjadi awal yang lebih sederhana daripada toko online penuh."
+      },
+      {
+        "q": "Apakah website bisa digunakan dari Instagram dan WhatsApp?",
+        "a": "Ya. URL website dapat dibagikan melalui bio, posting, status, chat, dan berbagai kanal promosi lainnya."
+      },
+      {
+        "q": "Berapa biaya website UMKM?",
+        "a": "Biaya disesuaikan dengan jumlah halaman, kebutuhan katalog, fitur, desain, dan ruang lingkup proyek."
+      }
     ]
   },
   {
@@ -44,19 +100,47 @@
     "keyword": "jasa pembuatan landing page",
     "title": "Jasa Pembuatan Landing Page | Nakama Digital",
     "description": "Jasa pembuatan landing page untuk promosi produk, jasa, event, campaign, dan iklan. Fokus pada pesan yang jelas, mobile-friendly, dan CTA yang mudah ditemukan.",
-    "headline": "Landing page yang fokus pada satu tujuan",
+    "headline": "Jasa Pembuatan Landing Page untuk Promosi, Campaign, dan Iklan",
     "intro": "Gunakan satu halaman yang terarah untuk memperkenalkan produk, jasa, program, atau campaign tanpa membuat pengunjung berpindah-pindah informasi.",
-    "audience": ["Promosi produk", "Jasa dan layanan", "Campaign dan iklan", "Event dan program"],
-    "benefits": ["Pesan promosi lebih fokus", "CTA mudah ditemukan", "Cocok untuk trafik dari iklan dan media sosial", "Dapat dibuat lebih ringkas daripada website penuh"],
+    "audience": [
+      "Promosi produk",
+      "Jasa dan layanan",
+      "Campaign dan iklan",
+      "Event dan program"
+    ],
+    "benefits": [
+      "Pesan promosi lebih fokus",
+      "CTA mudah ditemukan",
+      "Cocok untuk trafik dari iklan dan media sosial",
+      "Dapat dibuat lebih ringkas daripada website penuh"
+    ],
     "sections": [
-      {"heading":"Kapan menggunakan landing page?","text":"Landing page cocok saat Anda ingin mengarahkan pengunjung ke satu tindakan, misalnya menghubungi WhatsApp, mengisi formulir, mendaftar event, atau meminta informasi produk."},
-      {"heading":"Struktur yang mengikuti tujuan campaign","text":"Headline, manfaat, bukti pendukung, detail penawaran, FAQ, dan call-to-action disusun berdasarkan tujuan halaman dan karakter audiens."}
+      {
+        "heading": "Kapan menggunakan landing page?",
+        "text": "Landing page cocok saat Anda ingin mengarahkan pengunjung ke satu tindakan, misalnya menghubungi WhatsApp, mengisi formulir, mendaftar event, atau meminta informasi produk."
+      },
+      {
+        "heading": "Struktur yang mengikuti tujuan campaign",
+        "text": "Headline, manfaat, bukti pendukung, detail penawaran, FAQ, dan call-to-action disusun berdasarkan tujuan halaman dan karakter audiens."
+      }
     ],
     "faqs": [
-      {"q":"Apa bedanya landing page dan website biasa?","a":"Landing page biasanya dibuat untuk satu tujuan atau campaign tertentu, sedangkan website biasa dapat mencakup banyak halaman dan kebutuhan informasi."},
-      {"q":"Apakah landing page cocok untuk iklan?","a":"Ya. Landing page dapat digunakan sebagai halaman tujuan untuk trafik dari iklan, media sosial, email, atau promosi langsung."},
-      {"q":"Apakah landing page bisa terhubung ke WhatsApp?","a":"Ya. Call-to-action dapat diarahkan ke WhatsApp, formulir, atau tujuan lain sesuai kebutuhan campaign."},
-      {"q":"Berapa biaya landing page?","a":"Biaya bergantung pada struktur halaman, desain, integrasi, dan kebutuhan konten."}
+      {
+        "q": "Apa bedanya landing page dan website biasa?",
+        "a": "Landing page biasanya dibuat untuk satu tujuan atau campaign tertentu, sedangkan website biasa dapat mencakup banyak halaman dan kebutuhan informasi."
+      },
+      {
+        "q": "Apakah landing page cocok untuk iklan?",
+        "a": "Ya. Landing page dapat digunakan sebagai halaman tujuan untuk trafik dari iklan, media sosial, email, atau promosi langsung."
+      },
+      {
+        "q": "Apakah landing page bisa terhubung ke WhatsApp?",
+        "a": "Ya. Call-to-action dapat diarahkan ke WhatsApp, formulir, atau tujuan lain sesuai kebutuhan campaign."
+      },
+      {
+        "q": "Berapa biaya landing page?",
+        "a": "Biaya bergantung pada struktur halaman, desain, integrasi, dan kebutuhan konten."
+      }
     ]
   },
   {
@@ -64,19 +148,47 @@
     "keyword": "jasa pembuatan website sekolah",
     "title": "Jasa Pembuatan Website Sekolah | Nakama Digital",
     "description": "Jasa pembuatan website sekolah untuk SD, SMP, SMA, madrasah, dan yayasan. Tampilkan profil, program, fasilitas, informasi penerimaan, berita, dan kontak.",
-    "headline": "Website sekolah yang membuat informasi lebih mudah diakses",
+    "headline": "Jasa Pembuatan Website Sekolah untuk Informasi dan Pendaftaran",
     "intro": "Bantu calon siswa, orang tua, guru, dan masyarakat menemukan informasi sekolah dalam satu website resmi yang terstruktur.",
-    "audience": ["Sekolah", "Madrasah", "Yayasan pendidikan", "Lembaga pendidikan"],
-    "benefits": ["Profil sekolah tersedia dalam satu tempat", "Program dan fasilitas lebih mudah dijelaskan", "Informasi penerimaan siswa dapat ditampilkan", "Berita dan pengumuman lebih mudah dibagikan"],
+    "audience": [
+      "Sekolah",
+      "Madrasah",
+      "Yayasan pendidikan",
+      "Lembaga pendidikan"
+    ],
+    "benefits": [
+      "Profil sekolah tersedia dalam satu tempat",
+      "Program dan fasilitas lebih mudah dijelaskan",
+      "Informasi penerimaan siswa dapat ditampilkan",
+      "Berita dan pengumuman lebih mudah dibagikan"
+    ],
     "sections": [
-      {"heading":"Informasi penting sekolah dalam satu tempat","text":"Website dapat memuat profil sekolah, sambutan, visi misi, program, fasilitas, kegiatan, tenaga pendidik, informasi penerimaan siswa, berita, dan kontak."},
-      {"heading":"Disesuaikan dengan kebutuhan lembaga","text":"Struktur tidak harus sama untuk semua sekolah. Konten dapat disusun berdasarkan jenjang, program unggulan, informasi penerimaan, dan kebutuhan komunikasi sekolah dengan orang tua."}
+      {
+        "heading": "Informasi penting sekolah dalam satu tempat",
+        "text": "Website dapat memuat profil sekolah, sambutan, visi misi, program, fasilitas, kegiatan, tenaga pendidik, informasi penerimaan siswa, berita, dan kontak."
+      },
+      {
+        "heading": "Disesuaikan dengan kebutuhan lembaga",
+        "text": "Struktur tidak harus sama untuk semua sekolah. Konten dapat disusun berdasarkan jenjang, program unggulan, informasi penerimaan, dan kebutuhan komunikasi sekolah dengan orang tua."
+      }
     ],
     "faqs": [
-      {"q":"Apakah website sekolah bisa menampilkan informasi penerimaan siswa?","a":"Ya. Informasi pendaftaran, jadwal, persyaratan, kontak, dan tautan formulir dapat ditampilkan."},
-      {"q":"Apakah website sekolah bisa memiliki halaman berita?","a":"Ya. Website dapat memiliki halaman atau bagian berita untuk informasi kegiatan dan pengumuman."},
-      {"q":"Apakah website sekolah cocok untuk madrasah dan yayasan?","a":"Ya. Struktur dapat disesuaikan untuk sekolah, madrasah, yayasan pendidikan, dan lembaga pendidikan lainnya."},
-      {"q":"Berapa biaya website sekolah?","a":"Biaya bergantung pada jumlah halaman, kebutuhan berita atau konten, fitur, desain, dan ruang lingkup proyek."}
+      {
+        "q": "Apakah website sekolah bisa menampilkan informasi penerimaan siswa?",
+        "a": "Ya. Informasi pendaftaran, jadwal, persyaratan, kontak, dan tautan formulir dapat ditampilkan."
+      },
+      {
+        "q": "Apakah website sekolah bisa memiliki halaman berita?",
+        "a": "Ya. Website dapat memiliki halaman atau bagian berita untuk informasi kegiatan dan pengumuman."
+      },
+      {
+        "q": "Apakah website sekolah cocok untuk madrasah dan yayasan?",
+        "a": "Ya. Struktur dapat disesuaikan untuk sekolah, madrasah, yayasan pendidikan, dan lembaga pendidikan lainnya."
+      },
+      {
+        "q": "Berapa biaya website sekolah?",
+        "a": "Biaya bergantung pada jumlah halaman, kebutuhan berita atau konten, fitur, desain, dan ruang lingkup proyek."
+      }
     ]
   },
   {
@@ -84,19 +196,47 @@
     "keyword": "jasa pembuatan website travel",
     "title": "Jasa Pembuatan Website Travel & Tour | Nakama Digital",
     "description": "Jasa pembuatan website travel dan tour untuk menampilkan paket, destinasi, itinerary, galeri, informasi perjalanan, dan kontak WhatsApp secara profesional.",
-    "headline": "Website travel yang membuat paket perjalanan lebih mudah dipahami",
+    "headline": "Jasa Pembuatan Website Travel untuk Paket Tour dan Private Trip",
     "intro": "Tampilkan destinasi, paket perjalanan, itinerary, galeri, informasi keberangkatan, dan jalur konsultasi dalam satu website travel yang rapi.",
-    "audience": ["Travel agent", "Tour operator", "Guide dan penyedia private trip", "Bisnis pariwisata lokal"],
-    "benefits": ["Paket perjalanan lebih mudah dibandingkan", "Destinasi dan itinerary dapat dijelaskan dengan visual", "Calon pelanggan dapat langsung konsultasi", "Website bisa menjadi pusat informasi dari media sosial"],
+    "audience": [
+      "Travel agent",
+      "Tour operator",
+      "Guide dan penyedia private trip",
+      "Bisnis pariwisata lokal"
+    ],
+    "benefits": [
+      "Paket perjalanan lebih mudah dibandingkan",
+      "Destinasi dan itinerary dapat dijelaskan dengan visual",
+      "Calon pelanggan dapat langsung konsultasi",
+      "Website bisa menjadi pusat informasi dari media sosial"
+    ],
     "sections": [
-      {"heading":"Tampilkan pengalaman perjalanan dengan jelas","text":"Foto destinasi, itinerary, durasi, aktivitas, fasilitas, dan informasi penting dapat disusun agar calon pelanggan lebih mudah memahami paket yang ditawarkan."},
-      {"heading":"Cocok untuk travel lokal maupun private trip","text":"Struktur dapat diarahkan untuk paket reguler, private trip, tour satu hari, perjalanan beberapa hari, hingga layanan custom itinerary."}
+      {
+        "heading": "Tampilkan pengalaman perjalanan dengan jelas",
+        "text": "Foto destinasi, itinerary, durasi, aktivitas, fasilitas, dan informasi penting dapat disusun agar calon pelanggan lebih mudah memahami paket yang ditawarkan."
+      },
+      {
+        "heading": "Cocok untuk travel lokal maupun private trip",
+        "text": "Struktur dapat diarahkan untuk paket reguler, private trip, tour satu hari, perjalanan beberapa hari, hingga layanan custom itinerary."
+      }
     ],
     "faqs": [
-      {"q":"Apakah website travel bisa menampilkan paket tour?","a":"Ya. Paket dapat ditampilkan dengan informasi destinasi, durasi, itinerary, fasilitas, dan cara reservasi."},
-      {"q":"Apakah website travel bisa terhubung ke WhatsApp?","a":"Ya. Pengunjung dapat diarahkan ke WhatsApp untuk bertanya tentang jadwal, harga, atau ketersediaan trip."},
-      {"q":"Apakah bisa menampilkan galeri foto destinasi?","a":"Ya. Galeri dapat digunakan untuk memperlihatkan destinasi, aktivitas, akomodasi, dan pengalaman perjalanan."},
-      {"q":"Berapa biaya website travel?","a":"Biaya disesuaikan dengan jumlah paket, halaman, galeri, fitur, desain, dan ruang lingkup proyek."}
+      {
+        "q": "Apakah website travel bisa menampilkan paket tour?",
+        "a": "Ya. Paket dapat ditampilkan dengan informasi destinasi, durasi, itinerary, fasilitas, dan cara reservasi."
+      },
+      {
+        "q": "Apakah website travel bisa terhubung ke WhatsApp?",
+        "a": "Ya. Pengunjung dapat diarahkan ke WhatsApp untuk bertanya tentang jadwal, harga, atau ketersediaan trip."
+      },
+      {
+        "q": "Apakah bisa menampilkan galeri foto destinasi?",
+        "a": "Ya. Galeri dapat digunakan untuk memperlihatkan destinasi, aktivitas, akomodasi, dan pengalaman perjalanan."
+      },
+      {
+        "q": "Berapa biaya website travel?",
+        "a": "Biaya disesuaikan dengan jumlah paket, halaman, galeri, fitur, desain, dan ruang lingkup proyek."
+      }
     ]
   }
 ]
