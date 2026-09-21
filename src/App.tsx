@@ -3,7 +3,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import { LanguageProvider, useLanguage } from './context/LanguageContext';
 
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
+import HomeExperience from './components/HomeExperience';
 import Footer from './components/Footer';
 import CityLanding from './pages/CityLanding';
 import ServiceLanding from './pages/ServiceLanding';
@@ -79,7 +79,7 @@ function PageContent() {
     <>
       <Navbar />
       <main>
-        <Hero />
+        <HomeExperience />
       </main>
       <Footer />
       <a href="https://wa.me/6285820830530?text=Halo%20Nakama%20Digital,%20saya%20ingin%20konsultasi%20website." target="_blank" rel="noopener noreferrer" className="md:hidden fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full shadow-xl flex items-center justify-center z-50" aria-label="Chat on WhatsApp">
