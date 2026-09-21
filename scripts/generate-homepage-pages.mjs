@@ -23,36 +23,6 @@ const enUrl = 'https://nakamadigital.biz.id/en/';
 
 const homepageContent = [
   '<main>',
-  '<section><p>Jasa pembuatan website untuk bisnis Anda</p>',
-  '<h1>Jasa Pembuatan Website untuk Bisnis &amp; UMKM</h1>',
-  '<p>Jasa pembuatan website profesional untuk bisnis, UMKM, sekolah, travel, dan perusahaan. Nakama Digital mengerjakan website yang cepat, responsif, dan siap mendukung pemasaran online.</p>',
-  '<p>Kami mengerjakan pembuatan website, web design, dan pengembangan website sesuai kebutuhan bisnis, mulai dari company profile, website UMKM, landing page, website sekolah, hingga website travel.</p>',
-  '<a href="https://wa.me/6285820830530?text=' + encodeURIComponent('Halo Nakama Digital, saya ingin konsultasi website.') + '">Mulai Konsultasi</a></section>',
-  '<section><h2>Layanan website untuk kebutuhan bisnis</h2>',
-  '<p>Setiap jenis bisnis membutuhkan struktur website yang berbeda. Pilih layanan yang paling dekat dengan kebutuhan Anda.</p><ul>' +
-  services.map((service) => '<li><a href="/' + escapeHtml(service.slug) + '/">' + escapeHtml(service.title) + '</a> — ' + escapeHtml(service.description) + '</li>').join('') +
-  '</ul></section>',
-  '<section><h2>Website untuk bisnis di berbagai kota</h2>',
-  '<p>Nakama Digital menyediakan halaman layanan lokal untuk membantu bisnis menemukan informasi website yang lebih relevan dengan wilayahnya.</p><ul>' +
-  cities.map((city) => '<li><a href="/' + escapeHtml(city.slug) + '/">Jasa website ' + escapeHtml(city.city) + '</a> — ' + escapeHtml(city.locationLabel) + '</li>').join('') +
-  '</ul></section>',
-  '<section id="blog"><h2>Panduan Website untuk Bisnis</h2>',
-  '<p>Artikel praktis tentang biaya, struktur, dan pilihan jenis website sebelum memulai proyek.</p><ul>' +
-  posts.map((post) => '<li><a href="/blog/' + escapeHtml(post.slug) + '/">' + escapeHtml(post.title) + '</a></li>').join('') +
-  '</ul></section>',
-  '<section><h2>Website yang dibuat sesuai tujuan bisnis</h2>',
-  '<p>Kami merancang struktur, tampilan, dan fitur berdasarkan jenis bisnis, target pelanggan, informasi yang perlu ditampilkan, dan tindakan yang ingin dilakukan pengunjung.</p>',
-  '<p>Website dapat digunakan sebagai pusat informasi resmi, katalog produk, profil perusahaan, halaman promosi, atau media komunikasi dengan pelanggan.</p></section>',
-  '<section><h2>Pertanyaan umum tentang pembuatan website</h2><dl>',
-  '<dt>Berapa lama website dibuat?</dt><dd>Waktu pengerjaan bergantung pada kompleksitas. Website standar umumnya membutuhkan 3–7 hari kerja, sedangkan proyek custom membutuhkan waktu lebih lama.</dd>',
-  '<dt>Apakah website responsive?</dt><dd>Ya. Website dirancang agar nyaman digunakan di desktop, tablet, dan smartphone.</dd>',
-  '<dt>Apakah website bisa terhubung ke WhatsApp?</dt><dd>Ya. Tombol WhatsApp dapat ditempatkan pada bagian strategis sesuai kebutuhan.</dd>',
-  '<dt>Apakah website bisa muncul di Google?</dt><dd>Website dapat dibuat dengan struktur teknis dan konten yang SEO-friendly, tetapi posisi tertentu di Google tidak dapat dijamin.</dd>',
-  '</dl></section></main>'
-].join('');
-
-const homepageContent = [
-  '<main>',
   '<section><p>Jasa pembuatan website untuk bisnis dan UMKM</p>',
   '<h1>Jasa Pembuatan Website untuk Bisnis &amp; UMKM</h1>',
   '<p>Website profesional yang dibuat sesuai kebutuhan bisnis Anda.</p>',

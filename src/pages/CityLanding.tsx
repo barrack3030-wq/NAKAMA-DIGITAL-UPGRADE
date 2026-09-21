@@ -180,6 +180,22 @@ export default function CityLanding() {
             <div className="mt-7 flex flex-wrap gap-2">
               {city.localHighlights.map((item) => <span key={item} className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm text-slate-600">{item}</span>)}
             </div>
+
+            <div className="mt-12 grid gap-8 lg:grid-cols-2">
+              <article>
+                <h2 className="text-2xl font-bold tracking-tight">{city.seoHeading}</h2>
+                <p className="mt-4 text-base leading-7 text-slate-600">{city.seoParagraph}</p>
+              </article>
+              <article>
+                <h2 className="text-2xl font-bold tracking-tight">{city.seoSecondHeading}</h2>
+                <p className="mt-4 text-base leading-7 text-slate-600">{city.seoSecondParagraph}</p>
+              </article>
+            </div>
+
+            <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-6">
+              <p className="text-xs font-semibold uppercase tracking-[.16em] text-brand-600">Cakupan pencarian</p>
+              <p className="mt-3 text-base leading-7 text-slate-700">{city.keywordCoverage}</p>
+            </div>
           </div>
         </section>
 
@@ -246,7 +262,6 @@ export default function CityLanding() {
         <section className="px-5 pb-16 lg:px-8"><div className="mx-auto max-w-6xl overflow-hidden rounded-[2rem] bg-brand-600 px-6 py-12 text-center text-white sm:px-12"><h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Butuh website untuk bisnis di {city.city}?</h2><p className="mx-auto mt-4 max-w-2xl text-brand-100">Ceritakan jenis bisnis dan kebutuhan Anda. Kami akan membantu menentukan struktur website yang sesuai.</p><a href={whatsapp(`Halo Nakama Digital, saya ingin konsultasi website untuk bisnis saya di ${city.city}.`)} target="_blank" rel="noopener noreferrer" className="mt-7 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 font-bold text-brand-700 shadow-xl transition hover:bg-brand-50">Chat WhatsApp <MessageCircle size={18} /></a></div></section>
       </main>
 
-      <footer className="border-t border-slate-200 bg-white"><div className="mx-auto flex max-w-6xl flex-col gap-3 px-5 py-8 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between lg:px-8"><span>© {new Date().getFullYear()} Nakama Digital · {city.city}</span><a href="/" className="font-medium text-slate-700 hover:text-brand-600">Kembali ke website utama</a></div></footer>
       <Footer />
     </div>
   );
