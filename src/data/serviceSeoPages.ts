@@ -7,6 +7,7 @@ export type ServiceSeoPage = {
   description: string;
   headline: string;
   intro: string;
+  seoCoverage: string;
   audience: string[];
   benefits: string[];
   sections: { heading: string; text: string }[];
