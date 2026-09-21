@@ -11,7 +11,7 @@ const serviceLinks = [
   '/landing-page/',
   '/website-sekolah/',
   '/website-travel/',
-  null,
+  '/website-toko-online/',
   null,
   null,
 ];
