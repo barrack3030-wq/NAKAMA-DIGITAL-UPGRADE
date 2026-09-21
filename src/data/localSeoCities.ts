@@ -13,6 +13,8 @@ export type LocalSeoCity = {
   localContext: string;
   localHighlights: string[];
   locationLabel: string;
+  seoTitle: string;
+  seoDescription: string;
   serviceFocus: string[];
   seoHeading: string;
   seoParagraph: string;
@@ -32,6 +34,8 @@ type CityConfig = {
   context: string;
   highlights: string[];
   locationLabel: string;
+  seoTitle?: string;
+  seoDescription?: string;
   serviceFocus: string[];
   seoHeading: string;
   seoParagraph: string;
@@ -59,6 +63,8 @@ const buildCity = (config: CityConfig): LocalSeoCity => ({
   localContext: config.context,
   localHighlights: config.highlights,
   locationLabel: config.locationLabel,
+  seoTitle: config.seoTitle ?? `Jasa Website ${config.city} | Nakama Digital`,
+  seoDescription: config.seoDescription ?? `Jasa pembuatan website di ${config.city} untuk bisnis, UMKM, perusahaan, sekolah, dan organisasi. Website responsif dan SEO-friendly.`,
   serviceFocus: config.serviceFocus,
   seoHeading: config.seoHeading,
   seoParagraph: config.seoParagraph,
