@@ -93,8 +93,8 @@ function faqItems(city) {
 
 for (const city of cities) {
   const cityUrl = `https://nakamadigital.biz.id/${city.slug}/`;
-  const title = `Jasa Pembuatan Website ${city.city} | Nakama Digital`;
-  const description = `Jasa pembuatan website untuk bisnis, UMKM, jasa, sekolah, yayasan, perusahaan, dan organisasi di ${city.locationLabel}. Website profesional, mobile-friendly, SEO-ready, dan terhubung WhatsApp.`;
+  const title = city.seoTitle || `Jasa Website ${city.city} | Nakama Digital`;
+  const description = city.seoDescription || `Jasa pembuatan website untuk bisnis, UMKM, jasa, sekolah, yayasan, perusahaan, dan organisasi di ${city.locationLabel}. Website profesional, mobile-friendly, SEO-ready, dan terhubung WhatsApp.`;
 
   const serviceSchema = {
     '@context': 'https://schema.org',
