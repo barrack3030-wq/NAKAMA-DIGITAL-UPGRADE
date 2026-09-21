@@ -222,6 +222,7 @@ function AppShell() {
           <Route path="/landing-page/" element={<ServiceLanding />} />
           <Route path="/website-sekolah/" element={<ServiceLanding />} />
           <Route path="/website-travel/" element={<ServiceLanding />} />
+          <Route path="/website-toko-online/" element={<ServiceLanding />} />
           <Route path="/blog/" element={<BlogIndex />} />
           <Route path="/blog/:slug/" element={<BlogArticle />} />
           <Route path="/:citySlug" element={<CityLanding />} />
