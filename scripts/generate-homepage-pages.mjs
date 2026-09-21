@@ -125,6 +125,7 @@ const urls = [
   enUrl,
   ...cities.map((city) => rootUrl + city.slug + '/'),
   ...services.map((service) => rootUrl + service.slug + '/'),
+  ...posts.map((post) => rootUrl + 'blog/' + post.slug + '/'),
 ];
 
 const sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n' +
