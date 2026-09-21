@@ -3,6 +3,7 @@ import { ArrowRight, Check, ChevronDown, Globe2, MessageCircle, Search, Smartpho
 import { useParams } from 'react-router-dom';
 import { getLocalSeoCity, localSeoCities } from '../data/localSeoCities';
 import Footer from '../components/Footer';
+import { LanguageProvider } from '../context/LanguageContext';
 
 const WHATSAPP_NUMBER = '6285820830530';
 
@@ -97,7 +98,8 @@ export default function CityLanding() {
     `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 
   return (
-    <div className="bg-white text-brand-900">
+    <LanguageProvider>
+      <div className="bg-white text-brand-900">
       <header className="sticky top-0 z-40 border-b border-slate-200/70 bg-white/90 backdrop-blur-xl">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 lg:px-8">
           <a href="/" className="flex items-center gap-3" aria-label="Nakama Digital">
@@ -263,6 +265,7 @@ export default function CityLanding() {
       </main>
 
       <Footer />
-    </div>
+      </div>
+    </LanguageProvider>
   );
 }
