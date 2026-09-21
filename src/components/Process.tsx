@@ -1,43 +1,44 @@
 import React from 'react';
 import { motion } from 'motion/react';
+import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Process() {
   const { t } = useLanguage();
 
   return (
-    <section id="process" className="relative py-12 lg:py-16">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+    <section id="process" className="relative py-14 lg:py-18">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-10"
+          viewport={{ once: true }}
+          transition={{ duration: .7 }}
+          className="max-w-2xl"
         >
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-brand-900">
-            {t.process.title}
-          </h2>
+          <p className="text-xs font-semibold uppercase tracking-[.18em] text-brand-600">Cara kerja</p>
+          <h2 className="mt-3 text-4xl font-bold tracking-[-.04em] text-brand-900 sm:text-5xl">{t.process.title}</h2>
+          <p className="mt-4 max-w-xl text-base leading-7 text-slate-500">Anda tidak perlu datang dengan brief yang sudah sempurna. Kita mulai dari memahami bisnisnya dulu.</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
-          {/* Connecting line */}
-          <div className="hidden md:block absolute top-6 left-0 right-0 h-px bg-gray-100" />
-          
+        <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           {t.process.items.map((step, index) => (
             <motion.div
               key={step.id}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className="relative"
+              viewport={{ once: true }}
+              transition={{ duration: .55, delay: index * .08 }}
+              className="group rounded-[1.6rem] border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-brand-200 hover:shadow-xl"
             >
-              <div className="w-12 h-12 rounded-full bg-white border border-gray-200 flex items-center justify-center text-sm font-semibold text-brand-500 mb-6 relative z-10 shadow-sm">
-                {step.id}
+              <div className="flex items-start justify-between">
+                <span className="text-5xl font-bold tracking-[-.05em] text-brand-100 transition group-hover:text-brand-200">{step.id}</span>
+                <span className="mt-2 flex h-8 w-8 items-center justify-center rounded-full bg-slate-50 text-slate-400 transition group-hover:bg-brand-50 group-hover:text-brand-600">
+                  <ArrowRight className="h-4 w-4" />
+                </span>
               </div>
-              <h3 className="text-xl font-semibold text-brand-900 mb-3">{step.title}</h3>
-              <p className="text-gray-500 leading-relaxed text-sm">{step.desc}</p>
+              <h3 className="mt-10 text-xl font-bold tracking-tight text-brand-900">{step.title}</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-500">{step.desc}</p>
             </motion.div>
           ))}
         </div>
