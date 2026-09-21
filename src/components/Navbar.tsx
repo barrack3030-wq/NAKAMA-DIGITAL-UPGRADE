@@ -26,7 +26,7 @@ export default function Navbar() {
   return <>
     <motion.nav initial={{ y: -100 }} animate={{ y: 0 }} transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }} className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-md border-b border-gray-100 py-3 shadow-sm' : 'bg-transparent py-5'}`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between">
-        <a href="#" className="flex items-center group shrink-0" aria-label={siteConfig.brandName}>
+        <a href="/" className="flex items-center group shrink-0" aria-label={siteConfig.brandName}>
           <img
             key={logoSrc}
             src={logoSrc}
@@ -46,6 +46,6 @@ export default function Navbar() {
         </div>
       </div>
     </motion.nav>
-    <AnimatePresence>{mobileMenuOpen && <motion.div initial={{opacity:0,y:-20}} animate={{opacity:1,y:0}} exit={{opacity:0,y:-20}} className="fixed inset-0 z-40 bg-white pt-24 px-6 md:hidden"><div className="flex flex-col gap-6 text-center">{navLinks.map(link => <a key={link.name} href={link.href} onClick={()=>setMobileMenuOpen(false)} className="text-2xl font-semibold text-gray-900">{link.name}</a>)}<a href="#contact" onClick={()=>setMobileMenuOpen(false)} className="mt-4 px-6 py-4 bg-brand-500 text-white font-semibold rounded-2xl w-full">{t.nav.cta}</a></div></motion.div>}</AnimatePresence>
+    <AnimatePresence>{mobileMenuOpen && <motion.div initial={{opacity:0,y:-20}} animate={{opacity:1,y:0}} exit={{opacity:0,y:-20}} className="fixed inset-0 z-40 bg-white pt-24 px-6 md:hidden"><div className="flex flex-col gap-6 text-center">{navLinks.map(link => <a key={link.name} href={link.href} onClick={()=>setMobileMenuOpen(false)} className="text-2xl font-semibold text-gray-900">{link.name}</a>)}<a href="https://wa.me/6285820830530?text=Halo%20Nakama%20Digital,%20saya%20ingin%20konsultasi%20website." target="_blank" rel="noopener noreferrer" onClick={()=>setMobileMenuOpen(false)} className="mt-4 px-6 py-4 bg-brand-500 text-white font-semibold rounded-2xl w-full">{t.nav.cta}</a></div></motion.div>}</AnimatePresence>
   </>;
 }
