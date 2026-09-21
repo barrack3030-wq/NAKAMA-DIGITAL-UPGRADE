@@ -12,9 +12,9 @@ export const dict = {
     },
     hero: {
       eyebrow: 'DIGITAL AGENCY • WEBSITE • DESIGN • DEVELOPMENT',
-      title1: 'Jasa pembuatan website untuk\nbisnis Anda',
-      titleHighlight: 'lebih profesional.',
-      desc: 'Kami membantu bisnis, UMKM, sekolah, travel, dan perusahaan memiliki website yang rapi, cepat, responsif, dan mudah dipahami calon pelanggan.',
+      title1: 'Jasa pembuatan website untuk\nbisnis & UMKM',
+      titleHighlight: 'yang lebih profesional.',
+      desc: 'Kami membantu bisnis, UMKM, sekolah, travel, dan perusahaan melalui pembuatan website, web design, dan pengembangan website yang rapi, cepat, responsif, dan mudah dipahami calon pelanggan.',
       cta1: 'Mulai Konsultasi',
       cta2: 'Lihat Portfolio'
     },
