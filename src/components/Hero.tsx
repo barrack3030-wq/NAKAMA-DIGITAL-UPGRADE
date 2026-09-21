@@ -60,7 +60,7 @@ export default function Hero() {
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
           <a
-            href="#portfolio"
+            href="/website-umkm/"
             className="px-8 py-4 bg-white/60 hover:bg-white backdrop-blur-md text-brand-900 border border-brand-200/50 font-medium rounded-full transition-all duration-300 w-full sm:w-auto justify-center flex items-center shadow-sm"
           >
             {t.hero.cta2}
