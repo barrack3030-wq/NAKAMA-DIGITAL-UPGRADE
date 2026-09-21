@@ -38,14 +38,16 @@ export default function Hero() {
           </span>
         </motion.h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-4 text-base md:text-lg text-gray-600 max-w-xl mx-auto leading-6.5 md:leading-7 text-balance"
-        >
-          {t.hero.desc}
-        </motion.p>
+        {t.hero.desc && (
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            className="mt-4 text-base md:text-lg text-gray-600 max-w-xl mx-auto leading-6.5 md:leading-7 text-balance"
+          >
+            {t.hero.desc}
+          </motion.p>
+        )}
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
