@@ -1,91 +1,78 @@
 import React from 'react';
-import { siteConfig } from '../data/siteConfig';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Footer() {
-  const isEnglish = typeof window !== 'undefined' && window.location.pathname.startsWith('/en');
-  const asset = (path: string) => /^https?:\/\//i.test(path) ? path : `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
-  const logoSrc = `${asset(siteConfig.logoPath)}?v=20260914`;
-
-  const navigation = isEnglish
-    ? [
-        ['Home', '/'],
-        ['Services', '/website-company-profile/'],
-        ['Blog', '/blog/'],
-      ]
-    : [
-        ['Beranda', '/'],
-        ['Layanan', '/website-company-profile/'],
-        ['Blog', '/blog/'],
-      ];
-
-  const services = isEnglish
-    ? [
-        ['Company Profile', '/website-company-profile/'],
-        ['SME Website', '/website-umkm/'],
-        ['Landing Page', '/landing-page/'],
-        ['School Website', '/website-sekolah/'],
-        ['Travel Website', '/website-travel/'],
-      ]
-    : [
-        ['Company Profile', '/website-company-profile/'],
-        ['Website UMKM', '/website-umkm/'],
-        ['Landing Page', '/landing-page/'],
-        ['Website Sekolah', '/website-sekolah/'],
-        ['Website Travel', '/website-travel/'],
-      ];
+  const currentYear = new Date().getFullYear();
+  const { t } = useLanguage();
 
   return (
-    <footer className="border-t border-slate-200/80 bg-white/70 backdrop-blur-xl">
-      <div className="mx-auto max-w-6xl px-6 py-12 lg:px-8">
-        <div className="grid gap-10 md:grid-cols-[1.4fr_.8fr_1fr]">
-          <div className="max-w-sm">
-            <a href="/" className="inline-flex items-center" aria-label={siteConfig.brandName}>
-              <img src={logoSrc} alt={siteConfig.brandName} className="h-10 w-auto object-contain" />
+    <footer className="relative bg-white/40 backdrop-blur-xl pt-16 pb-8 border-t border-white/60">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-16">
+          <div className="max-w-xs">
+            <a href="#" className="flex items-center gap-2 mb-6 group">
+              <div className="w-8 h-8 bg-brand-500 rounded-lg flex items-center justify-center text-white font-bold text-xl group-hover:bg-brand-600 transition-colors">
+                N
+              </div>
+              <span className="font-semibold text-xl tracking-tight text-brand-900">
+                Nakama Digital
+              </span>
             </a>
-            <p className="mt-5 text-sm leading-6 text-slate-500">
-              {isEnglish
-                ? 'Professional websites for businesses, SMEs, schools, travel companies, and organizations.'
-                : 'Website profesional untuk bisnis, UMKM, sekolah, travel, dan organisasi.'}
+            <p className="text-sm text-gray-500 leading-relaxed">
+              {t.footer.desc}
             </p>
           </div>
 
-          <div>
-            <h2 className="text-sm font-semibold uppercase tracking-[.14em] text-slate-900">
-              {isEnglish ? 'Navigate' : 'Navigasi'}
-            </h2>
-            <ul className="mt-4 space-y-3">
-              {navigation.map(([label, href]) => (
-                <li key={href}>
-                  <a href={href} className="text-sm text-slate-500 transition hover:text-brand-600">{label}</a>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
+            <div>
+              <h4 className="font-semibold text-brand-900 mb-4 text-sm uppercase tracking-wider">{t.footer.nav}</h4>
+              <ul className="space-y-3">
+                {['Services', 'Portfolio', 'Process', 'FAQ'].map((item) => (
+                  <li key={item}>
+                    <a href={`#${item.toLowerCase()}`} className="text-sm text-gray-500 hover:text-brand-600 transition-colors">
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold text-brand-900 mb-4 text-sm uppercase tracking-wider">Layanan</h4>
+              <ul className="space-y-3">
+                {[
+                  ['Website Company Profile', '/website-company-profile/'],
+                  ['Website UMKM', '/website-umkm/'],
+                  ['Landing Page', '/landing-page/'],
+                  ['Website Sekolah', '/website-sekolah/'],
+                  ['Website Travel', '/website-travel/'],
+                ].map(([label, href]) => (
+                  <li key={href}>
+                    <a href={href} className="text-sm text-gray-500 hover:text-brand-600 transition-colors">{label}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold text-brand-900 mb-4 text-sm uppercase tracking-wider">{t.footer.contact}</h4>
+              <ul className="space-y-3">
+                <li>
+                  <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 hover:text-brand-600 transition-colors">
+                    WhatsApp: <br/>+62 858-2083-0530
+                  </a>
                 </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h2 className="text-sm font-semibold uppercase tracking-[.14em] text-slate-900">
-              {isEnglish ? 'Services' : 'Layanan'}
-            </h2>
-            <ul className="mt-4 space-y-3">
-              {services.map(([label, href]) => (
-                <li key={href}>
-                  <a href={href} className="text-sm text-slate-500 transition hover:text-brand-600">{label}</a>
-                </li>
-              ))}
-            </ul>
+              </ul>
+            </div>
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-4 border-t border-slate-100 pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <p className="text-sm font-medium text-slate-700">{isEnglish ? 'Need a website?' : 'Butuh website?'}</p>
-            <a href="https://wa.me/6285820830530" target="_blank" rel="noopener noreferrer" className="mt-1 inline-block text-sm text-slate-500 transition hover:text-brand-600">
-              WhatsApp +62 858-2083-0530
-            </a>
-          </div>
-          <p className="text-sm text-slate-400">
-            © {new Date().getFullYear()} {siteConfig.brandName}
+        <div className="pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-sm text-gray-400">
+            &copy; {currentYear} Nakama Digital. All rights reserved.
           </p>
+          <div className="flex gap-4">
+            <a href="#" className="text-sm text-gray-400 hover:text-brand-600 transition-colors">{t.footer.privacy}</a>
+            <a href="#" className="text-sm text-gray-400 hover:text-brand-600 transition-colors">{t.footer.terms}</a>
+          </div>
         </div>
       </div>
     </footer>
