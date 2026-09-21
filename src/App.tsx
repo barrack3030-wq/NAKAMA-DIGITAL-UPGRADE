@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense, useEffect } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { LanguageProvider } from './context/LanguageContext';
 
@@ -40,6 +40,47 @@ function PublicPage({ english = false }: { english?: boolean }) {
 }
 
 function PageContent() {
+  const { lang } = useLanguage();
+
+  useEffect(() => {
+    const isEnglish = lang === 'en';
+    const title = isEnglish
+      ? 'Professional Website Design & Development | Nakama Digital'
+      : 'Jasa Pembuatan Website untuk Bisnis, UMKM & Perusahaan | Nakama Digital';
+    const description = isEnglish
+      ? 'Nakama Digital designs fast, responsive, professional websites for businesses, SMEs, schools, travel companies, and organizations.'
+      : 'Nakama Digital membantu bisnis, UMKM, sekolah, travel, dan perusahaan membuat website profesional yang cepat, responsif, dan siap mendukung pemasaran online.';
+    const canonicalUrl = isEnglish
+      ? 'https://nakamadigital.biz.id/en/'
+      : 'https://nakamadigital.biz.id/';
+
+    document.documentElement.lang = isEnglish ? 'en' : 'id';
+    document.title = title;
+
+    const setMeta = (selector: string, attributes: Record<string, string>) => {
+      let el = document.head.querySelector(selector) as HTMLMetaElement | null;
+      if (!el) {
+        el = document.createElement('meta');
+        document.head.appendChild(el);
+      }
+      Object.entries(attributes).forEach(([key, value]) => el!.setAttribute(key, value));
+    };
+
+    setMeta('meta[name="description"]', { name: 'description', content: description });
+    setMeta('meta[name="robots"]', { name: 'robots', content: 'index,follow' });
+    setMeta('meta[property="og:title"]', { property: 'og:title', content: title });
+    setMeta('meta[property="og:description"]', { property: 'og:description', content: description });
+    setMeta('meta[property="og:url"]', { property: 'og:url', content: canonicalUrl });
+
+    let canonical = document.head.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = canonicalUrl;
+  }, [lang]);
+
   return (
     <>
       <Navbar />
