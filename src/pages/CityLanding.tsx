@@ -15,8 +15,8 @@ export default function CityLanding() {
   useEffect(() => {
     if (!city) return;
 
-    const title = `${city.primaryKeyword} | Nakama Digital`;
-    const description = `${city.primaryKeyword} untuk bisnis, UMKM, toko, jasa, sekolah, yayasan, dan perusahaan. Website profesional, mobile-friendly, SEO-ready, dan terhubung WhatsApp.`;
+    const title = city.seoTitle;
+    const description = city.seoDescription;
     document.title = title;
 
     const setMeta = (name: string, content: string) => {
@@ -101,7 +101,7 @@ export default function CityLanding() {
       <header className="sticky top-0 z-40 border-b border-slate-200/70 bg-white/90 backdrop-blur-xl">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 lg:px-8">
           <a href="/" className="flex items-center gap-3" aria-label="Nakama Digital">
-            <img src="/assets/logo/logo.svg" alt="Nakama Digital" className="h-9 w-auto" />
+            <img src="/images/logo/logo.png" alt="Nakama Digital" className="h-9 w-auto object-contain" />
             <span className="hidden text-sm font-semibold tracking-tight sm:block">Nakama Digital</span>
           </a>
           <a href={whatsapp(`Halo Nakama Digital, saya ingin konsultasi website untuk bisnis saya di ${city.city}.`)} target="_blank" rel="noopener noreferrer" className="rounded-full bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-700">Konsultasi Gratis</a>
