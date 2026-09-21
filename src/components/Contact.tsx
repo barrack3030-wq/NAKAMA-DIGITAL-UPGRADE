@@ -33,7 +33,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-16 lg:py-24">
+    <section id="contact" className="relative py-12 lg:py-16">
       {/* Electric blue diffuse light behind form */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-brand-500/15 blur-[150px] rounded-full pointer-events-none -z-10" />
       
@@ -43,7 +43,7 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-brand-900 mb-4">
             {t.contact.title}
@@ -58,10 +58,10 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="bg-white/70 backdrop-blur-2xl rounded-3xl p-8 md:p-12 shadow-2xl shadow-brand-500/5 border border-white/60"
+          className="bg-white/70 backdrop-blur-2xl rounded-3xl p-6 md:p-8 shadow-2xl shadow-brand-500/5 border border-white/60"
         >
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <form onSubmit={handleSubmit} className="space-y-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               <div className="space-y-2">
                 <label htmlFor="name" className="text-sm font-medium text-gray-700">{t.contact.name}</label>
                 <input
