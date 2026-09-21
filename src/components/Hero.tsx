@@ -53,7 +53,7 @@ export default function Hero() {
           className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
           <a
-            href="#contact"
+            href="https://wa.me/6285820830530?text=Halo%20Nakama%20Digital,%20saya%20ingin%20konsultasi%20website." target="_blank" rel="noopener noreferrer"
             className="group relative px-8 py-4 bg-brand-900 hover:bg-brand-800 text-white font-medium rounded-full overflow-hidden transition-all duration-300 flex items-center gap-2 w-full sm:w-auto justify-center shadow-xl shadow-brand-900/10"
           >
             <span>{t.hero.cta1}</span>
