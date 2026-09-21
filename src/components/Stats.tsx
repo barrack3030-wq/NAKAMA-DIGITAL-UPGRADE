@@ -6,9 +6,9 @@ export default function Stats() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative py-8 lg:py-10 border-y border-white/50 bg-white/30 backdrop-blur-md">
+    <section className="relative py-6 lg:py-8 border-y border-white/50 bg-white/30 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-8 divide-x divide-transparent md:divide-gray-100">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-6 divide-x divide-transparent md:divide-gray-100">
           {t.stats.map((stat, index) => (
             <motion.div
               key={stat.label}
