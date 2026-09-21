@@ -15,7 +15,7 @@ export const dict = {
       eyebrow: 'Untuk bisnis yang ingin tampil lebih jelas di internet',
       title1: 'Jasa pembuatan website untuk\nbisnis & UMKM',
       titleHighlight: 'yang dibuat mengikuti kebutuhan bisnis Anda.',
-      desc: 'Kami bantu menyusun tampilan, isi, dan alur website supaya calon pelanggan cepat tahu Anda siapa, menjual apa, dan harus menghubungi ke mana.',
+      desc: '',
       cta1: 'Ceritakan Kebutuhan Anda',
       cta2: 'Lihat Contoh Website'
     },
