@@ -32,7 +32,7 @@ export const dict = {
         { title: 'Landing Page' },
         { title: 'Website Sekolah' },
         { title: 'Website Travel' },
-        { title: 'Website Custom' },
+        { title: 'Toko Online' },
         { title: 'SEO Optimization' },
         { title: 'Website Maintenance' },
       ]
@@ -137,7 +137,7 @@ export const dict = {
         { title: 'Landing Page' },
         { title: 'School Website' },
         { title: 'Travel Website' },
-        { title: 'Custom Website' },
+        { title: 'Online Store' },
         { title: 'SEO Optimization' },
         { title: 'Website Maintenance' },
       ]
