@@ -3,6 +3,7 @@ import { ArrowRight, Check, ChevronDown, Globe2, MessageCircle } from 'lucide-re
 import { useParams } from 'react-router-dom';
 import { getServiceSeoPage } from '../data/serviceSeoPages';
 import { localSeoCities } from '../data/localSeoCities';
+import Footer from '../components/Footer';
 
 const WHATSAPP = '6285820830530';
 
@@ -286,6 +287,7 @@ export default function ServiceLanding() {
           </div>
         </section>
       </main>
+      <Footer />
     </div>
   );
 }
