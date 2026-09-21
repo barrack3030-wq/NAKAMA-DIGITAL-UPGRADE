@@ -1,0 +1,114 @@
+{
+  "homepage": {
+    "url": "/",
+    "primaryKeyword": "jasa pembuatan website",
+    "intent": "commercial",
+    "secondaryKeywords": [
+      "jasa website profesional",
+      "jasa web design",
+      "jasa pembuatan website bisnis",
+      "website profesional untuk UMKM"
+    ]
+  },
+  "services": [
+    {
+      "url": "/website-company-profile/",
+      "primaryKeyword": "jasa pembuatan website company profile",
+      "intent": "commercial",
+      "secondaryKeywords": [
+        "website company profile",
+        "website perusahaan",
+        "website profil perusahaan",
+        "website organisasi"
+      ]
+    },
+    {
+      "url": "/website-umkm/",
+      "primaryKeyword": "jasa pembuatan website UMKM",
+      "intent": "commercial",
+      "secondaryKeywords": [
+        "website UMKM",
+        "website bisnis lokal",
+        "katalog online UMKM",
+        "website toko"
+      ]
+    },
+    {
+      "url": "/landing-page/",
+      "primaryKeyword": "jasa pembuatan landing page",
+      "intent": "commercial",
+      "secondaryKeywords": [
+        "landing page bisnis",
+        "landing page iklan",
+        "landing page promosi",
+        "sales landing page"
+      ]
+    },
+    {
+      "url": "/website-sekolah/",
+      "primaryKeyword": "jasa pembuatan website sekolah",
+      "intent": "commercial",
+      "secondaryKeywords": [
+        "website sekolah",
+        "website madrasah",
+        "website pendidikan",
+        "website PPDB"
+      ]
+    },
+    {
+      "url": "/website-travel/",
+      "primaryKeyword": "jasa pembuatan website travel",
+      "intent": "commercial",
+      "secondaryKeywords": [
+        "website travel",
+        "website tour operator",
+        "website paket wisata",
+        "website private trip"
+      ]
+    }
+  ],
+  "articles": [
+    {
+      "url": "/blog/berapa-biaya-membuat-website-untuk-bisnis/",
+      "primaryKeyword": "berapa biaya membuat website",
+      "intent": "informational → commercial"
+    },
+    {
+      "url": "/blog/website-umkm-perlu-apa-saja/",
+      "primaryKeyword": "website UMKM perlu apa saja",
+      "intent": "informational → commercial"
+    },
+    {
+      "url": "/blog/company-profile-vs-landing-page/",
+      "primaryKeyword": "company profile vs landing page",
+      "intent": "informational → commercial"
+    },
+    {
+      "url": "/blog/website-sekolah-harus-punya-halaman-apa/",
+      "primaryKeyword": "website sekolah harus punya halaman apa saja",
+      "intent": "informational → commercial"
+    },
+    {
+      "url": "/blog/website-travel-harus-menampilkan-apa/",
+      "primaryKeyword": "website travel harus menampilkan apa",
+      "intent": "informational → commercial"
+    }
+  ],
+  "cities": [
+    {
+      "url": "/luwuk/",
+      "primaryKeyword": "jasa pembuatan website Luwuk",
+      "intent": "local commercial"
+    },
+    {
+      "url": "/sintang/",
+      "primaryKeyword": "jasa pembuatan website Sintang",
+      "intent": "local commercial"
+    },
+    {
+      "url": "/surabaya/",
+      "primaryKeyword": "jasa pembuatan website Surabaya",
+      "intent": "local commercial"
+    }
+  ]
+}
