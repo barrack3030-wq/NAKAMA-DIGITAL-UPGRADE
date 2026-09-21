@@ -158,7 +158,8 @@ function PageContent() {
 
 function AppShell() {
   return (
-    <div className="relative min-h-screen bg-[#FDFDFF] overflow-hidden selection:bg-brand-500 selection:text-white">
+    <LanguageProvider>
+      <div className="relative min-h-screen bg-[#FDFDFF] overflow-hidden selection:bg-brand-500 selection:text-white">
       <div className="fixed inset-0 z-0 pointer-events-none flex justify-center">
         <div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vh] rounded-full bg-brand-200/40 blur-[120px]" />
         <div className="absolute top-[30%] right-[-10%] w-[40vw] h-[60vh] rounded-full bg-blue-300/20 blur-[150px]" />
@@ -197,7 +198,8 @@ function AppShell() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
-    </div>
+      </div>
+    </LanguageProvider>
   );
 }
 
