@@ -53,9 +53,9 @@ const faqSchema = (locale) => ({
 const homepageContent = [
   '<main>',
   '<section><p>Jasa pembuatan website untuk bisnis Anda</p>',
-  '<h1>Jasa Pembuatan Website untuk Bisnis, UMKM &amp; Perusahaan</h1>',
-  '<p>Nakama Digital membantu bisnis, UMKM, sekolah, travel, dan perusahaan memiliki website profesional yang rapi, cepat, responsif, dan siap mendukung pemasaran online.</p>',
-  '<p>Website dapat disesuaikan dengan kebutuhan bisnis, mulai dari company profile, website UMKM, landing page, website sekolah, hingga website travel.</p>',
+  '<h1>Jasa Pembuatan Website untuk Bisnis &amp; UMKM</h1>',
+  '<p>Jasa pembuatan website profesional untuk bisnis, UMKM, sekolah, travel, dan perusahaan. Nakama Digital mengerjakan website yang cepat, responsif, dan siap mendukung pemasaran online.</p>',
+  '<p>Kami mengerjakan pembuatan website, web design, dan pengembangan website sesuai kebutuhan bisnis, mulai dari company profile, website UMKM, landing page, website sekolah, hingga website travel.</p>',
   '<a href="https://wa.me/6285820830530?text=' + encodeURIComponent('Halo Nakama Digital, saya ingin konsultasi website.') + '">Mulai Konsultasi</a></section>',
   '<section><h2>Layanan website untuk kebutuhan bisnis</h2>',
   '<p>Setiap jenis bisnis membutuhkan struktur website yang berbeda. Pilih layanan yang paling dekat dengan kebutuhan Anda.</p><ul>' +
@@ -104,8 +104,8 @@ const localizedMeta = (html, locale, title, description, canonical) => html
   .replace(/<meta property="og:url"[^>]*>/i, '<meta property="og:url" content="' + canonical + '">')
   .replace('</head>', '<link rel="alternate" hreflang="id" href="' + rootUrl + '"><link rel="alternate" hreflang="en" href="' + enUrl + '"><link rel="alternate" hreflang="x-default" href="' + rootUrl + '"><script id="homepage-faq-schema" type="application/ld+json">' + JSON.stringify(faqSchema(locale === 'en' ? 'en' : 'id')) + '</script></head>');
 
-const idTitle = 'Jasa Pembuatan Website untuk Bisnis, UMKM & Perusahaan | Nakama Digital';
-const idDescription = 'Nakama Digital membantu bisnis, UMKM, sekolah, travel, dan perusahaan membuat website profesional yang cepat, responsif, dan siap mendukung pemasaran online.';
+const idTitle = 'Jasa Pembuatan Website untuk Bisnis & UMKM | Nakama Digital';
+const idDescription = 'Jasa pembuatan website profesional untuk bisnis, UMKM, sekolah, travel, dan perusahaan. Nakama Digital mengerjakan website yang cepat, responsif, dan siap mendukung pemasaran online.';
 const enTitle = 'Professional Website Design & Development | Nakama Digital';
 const enDescription = 'Nakama Digital creates fast, responsive, professional websites for businesses, SMEs, schools, travel companies, and organizations.';
 
