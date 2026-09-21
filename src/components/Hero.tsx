@@ -10,7 +10,7 @@ export default function Hero() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative pt-24 pb-6 lg:pt-28 lg:pb-8 overflow-hidden">
+    <section className="relative pt-24 pb-6 lg:pt-28 lg:pb-10 overflow-hidden">
       {/* Diffused electric-blue light */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-500/15 blur-[120px] rounded-full pointer-events-none -z-10" />
       
@@ -30,7 +30,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="text-5xl md:text-7xl lg:text-[5.5rem] font-bold tracking-tight text-brand-900 leading-[1.05] max-w-5xl mx-auto text-balance whitespace-pre-line"
+          className="text-[3.25rem] sm:text-5xl md:text-6xl lg:text-[4.35rem] font-bold tracking-[-0.035em] text-brand-900 leading-[1.04] max-w-4xl mx-auto text-balance whitespace-pre-line"
         >
           {t.hero.title1 + ' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-brand-400">
@@ -42,7 +42,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-8 text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed text-balance"
+          className="mt-6 text-base md:text-lg text-gray-600 max-w-xl mx-auto leading-7 md:leading-8 text-balance"
         >
           {t.hero.desc}
         </motion.p>
@@ -51,7 +51,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center"
+          className="mt-8 flex flex-col sm:flex-row gap-3 justify-center items-center"
         >
           <a
             href="#contact"
