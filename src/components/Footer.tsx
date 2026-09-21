@@ -3,7 +3,7 @@ import { siteConfig } from '../data/siteConfig';
 
 export default function Footer() {
   const isEnglish = typeof window !== 'undefined' && window.location.pathname.startsWith('/en');
-  const asset = (path: string) => /^https?:\/\//i.test(path) ? path : `${import.meta.env.BASE_URL}${path.replace(/^\\/+/, '')}`;
+  const asset = (path: string) => /^https?:\/\//i.test(path) ? path : `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
   const logoSrc = `${asset(siteConfig.logoPath)}?v=20260914`;
 
   const navigation = isEnglish
