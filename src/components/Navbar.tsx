@@ -39,12 +39,12 @@ export default function Navbar() {
             loading="eager"
           />
         </a>
-        <div className="hidden md:flex items-center gap-1 rounded-full border border-gray-200 bg-white/75 p-1 shadow-sm backdrop-blur-md">
+        <div className="hidden md:flex items-center gap-1.5">
           {navLinks.map(link => (
             <a
               key={link.name}
               href={link.href}
-              className="inline-flex items-center gap-1.5 rounded-full border border-transparent px-3.5 py-2 text-xs font-medium text-gray-600 transition-all hover:border-gray-200 hover:bg-white hover:text-brand-900"
+              className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 bg-white/65 px-3.5 py-2 text-xs font-medium text-gray-600 shadow-sm backdrop-blur-md transition-all hover:border-gray-300 hover:bg-white hover:text-brand-900 hover:shadow"
             >
               {link.name === t.nav.home && <span className="h-1.5 w-1.5 rounded-full bg-brand-900" />}
               {link.name}
