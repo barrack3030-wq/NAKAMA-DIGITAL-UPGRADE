@@ -32,20 +32,19 @@ const staticCityContent = (city) => `
     <section>
       <h2>Website untuk bisnis di ${escapeHtml(city.city)}</h2>
       <p>${escapeHtml(city.context)}</p>
-      <h3>Jenis bisnis</h3>
-      <ul>${city.highlights.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
+      <div>${city.highlights.slice(0, 4).map((item) => `<span>${escapeHtml(item)}</span> `).join('')}</div>
     </section>
     <section>
       <h2>Layanan website di ${escapeHtml(city.city)}</h2>
       <p>Butuh jasa website ${escapeHtml(city.city)}, jasa web design, atau jasa desain website? Struktur dan fitur dapat disesuaikan dengan kebutuhan bisnis.</p>
       <ul>
-        ${services.map((service) => `<li><a href="/${escapeHtml(service.slug)}/">${escapeHtml(service.title)}</a></li>`).join('')}
+        ${services.slice(0, 4).map((service) => `<li><a href="/${escapeHtml(service.slug)}/">${escapeHtml(service.title)}</a></li>`).join('')}
       </ul>
     </section>
     <section>
       <h2>FAQ ${escapeHtml(city.city)}</h2>
       <dl>
-        ${faqItems(city).map(({ name, acceptedAnswer }) => `<dt>${escapeHtml(name)}</dt><dd>${escapeHtml(acceptedAnswer.text)}</dd>`).join("")}
+        ${faqItems(city).slice(0, 4).map(({ name, acceptedAnswer }) => `<dt>${escapeHtml(name)}</dt><dd>${escapeHtml(acceptedAnswer.text)}</dd>`).join("")}
       </dl>
     </section>
   </main>
