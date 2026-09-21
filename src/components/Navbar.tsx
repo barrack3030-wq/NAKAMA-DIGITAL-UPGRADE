@@ -28,7 +28,7 @@ export default function Navbar() {
 
   return <>
     <motion.nav initial={{ y: -100 }} animate={{ y: 0 }} transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }} className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-md border-b border-gray-100 py-3 shadow-sm' : 'bg-transparent py-5'}`}>
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between relative">
         <a href="/" className="flex items-center group shrink-0" aria-label={siteConfig.brandName}>
           <img
             key={logoSrc}
@@ -38,7 +38,7 @@ export default function Navbar() {
             loading="eager"
           />
         </a>
-        <div className="hidden md:flex items-center rounded-full bg-gradient-to-r from-[#0b4f8a] via-brand-600 to-[#a27bc8] p-1.5 shadow-lg shadow-brand-900/10">
+        <div className="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center rounded-full bg-gradient-to-r from-[#0b4f8a] via-brand-600 to-[#a27bc8] p-1.5 shadow-lg shadow-brand-900/10">
           <div className="flex items-center gap-0.5">
             {navLinks.map(link => (
               <a
