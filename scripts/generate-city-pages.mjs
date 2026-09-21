@@ -47,7 +47,7 @@ const staticCityContent = (city) => `
       <h2>FAQ ${escapeHtml(city.city)}</h2>
       <dl>
         ${faqItems(city).map(({ name, acceptedAnswer }) => `<dt>${escapeHtml(name)}</dt><dd>${escapeHtml(acceptedAnswer.text)}</dd>`).join("")}
-      </dl>l>
+      </dl>
     </section>
   </main>
 `;
