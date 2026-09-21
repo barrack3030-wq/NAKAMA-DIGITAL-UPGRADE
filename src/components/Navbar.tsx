@@ -22,6 +22,7 @@ export default function Navbar() {
     { name: t.nav.portfolio, href: '#portfolio' },
     { name: t.nav.process, href: '#process' },
     { name: t.nav.faq, href: '#faq' },
+    { name: t.nav.blog, href: '/blog/' },
   ];
   const toggleLanguage = () => setLanguage(lang === 'id' ? 'en' : 'id');
   const logoSrc = `${asset(siteConfig.logoPath)}?v=20260914`;
