@@ -10,7 +10,7 @@ export default function Hero() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative pt-24 pb-6 lg:pt-28 lg:pb-10 overflow-hidden">
+    <section className="relative pt-20 pb-6 lg:pt-24 lg:pb-8 overflow-hidden">
       {/* Diffused electric-blue light */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-500/15 blur-[120px] rounded-full pointer-events-none -z-10" />
       
@@ -19,7 +19,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="flex items-center justify-center gap-3 text-xs font-semibold tracking-[.16em] text-brand-600 uppercase mb-8"
+          className="flex items-center justify-center gap-3 text-xs font-semibold tracking-[.16em] text-brand-600 uppercase mb-5"
         >
           <span className="h-px w-8 bg-brand-300" />
           <span>{t.hero.eyebrow}</span>
@@ -30,7 +30,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="text-[3.25rem] sm:text-5xl md:text-6xl lg:text-[4.35rem] font-bold tracking-[-0.035em] text-brand-900 leading-[1.04] max-w-4xl mx-auto text-balance whitespace-pre-line"
+          className="text-[2.6rem] sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold tracking-[-0.025em] text-brand-900 leading-[1.08] max-w-4xl mx-auto text-balance whitespace-pre-line"
         >
           {t.hero.title1 + ' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-brand-400">
@@ -42,7 +42,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-6 text-base md:text-lg text-gray-600 max-w-xl mx-auto leading-7 md:leading-8 text-balance"
+          className="mt-4 text-base md:text-lg text-gray-600 max-w-xl mx-auto leading-6.5 md:leading-7 text-balance"
         >
           {t.hero.desc}
         </motion.p>
@@ -51,7 +51,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-8 flex flex-col sm:flex-row gap-3 justify-center items-center"
+          className="mt-6 flex flex-col sm:flex-row gap-3 justify-center items-center"
         >
           <a
             href="#contact"
@@ -74,7 +74,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
           style={{ y, opacity }}
-          className="mt-8 md:mt-12 relative max-w-5xl mx-auto"
+          className="mt-6 md:mt-8 relative max-w-5xl mx-auto"
         >
           {/* Subtle blue glow behind device */}
           <div className="absolute inset-0 bg-brand-400/30 blur-[100px] rounded-full" />
