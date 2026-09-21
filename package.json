@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
-    "build": "vite build && node scripts/generate-city-pages.mjs && node scripts/generate-service-pages.mjs && node scripts/generate-homepage-pages.mjs && cp dist/index.html dist/404.html",
+    "build": "vite build && node scripts/generate-city-pages.mjs && node scripts/generate-service-pages.mjs && node scripts/generate-homepage-pages.mjs && node scripts/generate-blog-pages.mjs && cp dist/index.html dist/404.html",
     "preview": "vite preview",
     "clean": "rm -rf dist server.js",
     "lint": "tsc --noEmit"
