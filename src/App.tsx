@@ -11,7 +11,6 @@ import Features from './components/Features';
 import Portfolio from './components/Portfolio';
 import Process from './components/Process';
 import Contact from './components/Contact';
-import FAQ from './components/FAQ';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 import CityLanding from './pages/CityLanding';
@@ -135,7 +134,6 @@ function PageContent() {
         <Features />
         <Process />
         <Contact />
-        <FAQ />
         <CTA />
 
       </main>
