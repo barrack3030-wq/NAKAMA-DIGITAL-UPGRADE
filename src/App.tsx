@@ -16,6 +16,7 @@ import CTA from './components/CTA';
 import Footer from './components/Footer';
 import { localSeoCities } from './data/localSeoCities';
 import CityLanding from './pages/CityLanding';
+import ServiceLanding from './pages/ServiceLanding';
 
 const Admin = lazy(() => import('./pages/Admin'));
 const CustomerIntake = lazy(() => import('./pages/CustomerIntake'));
@@ -151,6 +152,11 @@ function AppShell() {
             <Route path="/admin" element={<Admin />} />
           </Route>
           <Route path="/en" element={<PublicPage english />} />
+          <Route path="/website-company-profile/" element={<ServiceLanding />} />
+          <Route path="/website-umkm/" element={<ServiceLanding />} />
+          <Route path="/landing-page/" element={<ServiceLanding />} />
+          <Route path="/website-sekolah/" element={<ServiceLanding />} />
+          <Route path="/website-travel/" element={<ServiceLanding />} />
           <Route path="/:citySlug" element={<CityLanding />} />
           <Route path="/" element={<PublicPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
