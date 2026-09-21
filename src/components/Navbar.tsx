@@ -17,14 +17,10 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: t.nav.home, href: '#' },
-    { name: t.nav.services, href: '#services' },
-    { name: t.nav.portfolio, href: '#portfolio' },
-    { name: t.nav.process, href: '#process' },
-    { name: t.nav.faq, href: '#faq' },
+    { name: t.nav.home, href: '/' },
+    { name: t.nav.services, href: '/website-umkm/' },
     { name: t.nav.blog, href: '/blog/' },
-  ];
-  const toggleLanguage = () => setLanguage(lang === 'id' ? 'en' : 'id');
+  ];  const toggleLanguage = () => setLanguage(lang === 'id' ? 'en' : 'id');
   const logoSrc = `${asset(siteConfig.logoPath)}?v=20260914`;
 
   return <>
@@ -42,7 +38,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-8">{navLinks.map(link => <a key={link.name} href={link.href} className="text-sm font-medium text-gray-600 hover:text-brand-600 transition-colors">{link.name}</a>)}</div>
         <div className="hidden md:flex items-center gap-4">
           <button onClick={toggleLanguage} className="flex items-center gap-1.5 text-sm font-medium text-gray-600 hover:text-brand-600 transition-colors"><Globe className="w-4 h-4"/><span>{lang === 'id' ? 'EN' : 'ID'}</span></button>
-          <a href="#contact" className="px-5 py-2.5 bg-brand-900 hover:bg-brand-700 text-white text-sm font-medium rounded-full transition-all duration-300 transform hover:scale-105">{t.nav.cta}</a>
+          <a href="https://wa.me/6285820830530?text=Halo%20Nakama%20Digital,%20saya%20ingin%20konsultasi%20website." target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 bg-brand-900 hover:bg-brand-700 text-white text-sm font-medium rounded-full transition-all duration-300 transform hover:scale-105">{t.nav.cta}</a>
         </div>
         <div className="md:hidden flex items-center gap-4">
           <button onClick={toggleLanguage} className="text-gray-600 hover:text-brand-600 transition-colors flex items-center gap-1 font-medium text-sm"><Globe className="w-4 h-4"/><span>{lang === 'id' ? 'EN' : 'ID'}</span></button>
