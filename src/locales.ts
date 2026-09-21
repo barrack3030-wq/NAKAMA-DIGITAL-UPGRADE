@@ -14,7 +14,7 @@ export const dict = {
     hero: {
       eyebrow: 'Untuk bisnis yang ingin tampil lebih jelas di internet',
       title1: 'Jasa pembuatan website untuk\nbisnis & UMKM',
-      titleHighlight: 'yang sesuai dengan cara bisnis Anda berjalan.',
+      titleHighlight: 'yang dibuat mengikuti kebutuhan bisnis Anda.',
       desc: 'Kami bantu menyusun tampilan, isi, dan alur website supaya calon pelanggan cepat tahu Anda siapa, menjual apa, dan harus menghubungi ke mana.',
       cta1: 'Ceritakan Kebutuhan Anda',
       cta2: 'Lihat Contoh Website'
@@ -43,8 +43,8 @@ export const dict = {
       title2: 'Tanpa bikin pengunjung menebak-nebak.'
     },
     features: {
-      title1: 'Yang orang lihat pertama kali.',
-      title2: 'Lalu alasan mereka lanjut.',
+      title1: 'Tampilan yang rapi.',
+      title2: 'Struktur yang tidak bikin bingung.',
       items: [
         'Struktur yang jelas',
         'Cepat dibuka',
@@ -149,8 +149,8 @@ export const dict = {
       title2: 'Without making visitors guess.'
     },
     features: {
-      title1: 'What people notice first.',
-      title2: 'Then what makes them stay.',
+      title1: 'A clean first impression.',
+      title2: 'A structure that stays clear.',
       items: [
         'Clear structure',
         'Fast loading',
