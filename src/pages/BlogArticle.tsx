@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Footer from '../components/Footer';
 import { ArrowRight, ChevronDown, MessageCircle } from 'lucide-react';
 import { useParams } from 'react-router-dom';
 import { getBlogSeoPost } from '../data/blogSeoPosts';
@@ -115,7 +116,7 @@ export default function BlogArticle() {
     <div className="bg-white text-brand-900">
       <header className="border-b border-slate-200 bg-white">
         <div className="mx-auto flex max-w-4xl items-center justify-between px-5 py-5 lg:px-8">
-          <a href="/" className="font-semibold tracking-tight">Nakama Digital</a>
+          <a href="/" className="inline-flex items-center" aria-label="Nakama Digital"><img src="/images/logo/logo-web.png" alt="Nakama Digital" className="h-9 w-auto object-contain" /></a>
           <a href={whatsapp} target="_blank" rel="noopener noreferrer" className="rounded-full bg-brand-600 px-4 py-2 text-sm font-semibold text-white">Konsultasi</a>
         </div>
       </header>
@@ -125,7 +126,7 @@ export default function BlogArticle() {
           <nav aria-label="Breadcrumb" className="mb-8 flex flex-wrap items-center gap-2 text-sm text-slate-500">
             <a href="/" className="hover:text-brand-700">Nakama Digital</a>
             <span>/</span>
-            <a href="/#blog" className="hover:text-brand-700">Blog</a>
+            <a href="/blog/" className="hover:text-brand-700">Blog</a>
             <span>/</span>
             <span className="text-slate-700">{post.headline}</span>
           </nav>
@@ -178,11 +179,7 @@ export default function BlogArticle() {
         </article>
       </main>
 
-      <footer className="border-t border-slate-200 bg-white">
-        <div className="mx-auto max-w-4xl px-5 py-8 text-sm text-slate-500 lg:px-8">
-          <a href="/" className="font-medium text-slate-700 hover:text-brand-600">Kembali ke website utama</a>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
