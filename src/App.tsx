@@ -55,6 +55,24 @@ function PageContent() {
       ? 'https://nakamadigital.biz.id/en/'
       : 'https://nakamadigital.biz.id/';
 
+    const faqItems = isEnglish
+      ? [
+          { q: 'How long does it take to build a website?', a: 'Development time varies depending on complexity. It generally takes 3–7 working days for a standard website, and 2-4 weeks for custom websites.' },
+          { q: 'Can I use my own domain?', a: 'Certainly. You can use an existing domain, or we can help register a new domain for you.' },
+          { q: 'Are the websites responsive?', a: 'Yes, all websites we build are guaranteed to be 100% responsive and will look perfect on various devices (desktop, tablet, and mobile).' },
+          { q: 'Can I change the content myself?', a: 'We provide an easy-to-use CMS (Content Management System) so you can update text, images, and other content independently.' },
+          { q: 'Do you help with hosting and domain?', a: 'Yes, we provide all-in-one packages that include high-speed hosting and domain registration.' },
+          { q: 'How does the payment process work?', a: 'Payment can be made in two stages: a 50% DP (Down Payment) to start the project, and the remaining 50% upon completion when the website is ready to go live.' }
+        ]
+      : [
+          { q: 'Berapa lama website dibuat?', a: 'Waktu pengerjaan bervariasi tergantung kompleksitas. Umumnya memakan waktu 3–7 hari kerja untuk website standar, dan 2-4 minggu untuk website custom.' },
+          { q: 'Apakah bisa menggunakan domain sendiri?', a: 'Tentu. Anda bisa menggunakan domain yang sudah ada, atau kami bisa membantu mendaftarkan domain baru untuk Anda.' },
+          { q: 'Apakah website responsive?', a: 'Ya, semua website yang kami buat dijamin 100% responsive dan akan terlihat sempurna di berbagai perangkat (desktop, tablet, maupun mobile).' },
+          { q: 'Apakah saya bisa mengubah konten?', a: 'Kami menyediakan CMS (Content Management System) yang mudah digunakan sehingga Anda dapat mengubah teks, gambar, dan konten lainnya secara mandiri.' },
+          { q: 'Apakah bisa membantu hosting dan domain?', a: 'Ya, kami menyediakan paket all-in-one yang sudah termasuk layanan hosting berkecepatan tinggi dan registrasi domain.' },
+          { q: 'Bagaimana proses pembayarannya?', a: 'Pembayaran dapat dilakukan dalam dua tahap: DP (Down Payment) sebesar 50% untuk memulai proyek, dan pelunasan 50% setelah website selesai dan siap online.' }
+        ];
+
     document.documentElement.lang = isEnglish ? 'en' : 'id';
     document.title = title;
 
@@ -80,6 +98,28 @@ function PageContent() {
       document.head.appendChild(canonical);
     }
     canonical.href = canonicalUrl;
+
+    const faqSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqItems.map((faq) => ({
+        '@type': 'Question',
+        name: faq.q,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.a,
+        },
+      })),
+    };
+
+    let faqScript = document.head.querySelector('#homepage-faq-schema') as HTMLScriptElement | null;
+    if (!faqScript) {
+      faqScript = document.createElement('script');
+      faqScript.id = 'homepage-faq-schema';
+      faqScript.type = 'application/ld+json';
+      document.head.appendChild(faqScript);
+    }
+    faqScript.textContent = JSON.stringify(faqSchema);
   }, [lang]);
 
   return (
