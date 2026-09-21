@@ -37,6 +37,8 @@ const staticServiceContent = (service) => `
     </section>
     <section>
       ${service.sections.map((item) => `<h2>${escapeHtml(item.heading)}</h2><p>${escapeHtml(item.text)}</p>`).join('')}
+      <h2>Cakupan layanan</h2>
+      <p>${escapeHtml(service.seoCoverage)}</p>
     </section>
     <section>
       <h2>Cocok untuk</h2>
