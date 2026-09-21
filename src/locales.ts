@@ -12,9 +12,9 @@ export const dict = {
     },
     hero: {
       eyebrow: 'DIGITAL AGENCY • WEBSITE • DESIGN • DEVELOPMENT',
-      title1: 'Website yang membuat\nbisnis Anda terlihat',
+      title1: 'Jasa pembuatan website untuk\nbisnis Anda',
       titleHighlight: 'lebih profesional.',
-      desc: 'Kami merancang website modern, cepat, dan profesional yang membantu bisnis membangun kepercayaan dan mendapatkan lebih banyak pelanggan.',
+      desc: 'Kami membantu bisnis, UMKM, sekolah, travel, dan perusahaan memiliki website yang rapi, cepat, responsif, dan mudah dipahami calon pelanggan.',
       cta1: 'Mulai Konsultasi',
       cta2: 'Lihat Portfolio'
     },
@@ -25,7 +25,7 @@ export const dict = {
       { label: 'Fondasi Teknis', value: 'SEO Ready' },
     ],
     services: {
-      title: 'Semua yang bisnis Anda butuhkan untuk berkembang online.',
+      title: 'Layanan website untuk kebutuhan bisnis Anda.',
       items: [
         { title: 'Website Company Profile' },
         { title: 'Website UMKM' },
@@ -55,7 +55,7 @@ export const dict = {
     },
     portfolio: {
       title: 'Karya Terpilih',
-      desc: 'Sekilas tentang pengalaman digital premium yang kami rancang untuk berbagai bisnis dan industri.',
+      desc: 'Lihat beberapa proyek dan referensi website yang dirancang untuk kebutuhan bisnis yang berbeda.',
       viewAll: 'Lihat Semua Portfolio'
     },
     process: {
@@ -99,7 +99,7 @@ export const dict = {
       btn: 'Mulai Konsultasi'
     },
     footer: {
-      desc: 'Premium digital agency specializing in professional website design and development.',
+      desc: 'Nakama Digital membantu bisnis membangun website profesional, dari company profile dan UMKM hingga landing page, sekolah, travel, dan website custom.',
       nav: 'Navigasi',
       contact: 'Kontak',
       privacy: 'Kebijakan Privasi',
