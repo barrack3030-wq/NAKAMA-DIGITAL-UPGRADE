@@ -243,5 +243,54 @@
       }
     ],
     "seoCoverage": "Website travel dapat digunakan untuk agen perjalanan, tour operator, private trip, dan bisnis pariwisata lokal. Informasi paket, destinasi, itinerary, durasi, fasilitas, galeri, dan kontak reservasi dapat ditempatkan dalam struktur yang mudah dipahami."
+  },
+  {
+    "slug": "website-toko-online",
+    "keyword": "jasa pembuatan toko online",
+    "title": "Jasa Pembuatan Toko Online | Nakama Digital",
+    "description": "Jasa pembuatan toko online untuk bisnis dan brand yang membutuhkan katalog produk, pemesanan, checkout, dan pengalaman belanja yang nyaman di mobile.",
+    "headline": "Jasa Pembuatan Toko Online untuk Menjual Produk Secara Profesional",
+    "intro": "Bangun toko online dengan katalog produk yang rapi, alur pemesanan yang jelas, dan struktur yang disesuaikan dengan kebutuhan bisnis Anda.",
+    "seoCoverage": "Kebutuhan toko online dapat mencakup katalog produk, kategori, halaman produk, pemesanan melalui WhatsApp, keranjang dan checkout, serta integrasi pembayaran atau pengiriman sesuai ruang lingkup proyek. Pendekatan dapat dibuat sederhana untuk bisnis yang baru mulai atau lebih lengkap untuk kebutuhan e-commerce yang berkembang.",
+    "audience": [
+      "Brand dan bisnis produk",
+      "Toko dengan katalog online",
+      "UMKM yang mulai menjual langsung",
+      "Bisnis yang ingin mengurangi ketergantungan pada marketplace"
+    ],
+    "benefits": [
+      "Produk dan katalog dapat diakses dari satu website",
+      "Brand memiliki toko online dengan domain sendiri",
+      "Pemesanan dapat diarahkan ke WhatsApp atau checkout",
+      "Struktur website dapat dikembangkan sesuai kebutuhan bisnis"
+    ],
+    "sections": [
+      {
+        "heading": "Toko online sesuai tingkat kebutuhan bisnis",
+        "text": "Tidak semua bisnis membutuhkan sistem e-commerce yang kompleks. Toko online dapat dimulai dari katalog dan pemesanan WhatsApp, lalu dikembangkan ke keranjang, checkout, pembayaran, atau integrasi pengiriman saat kebutuhan bertambah."
+      },
+      {
+        "heading": "Pengalaman belanja yang mudah dipahami",
+        "text": "Kategori, halaman produk, informasi harga, tombol beli, metode pembayaran, dan informasi pengiriman perlu disusun dalam alur yang sederhana agar pelanggan tahu langkah berikutnya."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Apakah toko online bisa menggunakan WhatsApp untuk pemesanan?",
+        "a": "Ya. Toko online dapat menggunakan tombol WhatsApp pada produk atau alur pemesanan sesuai kebutuhan bisnis."
+      },
+      {
+        "q": "Apakah toko online harus memiliki checkout otomatis?",
+        "a": "Tidak. Checkout otomatis dapat ditambahkan bila memang dibutuhkan. Untuk bisnis tertentu, katalog dan pemesanan melalui WhatsApp sudah cukup sebagai tahap awal."
+      },
+      {
+        "q": "Apakah toko online bisa terhubung ke pembayaran dan pengiriman?",
+        "a": "Bisa, sesuai teknologi dan ruang lingkup proyek yang dipilih."
+      },
+      {
+        "q": "Apa perbedaan website UMKM dan toko online?",
+        "a": "Website UMKM dapat berfungsi sebagai profil dan katalog bisnis, sedangkan toko online lebih berfokus pada proses belanja dan pemesanan produk."
+      }
+    ]
   }
 ]
