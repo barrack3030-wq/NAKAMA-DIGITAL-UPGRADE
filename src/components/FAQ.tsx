@@ -8,21 +8,21 @@ export default function FAQ() {
   const { t } = useLanguage();
 
   return (
-    <section id="faq" className="relative py-16 lg:py-24 border-b border-white/50">
+    <section id="faq" className="relative py-12 lg:py-16 border-b border-white/50">
       <div className="max-w-3xl mx-auto px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-brand-900">
             {t.faq.title}
           </h2>
         </motion.div>
 
-        <div className="space-y-4">
+        <div className="space-y-3">
           {t.faq.items.map((faq, index) => {
             const isOpen = openIndex === index;
             return (
@@ -36,7 +36,7 @@ export default function FAQ() {
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="w-full text-left px-6 py-6 flex justify-between items-center bg-transparent"
+                  className="w-full text-left px-5 py-5 flex justify-between items-center bg-transparent"
                 >
                   <span className="font-semibold text-lg text-brand-900">{faq.q}</span>
                   <motion.div
@@ -56,7 +56,7 @@ export default function FAQ() {
                       transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                       className="overflow-hidden"
                     >
-                      <div className="px-6 pb-6 pt-0 text-gray-500 leading-relaxed">
+                      <div className="px-5 pb-5 pt-0 text-gray-500 leading-relaxed">
                         {faq.a}
                       </div>
                     </motion.div>
