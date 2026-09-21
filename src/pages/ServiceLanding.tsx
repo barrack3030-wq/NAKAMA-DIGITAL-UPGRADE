@@ -229,6 +229,29 @@ export default function ServiceLanding() {
           </div>
         </section>
 
+        <section className="bg-slate-50">
+          <div className="mx-auto max-w-6xl px-5 py-16 lg:px-8">
+            <div className="max-w-3xl">
+              <p className="text-sm font-semibold uppercase tracking-[.18em] text-brand-600">Layanan lainnya</p>
+              <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Pilihan layanan website lainnya</h2>
+              <p className="mt-4 text-lg leading-8 text-slate-600">Kebutuhan website bisa berkembang. Lihat layanan lain yang mungkin relevan dengan bisnis atau organisasi Anda.</p>
+            </div>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                { slug: 'website-company-profile', title: 'Website Company Profile' },
+                { slug: 'website-umkm', title: 'Website UMKM' },
+                { slug: 'landing-page', title: 'Landing Page' },
+                { slug: 'website-sekolah', title: 'Website Sekolah' },
+                { slug: 'website-travel', title: 'Website Travel' },
+              ].filter((item) => item.slug !== service.slug).map((item) => (
+                <a key={item.slug} href={`/${item.slug}/`} className="rounded-2xl border border-slate-200 bg-white p-5 transition hover:-translate-y-1 hover:border-brand-200 hover:shadow-lg">
+                  <h3 className="font-bold">{item.title}</h3>
+                  <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-brand-600">Lihat layanan <ArrowRight size={15} /></span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
         <section className="mx-auto max-w-4xl px-5 py-16 lg:px-8">
           <div className="text-center">
             <p className="text-sm font-semibold uppercase tracking-[.18em] text-brand-600">FAQ</p>
