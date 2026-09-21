@@ -65,6 +65,17 @@
         "website paket wisata",
         "website private trip"
       ]
+    },
+    {
+      "url": "/website-toko-online/",
+      "primaryKeyword": "jasa pembuatan toko online",
+      "intent": "commercial",
+      "secondaryKeywords": [
+        "website toko online",
+        "jasa e-commerce",
+        "toko online sendiri",
+        "website jualan online"
+      ]
     }
   ],
   "articles": [
