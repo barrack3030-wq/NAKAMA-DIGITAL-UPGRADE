@@ -38,16 +38,18 @@ export default function Navbar() {
             loading="eager"
           />
         </a>
-        <div className="hidden md:flex items-center gap-8">
-          {navLinks.map(link => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="text-sm font-medium text-slate-600 transition-colors hover:text-brand-900"
-            >
-              {link.name}
-            </a>
-          ))}
+        <div className="hidden md:flex items-center rounded-full bg-gradient-to-r from-[#0b4f8a] via-brand-600 to-[#a27bc8] p-1.5 shadow-lg shadow-brand-900/10">
+          <div className="flex items-center gap-0.5">
+            {navLinks.map(link => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="inline-flex items-center rounded-full px-5 py-2.5 text-sm font-medium text-white/95 transition-all hover:bg-white/10 hover:text-white"
+              >
+                {link.name}
+              </a>
+            ))}
+          </div>
         </div>
         <div className="hidden md:flex items-center gap-5 ml-auto">
           <button
