@@ -47,10 +47,10 @@ function PageContent() {
     const isEnglish = lang === 'en';
     const title = isEnglish
       ? 'Professional Website Design & Development | Nakama Digital'
-      : 'Jasa Pembuatan Website untuk Bisnis, UMKM & Perusahaan | Nakama Digital';
+      : 'Jasa Pembuatan Website untuk Bisnis & UMKM | Nakama Digital';
     const description = isEnglish
       ? 'Nakama Digital designs fast, responsive, professional websites for businesses, SMEs, schools, travel companies, and organizations.'
-      : 'Nakama Digital membantu bisnis, UMKM, sekolah, travel, dan perusahaan membuat website profesional yang cepat, responsif, dan siap mendukung pemasaran online.';
+      : 'Jasa pembuatan website profesional untuk bisnis, UMKM, sekolah, travel, dan perusahaan. Nakama Digital mengerjakan website yang cepat, responsif, dan siap mendukung pemasaran online.';
     const canonicalUrl = isEnglish
       ? 'https://nakamadigital.biz.id/en/'
       : 'https://nakamadigital.biz.id/';
