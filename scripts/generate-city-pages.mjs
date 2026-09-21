@@ -161,17 +161,16 @@ for (const city of cities) {
   };
 
   let html = baseHtml
-    .replace(/<title>.*?<\/title>/i, `<title>${title}</title>`)
-    .replace(/<meta name="description"[^>]*>/i, `<meta name="description" content="${description}">`)
-    .replace(/<meta property="og:title"[^>]*>/i, `<meta property="og:title" content="${title}">`)
-    .replace(/<meta property="og:description"[^>]*>/i, `<meta property="og:description" content="${description}">`)
+    .replace(/<html lang="[^"]*"/i, '<html lang="id"')
+    .replace(/<title>.*?<\/title>/i, `<title>${escapeHtml(title)}</title>`)
+    .replace(/<meta name="description"[^>]*>/i, `<meta name="description" content="${escapeHtml(description)}">`)
+    .replace(/<meta name="robots"[^>]*>/i, '<meta name="robots" content="index,follow">')
+    .replace(/<link rel="canonical"[^>]*>/i, `<link rel="canonical" href="${cityUrl}">`)
+    .replace(/<meta property="og:title"[^>]*>/i, `<meta property="og:title" content="${escapeHtml(title)}">`)
+    .replace(/<meta property="og:description"[^>]*>/i, `<meta property="og:description" content="${escapeHtml(description)}">`)
+    .replace(/<meta property="og:url"[^>]*>/i, `<meta property="og:url" content="${cityUrl}">`)
     .replace('<div id="root"></div>', `<div id="root">${staticCityContent(city)}</div>`)
-    .replace('</head>', `<meta name="robots" content="index,follow">
-<link rel="canonical" href="${cityUrl}">
-<meta property="og:title" content="${title}">
-<meta property="og:description" content="${description}">
-<meta property="og:type" content="website">
-<meta property="og:url" content="${cityUrl}">
+    .replace('</head>', `<meta property="og:type" content="website">
 <script type="application/ld+json">${JSON.stringify(serviceSchema)}</script>
 <script type="application/ld+json">${JSON.stringify(faqSchema)}</script>
 <script type="application/ld+json">${JSON.stringify(webPageSchema)}</script>
