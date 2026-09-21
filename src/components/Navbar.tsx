@@ -30,7 +30,7 @@ export default function Navbar() {
   return <>
     <motion.nav initial={{ y: -100 }} animate={{ y: 0 }} transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }} className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-md border-b border-gray-100 py-3 shadow-sm' : 'bg-transparent py-5'}`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between">
-        <a href="#" className="flex items-center group shrink-0" aria-label={siteConfig.brandName}>
+        <a href="/" className="flex items-center group shrink-0" aria-label={siteConfig.brandName}>
           <img
             key={logoSrc}
             src={logoSrc}
