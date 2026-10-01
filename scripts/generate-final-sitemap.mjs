@@ -9,11 +9,14 @@ const cities = readJson('localSeoCities.json');
 const services = readJson('serviceSeoPages.json');
 const posts = readJson('blogSeoPosts.json');
 
+const caseSlugs = ["pelita-dental-luwuk","british-propolis-toili","banggai-wonderland","the-common-cafe","osaka-residence","deho-cafe","bmt-al-muhajirin"];
+
 const urls = [
   'https://nakamadigital.biz.id/',
   'https://nakamadigital.biz.id/en/',
   'https://nakamadigital.biz.id/blog/',
   'https://nakamadigital.biz.id/portfolio/',
+  ...caseSlugs.map((slug) => 'https://nakamadigital.biz.id/portfolio/' + slug + '/'),
   ...cities.map((city) => 'https://nakamadigital.biz.id/' + city.slug + '/'),
   ...services.map((service) => 'https://nakamadigital.biz.id/' + service.slug + '/'),
   ...posts.map((post) => 'https://nakamadigital.biz.id/blog/' + post.slug + '/'),
