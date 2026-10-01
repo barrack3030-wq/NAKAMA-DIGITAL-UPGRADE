@@ -103,6 +103,31 @@
       "url": "/blog/website-travel-harus-menampilkan-apa/",
       "primaryKeyword": "website travel harus menampilkan apa",
       "intent": "informational → commercial"
+    },
+    {
+      "url": "/blog/website-toko-online-perlu-apa-saja/",
+      "primaryKeyword": "website toko online perlu apa saja",
+      "intent": "informational → commercial"
+    },
+    {
+      "url": "/blog/cara-memilih-jasa-pembuatan-website/",
+      "primaryKeyword": "cara memilih jasa pembuatan website",
+      "intent": "informational → commercial"
+    },
+    {
+      "url": "/blog/website-bisnis-profesional-manfaat/",
+      "primaryKeyword": "manfaat website profesional untuk bisnis",
+      "intent": "informational → commercial"
+    },
+    {
+      "url": "/blog/website-company-profile-isi/",
+      "primaryKeyword": "isi website company profile",
+      "intent": "informational → commercial"
+    },
+    {
+      "url": "/blog/website-sekolah-untuk-ppdb/",
+      "primaryKeyword": "website sekolah untuk PPDB",
+      "intent": "informational → commercial"
     }
   ],
   "cities": [
