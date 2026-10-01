@@ -25,7 +25,7 @@ const content = '<main><article><p>Portfolio website</p>' +
   '<section><h2>Project website</h2><ul>' +
   items.map(([name, category, url]) => '<li><strong>' + esc(name) + '</strong> — ' + esc(category) + ' — <a href="' + esc(url) + '">Lihat website</a></li>').join('') +
   '</ul></section>' +
-  '<section><h2>Butuh website untuk bisnis Anda?</h2><p>Kami dapat membantu menyusun struktur, desain, dan pengembangan website sesuai kebutuhan bisnis.</p>' +
+  '<section><h2>Jenis project yang pernah dikerjakan</h2><p>Portfolio mencakup website klinik, bisnis produk, travel, cafe, properti, restoran, dan koperasi. Setiap project memiliki kebutuhan informasi yang berbeda sehingga struktur website disusun berdasarkan tujuan bisnis dan karakter audiens.</p><p>Website klinik dapat menonjolkan layanan dan kontak, travel membutuhkan paket dan itinerary, properti membutuhkan informasi unit dan lokasi, sedangkan bisnis produk membutuhkan katalog dan jalur pemesanan. Contoh-contoh tersebut membantu calon klien melihat bagaimana kebutuhan bisnis diterjemahkan menjadi struktur website.</p></section><section><h2>Butuh website untuk bisnis Anda?</h2><p>Kami dapat membantu menyusun struktur, desain, dan pengembangan website sesuai kebutuhan bisnis.</p>' +
   '<a href="https://wa.me/6285820830530?text=' + encodeURIComponent('Halo Nakama Digital, saya ingin konsultasi website.') + '">Mulai Konsultasi</a></section>' +
   '</article></main>';
 
