@@ -7,6 +7,7 @@ const source = path.join(dist, 'index.html');
 const posts = JSON.parse(fs.readFileSync(path.join(root, 'src', 'data', 'blogSeoPosts.json'), 'utf8'));
 const cities = JSON.parse(fs.readFileSync(path.join(root, 'src', 'data', 'localSeoCities.json'), 'utf8'));
 const services = JSON.parse(fs.readFileSync(path.join(root, 'src', 'data', 'serviceSeoPages.json'), 'utf8'));
+const { internalLinks, relatedPosts, relatedCaseStudies } = await import('./internal-links.mjs');
 
 if (!fs.existsSync(source)) throw new Error('dist/index.html tidak ditemukan setelah vite build.');
 
@@ -27,6 +28,12 @@ const staticPostContent = (post) => [
   post.sections.map((section) => '<section><h2>' + escapeHtml(section.heading) + '</h2><p>' + escapeHtml(section.text) + '</p></section>').join(''),
   '<section><h2>Layanan yang mungkin Anda butuhkan</h2><ul>' +
     post.links.map((link) => '<li><a href="' + escapeHtml(link.href) + '">' + escapeHtml(link.label) + '</a></li>').join('') +
+  '</ul></section>',
+  '<section><h2>Artikel terkait</h2><ul>' +
+    (() => { const links = relatedPosts((internalLinks.posts[post.slug] || {}).posts); return links.map((item) => '<li><a href="/blog/' + escapeHtml(item.slug) + '/">' + escapeHtml(item.title) + '</a></li>').join(''); })() +
+  '</ul></section>',
+  '<section><h2>Contoh proyek terkait</h2><ul>' +
+    (() => { const links = relatedCaseStudies((internalLinks.posts[post.slug] || {}).caseStudies); return links.map((item) => '<li><a href="/portfolio/' + escapeHtml(item.slug) + '/">' + escapeHtml(item.name) + '</a></li>').join(''); })() +
   '</ul></section>',
   '<section><h2>FAQ</h2><dl>' +
     post.faqs.map((faq) => '<dt>' + escapeHtml(faq.q) + '</dt><dd>' + escapeHtml(faq.a) + '</dd>').join('') +
