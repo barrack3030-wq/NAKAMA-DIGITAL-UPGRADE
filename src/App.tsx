@@ -20,6 +20,7 @@ import BlogArticle from './pages/BlogArticle';
 import { blogSeoPosts } from './data/blogSeoPosts';
 import { localSeoCities } from './data/localSeoCities';
 import PortfolioPage from './pages/PortfolioPage';
+import AboutPage from './pages/AboutPage';
 
 const Admin = lazy(() => import('./pages/Admin'));
 const CustomerIntake = lazy(() => import('./pages/CustomerIntake'));
@@ -224,6 +225,8 @@ function InternalNavigation() {
         <Route path="/website-toko-online/" element={<ServiceLanding />} />
         <Route path="/blog/" element={<BlogIndex />} />
         <Route path="/portfolio/" element={<PortfolioPage />} />
+        <Route path="/tentang-nakama-digital/" element={<AboutPage />} />
+        <Route path="/en/about/" element={<AboutPage english />} />
         <Route path="/blog/:slug/" element={<BlogArticle />} />
         <Route path="/:citySlug" element={<CityLanding />} />
         <Route path="/" element={<PublicPage />} />
