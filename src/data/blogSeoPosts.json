@@ -2,7 +2,7 @@
   {
     "slug": "berapa-biaya-membuat-website-untuk-bisnis",
     "keyword": "berapa biaya membuat website",
-    "title": "Berapa Biaya Membuat Website untuk Bisnis? Panduan Memahami Komponennya",
+    "title": "Berapa Biaya Membuat Website untuk Bisnis? Komponen yang Perlu Dihitung",
     "description": "Pelajari komponen biaya pembuatan website untuk bisnis, UMKM, company profile, landing page, sekolah, dan travel agar lebih mudah menentukan kebutuhan proyek.",
     "headline": "Berapa biaya membuat website untuk bisnis?",
     "intro": "Tidak ada satu harga yang cocok untuk semua website. Biaya biasanya dipengaruhi oleh jenis website, jumlah halaman, desain, fitur, integrasi, dan ruang lingkup pengerjaan.",
@@ -18,6 +18,10 @@
       {
         "heading": "Apa yang perlu disiapkan sebelum meminta penawaran?",
         "text": "Tentukan tujuan website, jenis bisnis, halaman yang dibutuhkan, materi foto dan teks yang tersedia, serta fitur yang benar-benar penting. Dengan informasi tersebut, kebutuhan proyek lebih mudah dihitung dan dibandingkan."
+      },
+      {
+        "heading": "Jangan hanya membandingkan harga paket",
+        "text": "Dua penawaran website dapat memiliki harga berbeda karena ruang lingkupnya berbeda. Periksa jumlah halaman, desain, penulisan konten, optimasi mobile, domain, hosting, formulir, integrasi WhatsApp, dan dukungan setelah website selesai. Bila website ditujukan untuk SEO, tanyakan juga bagaimana struktur title, description, canonical, sitemap, serta halaman layanan dan lokasi disiapkan. Dengan membandingkan komponen tersebut, Anda dapat melihat biaya berdasarkan kebutuhan nyata, bukan hanya angka paket di awal."
       }
     ],
     "links": [
@@ -68,6 +72,10 @@
       {
         "heading": "FAQ dan informasi pemesanan",
         "text": "Pertanyaan berulang tentang harga, cara pesan, area layanan, atau waktu pengerjaan dapat dijawab melalui FAQ agar calon pelanggan lebih cepat memahami proses."
+      },
+      {
+        "heading": "Prioritaskan halaman yang menjawab pertanyaan pelanggan",
+        "text": "Sebelum menentukan desain, tuliskan pertanyaan yang paling sering muncul saat pelanggan hendak membeli. Dari sana, susun halaman atau bagian yang menjawab pertanyaan tersebut: apa yang dijual, berapa kisaran harga bila dapat dipublikasikan, di mana lokasi usaha, bagaimana pemesanan dilakukan, dan siapa yang dapat dihubungi. Struktur sederhana tetapi lengkap biasanya lebih berguna daripada banyak halaman yang jarang dibaca."
       }
     ],
     "links": [
@@ -94,7 +102,7 @@
   {
     "slug": "company-profile-vs-landing-page",
     "keyword": "company profile vs landing page",
-    "title": "Company Profile vs Landing Page: Apa Bedanya dan Kapan Menggunakannya?",
+    "title": "Company Profile vs Landing Page: Perbedaan dan Cara Memilih",
     "description": "Pelajari perbedaan website company profile dan landing page dari tujuan, struktur, isi, dan penggunaan agar lebih mudah memilih jenis website.",
     "headline": "Company profile vs landing page: mana yang sesuai?",
     "intro": "Keduanya sama-sama bisa digunakan untuk bisnis, tetapi tujuan dan struktur halamannya berbeda. Memahami perbedaannya membantu Anda memilih website yang tidak terlalu rumit dan tetap efektif.",
@@ -110,6 +118,10 @@
       {
         "heading": "Kapan memilih masing-masing?",
         "text": "Gunakan company profile saat kebutuhan utamanya adalah membangun kehadiran resmi dan menjelaskan bisnis. Gunakan landing page saat Anda memiliki satu penawaran atau campaign yang membutuhkan halaman fokus."
+      },
+      {
+        "heading": "Pilih berdasarkan perjalanan pengunjung",
+        "text": "Bayangkan apa yang dilakukan pengunjung setelah membuka halaman. Pada company profile, pengunjung biasanya berpindah dari profil ke layanan, portofolio, lalu kontak karena mereka ingin mengenal bisnis lebih lengkap. Pada landing page, alurnya lebih sempit: memahami penawaran, melihat alasan untuk bertindak, lalu mengisi formulir atau menghubungi WhatsApp. Kerangka ini membantu menentukan isi halaman tanpa menambahkan fitur yang sebenarnya tidak diperlukan."
       }
     ],
     "links": [
@@ -156,6 +168,10 @@
       {
         "heading": "Berita, pengumuman, dan kontak",
         "text": "Berita membantu menyampaikan kegiatan dan perkembangan sekolah, sedangkan informasi kontak membuat pengunjung tahu ke mana harus bertanya atau berkunjung."
+      },
+      {
+        "heading": "Bedakan informasi permanen dan informasi yang sering berubah",
+        "text": "Profil sekolah, visi misi, fasilitas, dan program biasanya relatif stabil, sedangkan jadwal kegiatan, pengumuman, dan informasi penerimaan dapat berubah secara berkala. Struktur website sebaiknya memisahkan keduanya sehingga pembaruan rutin tidak mengganggu halaman utama. Untuk sekolah atau madrasah yang aktif, berita dan pengumuman juga dapat menjadi pintu masuk pengunjung dari Google."
       }
     ],
     "links": [
@@ -178,7 +194,7 @@
   {
     "slug": "website-travel-harus-menampilkan-apa",
     "keyword": "website travel harus menampilkan apa",
-    "title": "Website Travel Harus Menampilkan Apa? Panduan Struktur untuk Agen dan Private Trip",
+    "title": "Website Travel Harus Menampilkan Apa? Panduan untuk Agen & Private Trip",
     "description": "Panduan membuat website travel yang jelas: paket perjalanan, itinerary, destinasi, durasi, fasilitas, galeri, FAQ, dan jalur reservasi.",
     "headline": "Website travel harus menampilkan apa?",
     "intro": "Calon pelanggan travel biasanya ingin tahu ke mana perjalanan berlangsung, berapa lama, apa yang termasuk, dan bagaimana cara memesan. Struktur website sebaiknya menjawab pertanyaan tersebut dengan cepat.",
@@ -198,6 +214,10 @@
       {
         "heading": "Reservasi dan FAQ",
         "text": "Sediakan jalur konsultasi seperti WhatsApp serta jawaban atas pertanyaan umum tentang harga, jadwal, kapasitas, pembatalan, dan persiapan perjalanan."
+      },
+      {
+        "heading": "Informasi perjalanan yang sering dicari",
+        "text": "Selain harga, calon pelanggan biasanya perlu mengetahui durasi perjalanan, titik keberangkatan, kapasitas peserta, fasilitas, hal yang tidak termasuk, kebijakan perubahan jadwal, dan cara reservasi. Untuk private trip, tampilkan juga pilihan kendaraan, akomodasi, serta fleksibilitas itinerary bila tersedia. Informasi yang jelas membantu calon pelanggan membandingkan paket dan mengurangi pertanyaan yang sama sebelum reservasi."
       }
     ],
     "links": [
@@ -240,6 +260,10 @@
       {
         "heading": "Kepercayaan dan informasi toko",
         "text": "Profil usaha, kontak, kebijakan pemesanan, FAQ, dan bukti bisnis membantu pelanggan memahami siapa penjual dan bagaimana transaksi berlangsung."
+      },
+      {
+        "heading": "Mulai dari alur transaksi yang paling realistis",
+        "text": "Sebelum membuat checkout otomatis, tentukan dulu bagaimana pesanan diproses saat ini. Bila transaksi masih banyak melalui WhatsApp, website dapat memprioritaskan katalog, detail produk, tombol pesan, dan informasi pengiriman. Saat volume transaksi meningkat, alur dapat dikembangkan menjadi keranjang, pembayaran, serta pengelolaan pesanan. Pendekatan bertahap membuat website mengikuti kebutuhan operasional, bukan memaksakan fitur yang belum digunakan."
       }
     ],
     "links": [
@@ -286,6 +310,10 @@
       {
         "heading": "Pastikan ruang lingkup dan proses jelas",
         "text": "Sebelum mulai, sepakati halaman, materi, revisi, domain, hosting, fitur, waktu pengerjaan, dan siapa yang mengelola perubahan setelah website selesai."
+      },
+      {
+        "heading": "Minta gambaran hasil akhir sebelum proyek dimulai",
+        "text": "Selain melihat demo, minta penjelasan mengenai sitemap atau struktur halaman yang akan dibuat. Periksa siapa yang menyediakan materi, bagaimana proses revisi, apakah website responsive, siapa yang mengurus domain dan hosting, serta apa yang terjadi setelah proyek selesai. Penjelasan ini membantu menghindari perbedaan ekspektasi ketika website sudah masuk tahap produksi."
       }
     ],
     "links": [
@@ -332,6 +360,10 @@
       {
         "heading": "Membangun aset digital sendiri",
         "text": "Berbeda dari profil di platform pihak ketiga, website adalah aset digital yang dapat dikembangkan dengan struktur dan konten sesuai kebutuhan bisnis."
+      },
+      {
+        "heading": "Nilai website muncul dari cara bisnis menggunakannya",
+        "text": "Website akan lebih berguna ketika dihubungkan dengan aktivitas pemasaran yang sudah berjalan. Tautkan dari Instagram, WhatsApp, iklan, Google Business Profile, proposal, kartu nama, atau materi promosi. Gunakan halaman yang spesifik untuk menjawab kebutuhan pengunjung, lalu ukur kontak atau permintaan yang masuk. Dengan begitu, website bukan hanya halaman profil, tetapi bagian dari alur pemasaran yang bisa terus diperbaiki."
       }
     ],
     "links": [
@@ -378,6 +410,10 @@
       {
         "heading": "Kontak dan area layanan",
         "text": "Alamat, nomor kontak, email, WhatsApp, jam operasional, dan area layanan perlu mudah ditemukan agar calon pelanggan tahu langkah berikutnya."
+      },
+      {
+        "heading": "Sesuaikan isi dengan siapa yang membaca",
+        "text": "Calon pelanggan membutuhkan informasi layanan dan cara menghubungi, sedangkan calon mitra atau perusahaan lain dapat membutuhkan portofolio, kemampuan kerja, area layanan, dan informasi organisasi. Karena itu, isi company profile tidak perlu mengikuti template yang sama untuk semua bisnis. Susun informasi berdasarkan pertanyaan dari audiens utama dan tampilkan bukti yang memang dapat dipublikasikan."
       }
     ],
     "links": [
@@ -424,6 +460,10 @@
       {
         "heading": "FAQ dan kontak panitia",
         "text": "Pertanyaan umum dapat dijawab di halaman FAQ, sedangkan nomor kontak atau WhatsApp panitia perlu mudah ditemukan."
+      },
+      {
+        "heading": "Buat halaman PPDB yang mudah ditemukan dari halaman utama",
+        "text": "Informasi pendaftaran sebaiknya tidak tersembunyi di dalam banyak menu. Tampilkan tautan PPDB dari halaman utama dan pastikan jadwal, persyaratan, alur, formulir, serta kontak panitia dapat ditemukan tanpa banyak klik. Setelah periode pendaftaran berakhir, perbarui informasi agar pengunjung tidak menemukan jadwal lama dan sekolah dapat mempertahankan halaman sebagai arsip atau panduan untuk periode berikutnya."
       }
     ],
     "links": [
