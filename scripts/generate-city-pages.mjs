@@ -126,6 +126,7 @@ for (const city of cities) {
       '@type': 'Organization',
       name: 'Nakama Digital',
       url: 'https://nakamadigital.biz.id/',
+      logo: 'https://nakamadigital.biz.id/images/logo/logo.png',
     },
     areaServed: {
       '@type': 'City',
