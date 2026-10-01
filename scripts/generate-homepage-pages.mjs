@@ -28,7 +28,7 @@ const homepageContent = [
   '<p>Website profesional yang dibuat sesuai kebutuhan bisnis Anda.</p>',
   '<a href="https://wa.me/6285820830530?text=' + encodeURIComponent('Halo Nakama Digital, saya ingin konsultasi website.') + '">Mulai Konsultasi</a>',
   '</section>',
-  '<section><h2>Layanan website untuk kebutuhan bisnis</h2><p>Company profile, website UMKM, landing page, website sekolah, website travel, dan toko online.</p></section>',
+  '<section><h2>Layanan website untuk kebutuhan bisnis</h2><p>Company profile, website UMKM, landing page, website sekolah, website travel, dan toko online.</p><ul>' + services.map((service) => '<li><a href="/' + escapeHtml(service.slug) + '/">' + escapeHtml(service.title) + '</a></li>').join('') + '</ul><p><a href="/portfolio/">Lihat portfolio website</a></p></section>',
   '<section id="blog"><h2>Panduan Website untuk Bisnis</h2><p>Artikel praktis untuk membantu menentukan jenis website dan kebutuhan proyek.</p><ul>' +
   posts.map((post) => '<li><a href="/blog/' + escapeHtml(post.slug) + '/">' + escapeHtml(post.title) + '</a></li>').join('') +
   '</ul></section>',
