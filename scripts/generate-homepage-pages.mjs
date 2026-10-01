@@ -68,7 +68,7 @@ const localizedMeta = (html, locale, title, description, canonical) => html
   .replace('</head>', '<link rel="alternate" hreflang="id" href="' + rootUrl + '"><link rel="alternate" hreflang="en" href="' + enUrl + '"><link rel="alternate" hreflang="x-default" href="' + rootUrl + '"></head>');
 
 const idTitle = 'Jasa Pembuatan Website untuk Bisnis & UMKM | Nakama Digital';
-const idDescription = 'Jasa pembuatan website profesional untuk bisnis, UMKM, sekolah, travel, dan perusahaan. Nakama Digital mengerjakan website yang cepat, responsif, dan siap mendukung pemasaran online.';
+const idDescription = 'Jasa pembuatan website untuk bisnis, UMKM, sekolah, travel, dan perusahaan. Nakama Digital membuat website responsif, cepat, dan SEO-friendly.';
 const enTitle = 'Professional Website Design & Development | Nakama Digital';
 const enDescription = 'Nakama Digital creates fast, responsive, professional websites for businesses, SMEs, schools, travel companies, and organizations.';
 
