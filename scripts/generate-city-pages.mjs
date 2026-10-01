@@ -8,6 +8,7 @@ const serviceConfigPath = path.join(root, 'src', 'data', 'serviceSeoPages.json')
 
 const cities = JSON.parse(fs.readFileSync(configPath, 'utf8'));
 const services = JSON.parse(fs.readFileSync(serviceConfigPath, 'utf8'));
+const { internalLinks, relatedPosts, relatedCaseStudies } = await import('./internal-links.mjs');
 
 const source = path.join(dist, 'index.html');
 if (!fs.existsSync(source)) throw new Error('dist/index.html tidak ditemukan setelah vite build.');
