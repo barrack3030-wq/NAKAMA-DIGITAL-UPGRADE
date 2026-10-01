@@ -45,7 +45,7 @@ const englishContent = [
   '<p>Fast, responsive websites designed around your business needs.</p>',
   '<a href="https://wa.me/6285820830530?text=' + encodeURIComponent('Hello Nakama Digital, I would like to consult about a website.') + '">Start a Consultation</a>',
   '</section>',
-  '<section><h2>Website services for different business needs</h2><p>Company profiles, SME websites, landing pages, school websites, travel websites, and online stores.</p></section>',
+  '<section><h2>Website services for different business needs</h2><p>Company profiles, SME websites, landing pages, school websites, travel websites, and online stores.</p><ul>' + services.map((service) => '<li><a href="/' + escapeHtml(service.slug) + '/">' + escapeHtml(service.title) + '</a></li>').join('') + '</ul><p><a href="/portfolio/">View website portfolio</a></p></section>',
   '<section><h2>Business website guides</h2><ul>' +
   posts.map((post) => '<li><a href="/blog/' + escapeHtml(post.slug) + '/">' + escapeHtml(post.title) + '</a></li>').join('') +
   '</ul></section>',
