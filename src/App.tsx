@@ -1,5 +1,5 @@
 import React, { lazy, Suspense, useEffect } from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import { LanguageProvider, useLanguage } from './context/LanguageContext';
 
 import Navbar from './components/Navbar';
@@ -156,6 +156,83 @@ function PageContent() {
   );
 }
 
+function InternalNavigation() {
+  const navigate = useNavigate();
+
+  const handleClickCapture = (event: React.MouseEvent<HTMLDivElement>) => {
+    const target = event.target as HTMLElement | null;
+    const anchor = target?.closest('a[href]') as HTMLAnchorElement | null;
+
+    if (!anchor) return;
+    if (event.defaultPrevented || event.button !== 0) return;
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    if (anchor.target && anchor.target !== '_self') return;
+    if (anchor.hasAttribute('download')) return;
+
+    const rawHref = anchor.getAttribute('href');
+    if (!rawHref || rawHref.startsWith('#') || /^(mailto:|tel:|javascript:)/i.test(rawHref)) return;
+
+    let url: URL;
+    try {
+      url = new URL(rawHref, window.location.href);
+    } catch {
+      return;
+    }
+
+    if (url.origin !== window.location.origin) return;
+
+    event.preventDefault();
+
+    const nextPath = url.pathname + url.search + url.hash;
+    navigate(nextPath);
+
+    if (url.hash) {
+      requestAnimationFrame(() => {
+        const element = document.getElementById(decodeURIComponent(url.hash.slice(1)));
+        element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <div onClickCapture={handleClickCapture}>
+      <Routes>
+        <Route element={<Suspense fallback={<div className="min-h-screen bg-white" aria-busy="true" />} />}>
+          <Route path="/workflow/login" element={<WorkflowLogin />} />
+          <Route path="/workflow" element={<WorkflowLayout />}>
+            <Route index element={<WorkflowDashboard />} />
+            <Route path="customers" element={<Customers />} />
+            <Route path="customers/new" element={<CustomerForm />} />
+            <Route path="customers/:id" element={<CustomerDetail />} />
+            <Route path="projects" element={<Projects />} />
+            <Route path="projects/new" element={<ProjectForm />} />
+            <Route path="projects/:id" element={<ProjectDetail />} />
+            <Route path="tasks" element={<Tasks />} />
+            <Route path="settings" element={<Settings />} />
+          </Route>
+          <Route path="/client-intake" element={<CustomerIntake />} />
+          <Route path="/admin" element={<Admin />} />
+        </Route>
+        <Route path="/en" element={<PublicPage english />} />
+        <Route path="/website-company-profile/" element={<ServiceLanding />} />
+        <Route path="/website-umkm/" element={<ServiceLanding />} />
+        <Route path="/landing-page/" element={<ServiceLanding />} />
+        <Route path="/website-sekolah/" element={<ServiceLanding />} />
+        <Route path="/website-travel/" element={<ServiceLanding />} />
+        <Route path="/website-toko-online/" element={<ServiceLanding />} />
+        <Route path="/blog/" element={<BlogIndex />} />
+        <Route path="/portfolio/" element={<PortfolioPage />} />
+        <Route path="/blog/:slug/" element={<BlogArticle />} />
+        <Route path="/:citySlug" element={<CityLanding />} />
+        <Route path="/" element={<PublicPage />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </div>
+  );
+}
+
 function AppShell() {
   return (
     <LanguageProvider>
@@ -166,37 +243,7 @@ function AppShell() {
         <div className="absolute bottom-[-20%] left-[10%] w-[60vw] h-[50vh] rounded-full bg-brand-400/15 blur-[150px]" />
       </div>
       <div className="relative z-10 flex flex-col min-h-screen">
-        <Routes>
-          <Route element={<Suspense fallback={<div className="min-h-screen bg-white" aria-busy="true" />} />}>
-            <Route path="/workflow/login" element={<WorkflowLogin />} />
-            <Route path="/workflow" element={<WorkflowLayout />}>
-              <Route index element={<WorkflowDashboard />} />
-              <Route path="customers" element={<Customers />} />
-              <Route path="customers/new" element={<CustomerForm />} />
-              <Route path="customers/:id" element={<CustomerDetail />} />
-              <Route path="projects" element={<Projects />} />
-              <Route path="projects/new" element={<ProjectForm />} />
-              <Route path="projects/:id" element={<ProjectDetail />} />
-              <Route path="tasks" element={<Tasks />} />
-              <Route path="settings" element={<Settings />} />
-            </Route>
-            <Route path="/client-intake" element={<CustomerIntake />} />
-            <Route path="/admin" element={<Admin />} />
-          </Route>
-          <Route path="/en" element={<PublicPage english />} />
-          <Route path="/website-company-profile/" element={<ServiceLanding />} />
-          <Route path="/website-umkm/" element={<ServiceLanding />} />
-          <Route path="/landing-page/" element={<ServiceLanding />} />
-          <Route path="/website-sekolah/" element={<ServiceLanding />} />
-          <Route path="/website-travel/" element={<ServiceLanding />} />
-          <Route path="/website-toko-online/" element={<ServiceLanding />} />
-          <Route path="/blog/" element={<BlogIndex />} />
-          <Route path="/portfolio/" element={<PortfolioPage />} />
-          <Route path="/blog/:slug/" element={<BlogArticle />} />
-          <Route path="/:citySlug" element={<CityLanding />} />
-          <Route path="/" element={<PublicPage />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
+        <InternalNavigation />
       </div>
       </div>
     </LanguageProvider>
