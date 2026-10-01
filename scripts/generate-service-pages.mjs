@@ -27,49 +27,35 @@ const faqItems = (service) => service.faqs.map((faq) => ({
   acceptedAnswer: { '@type': 'Answer', text: faq.a },
 }));
 
-const staticServiceContent = (service) => `
-  <main>
-    <section>
-      <p>Jasa website</p>
-      <h1>${escapeHtml(service.headline)}</h1>
-      <p>${escapeHtml(service.intro)}</p>
-      <a href="https://wa.me/6285820830530?text=${encodeURIComponent(`Halo Nakama Digital, saya ingin konsultasi ${service.keyword}.`) }">Konsultasi Website Gratis</a>
-    </section>
-    <section>
-      ${service.sections.map((item) => `<h2>${escapeHtml(item.heading)}</h2><p>${escapeHtml(item.text)}</p>`).join('')}
-      <h2>Cakupan layanan</h2>
-      <p>${escapeHtml(service.seoCoverage)}</p>
-    </section>
-    <section>
-      <h2>Cocok untuk</h2>
-      <ul>${service.audience.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
-    </section>
-    <section>
-      <h2>Yang bisa Anda dapatkan</h2>
-      <ul>${service.benefits.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
-    </section>
-    <section>
-      <h2>Layanan website lainnya</h2>
-      <p>Kebutuhan website bisa berkembang. Lihat layanan lain yang mungkin relevan dengan bisnis atau organisasi Anda.</p>
-      <ul>
-        ${services.filter((item) => item.slug !== service.slug).map((item) => `<li><a href="/${escapeHtml(item.slug)}/">${escapeHtml(item.title)}</a></li>`).join('')}
-      </ul>
-    </section>
-
-    <section>
-      <h2>Area layanan</h2>
-      <ul>
-        ${cities.map((city) => `<li><a href="/${escapeHtml(city.slug)}/">Website ${escapeHtml(city.city)}</a></li>`).join('')}
-      </ul>
-    </section>
-    <section>
-      <h2>FAQ</h2>
-      <dl>
-        ${service.faqs.map((faq) => `<dt>${escapeHtml(faq.q)}</dt><dd>${escapeHtml(faq.a)}</dd>`).join('')}
-      </dl>
-    </section>
-  </main>
-`;
+const staticServiceContent = (service) => [
+  '  <main>',
+  '    <nav aria-label="Breadcrumb"><a href="/">Nakama Digital</a> / <span>' + escapeHtml(service.keyword) + '</span></nav>',
+  '    <section>',
+  '      <p>Jasa pembuatan website</p>',
+  '      <h1>' + escapeHtml(service.headline) + '</h1>',
+  '      <p>' + escapeHtml(service.intro) + '</p>',
+  '      <p>Website dibuat sesuai kebutuhan bisnis atau organisasi, dengan struktur yang jelas, mobile-friendly, dan siap dikembangkan.</p>',
+  '      <p><a href="https://wa.me/6285820830530?text=' + encodeURIComponent('Halo Nakama Digital, saya ingin konsultasi ' + service.keyword + '.') + '">Konsultasi Website Gratis</a> <a href="/portfolio/">Lihat Portfolio</a></p>',
+  '    </section>',
+  '    <section>',
+  '      <h2>Mengapa layanan ini dibutuhkan?</h2>',
+  service.sections.map((item) => '      <h3>' + escapeHtml(item.heading) + '</h3><p>' + escapeHtml(item.text) + '</p>').join(''),
+  '      <h2>Cakupan layanan</h2><p>' + escapeHtml(service.seoCoverage) + '</p>',
+  '    </section>',
+  '    <section><h2>Yang bisa Anda dapatkan</h2><ul>' + service.benefits.map((item) => '<li>' + escapeHtml(item) + '</li>').join('') + '</ul></section>',
+  '    <section><h2>Cocok untuk</h2><ul>' + service.audience.map((item) => '<li>' + escapeHtml(item) + '</li>').join('') + '</ul></section>',
+  '    <section><h2>Proses pembuatan website</h2><ol>' +
+    '<li><strong>Konsultasi kebutuhan</strong> — menentukan tujuan, target pengunjung, halaman, dan fitur yang diperlukan.</li>' +
+    '<li><strong>Struktur dan desain</strong> — menyusun alur informasi, tampilan, dan konten agar mudah dipahami di mobile maupun desktop.</li>' +
+    '<li><strong>Development</strong> — membangun website, memasukkan konten, menghubungkan CTA, dan menyiapkan struktur teknis SEO.</li>' +
+    '<li><strong>Review dan peluncuran</strong> — mengecek tampilan, tautan, performa dasar, dan kebutuhan sebelum website dipublikasikan.</li></ol></section>',
+  '    <section><h2>Portfolio website</h2><p>Lihat beberapa proyek website yang pernah dikerjakan Nakama Digital untuk bisnis dan organisasi.</p><p><a href="/portfolio/">Lihat portfolio dan contoh proyek</a></p></section>',
+  '    <section><h2>Layanan website lainnya</h2><p>Kebutuhan website bisa berkembang. Bandingkan layanan lain yang mungkin relevan.</p><ul>' + services.filter((item) => item.slug !== service.slug).map((item) => '<li><a href="/' + escapeHtml(item.slug) + '/">' + escapeHtml(item.title) + '</a></li>').join('') + '</ul></section>',
+  '    <section><h2>Area layanan</h2><p>Nakama Digital melayani kebutuhan website dari berbagai kota di Indonesia.</p><ul>' + cities.map((city) => '<li><a href="/' + escapeHtml(city.slug) + '/">Jasa website ' + escapeHtml(city.city) + '</a></li>').join('') + '</ul></section>',
+  '    <section><h2>Pertanyaan yang sering ditanyakan</h2><dl>' + service.faqs.map((faq) => '<dt>' + escapeHtml(faq.q) + '</dt><dd>' + escapeHtml(faq.a) + '</dd>').join('') + '</dl></section>',
+  '    <section><h2>Siap membahas kebutuhan website?</h2><p>Ceritakan jenis bisnis, target pelanggan, dan kebutuhan website Anda. Kami dapat membantu menentukan struktur yang sesuai sebelum proyek dimulai.</p><p><a href="https://wa.me/6285820830530?text=' + encodeURIComponent('Halo Nakama Digital, saya ingin konsultasi ' + service.keyword + '.') + '">Mulai konsultasi via WhatsApp</a></p></section>',
+  '  </main>'
+].join('\n');
 
 for (const service of services) {
   const serviceUrl = `https://nakamadigital.biz.id/${service.slug}/`;
