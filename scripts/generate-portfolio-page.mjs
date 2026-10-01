@@ -7,8 +7,6 @@ const source = path.join(dist, 'index.html');
 if (!fs.existsSync(source)) throw new Error('dist/index.html tidak ditemukan setelah vite build.');
 
 const baseHtml = fs.readFileSync(source, 'utf8');
-const portfolio = fs.readFileSync(path.join(root, 'src', 'data', 'portfolio.ts'), 'utf8');
-
 const items = [
   ['Pelita Dental Luwuk','Website Klinik','https://barrack3030-wq.github.io/pelita-dental-luwuk/'],
   ['British Propolis Toili','Website Bisnis','https://agenbptoili.my.id/'],
@@ -37,7 +35,7 @@ const description = 'Portfolio website Nakama Digital: contoh project website un
 
 const html = baseHtml
   .replace(/<html lang="[^"]*"/i, '<html lang="id"')
-  .replace(/<title>.*?<\\/title>/i, '<title>' + esc(title) + '</title>')
+  .replace(/<title>.*?<\/title>/i, '<title>' + esc(title) + '</title>')
   .replace(/<meta name="description"[^>]*>/i, '<meta name="description" content="' + esc(description) + '">')
   .replace(/<meta name="robots"[^>]*>/i, '<meta name="robots" content="index,follow">')
   .replace(/<link rel="canonical"[^>]*>/i, '<link rel="canonical" href="' + url + '">')
