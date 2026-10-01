@@ -76,6 +76,7 @@ for (const service of services) {
       '@type': 'Organization',
       name: 'Nakama Digital',
       url: 'https://nakamadigital.biz.id/',
+      logo: 'https://nakamadigital.biz.id/images/logo/logo.png',
     },
     areaServed: {
       '@type': 'Country',
