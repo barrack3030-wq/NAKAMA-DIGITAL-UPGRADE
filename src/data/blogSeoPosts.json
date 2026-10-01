@@ -216,5 +216,235 @@
         "a": "Sebaiknya ya bila itinerary merupakan bagian penting dari keputusan pelanggan. Informasi dapat dibuat ringkas tetapi jelas."
       }
     ]
+  },
+  {
+    "slug": "website-toko-online-perlu-apa-saja",
+    "keyword": "website toko online perlu apa saja",
+    "title": "Website Toko Online Perlu Apa Saja? Struktur Dasar untuk Jualan",
+    "description": "Panduan struktur website toko online: katalog, detail produk, keranjang, pembayaran, pengiriman, WhatsApp, dan informasi toko.",
+    "headline": "Website toko online perlu apa saja?",
+    "intro": "Toko online tidak harus langsung memiliki sistem yang sangat kompleks. Struktur awal sebaiknya mengikuti cara pelanggan melihat produk, bertanya, dan menyelesaikan pembelian.",
+    "sections": [
+      {
+        "heading": "Katalog dan detail produk",
+        "text": "Setiap produk perlu memiliki nama, foto, deskripsi, harga, variasi bila ada, dan informasi ketersediaan yang mudah dipahami."
+      },
+      {
+        "heading": "Alur pembelian",
+        "text": "Tentukan apakah pelanggan membeli melalui checkout, formulir, atau WhatsApp. Alur yang jelas mengurangi kebingungan saat pelanggan siap memesan."
+      },
+      {
+        "heading": "Pembayaran dan pengiriman",
+        "text": "Informasi metode pembayaran, area pengiriman, ongkos kirim, dan estimasi proses perlu disesuaikan dengan cara bisnis menerima pesanan."
+      },
+      {
+        "heading": "Kepercayaan dan informasi toko",
+        "text": "Profil usaha, kontak, kebijakan pemesanan, FAQ, dan bukti bisnis membantu pelanggan memahami siapa penjual dan bagaimana transaksi berlangsung."
+      }
+    ],
+    "links": [
+      {
+        "label": "Lihat jasa pembuatan toko online",
+        "href": "/website-toko-online/"
+      },
+      {
+        "label": "Lihat jasa pembuatan website UMKM",
+        "href": "/website-umkm/"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Apakah toko online harus memakai checkout otomatis?",
+        "a": "Tidak selalu. Bisnis dapat memulai dengan katalog dan WhatsApp jika volume transaksi belum membutuhkan checkout otomatis."
+      },
+      {
+        "q": "Apakah website toko online bisa terhubung ke WhatsApp?",
+        "a": "Bisa. WhatsApp dapat digunakan sebagai jalur konsultasi atau pemesanan sesuai alur bisnis."
+      }
+    ]
+  },
+  {
+    "slug": "cara-memilih-jasa-pembuatan-website",
+    "keyword": "cara memilih jasa pembuatan website",
+    "title": "Cara Memilih Jasa Pembuatan Website untuk Bisnis",
+    "description": "Hal yang perlu diperiksa sebelum memilih jasa pembuatan website: kebutuhan, portofolio, struktur, mobile, SEO, biaya, dan proses pengerjaan.",
+    "headline": "Cara memilih jasa pembuatan website untuk bisnis",
+    "intro": "Memilih jasa website sebaiknya tidak hanya berdasarkan tampilan demo atau harga. Periksa apakah penyedia jasa memahami kebutuhan bisnis dan menjelaskan ruang lingkup pekerjaan dengan jelas.",
+    "sections": [
+      {
+        "heading": "Mulai dari tujuan website",
+        "text": "Tentukan apakah website ditujukan untuk profil perusahaan, mendapatkan leads, menampilkan katalog, menerima reservasi, atau menjual produk. Tujuan akan menentukan struktur dan fitur."
+      },
+      {
+        "heading": "Periksa portofolio yang relevan",
+        "text": "Lihat contoh proyek yang mendekati jenis bisnis Anda. Perhatikan struktur informasi, tampilan mobile, navigasi, dan jalur kontak."
+      },
+      {
+        "heading": "Tanyakan SEO dan performa dasar",
+        "text": "Pastikan struktur halaman, title, description, canonical, sitemap, dan tampilan mobile dipertimbangkan sejak awal bila website juga ditujukan untuk pencarian Google."
+      },
+      {
+        "heading": "Pastikan ruang lingkup dan proses jelas",
+        "text": "Sebelum mulai, sepakati halaman, materi, revisi, domain, hosting, fitur, waktu pengerjaan, dan siapa yang mengelola perubahan setelah website selesai."
+      }
+    ],
+    "links": [
+      {
+        "label": "Lihat portfolio Nakama Digital",
+        "href": "/portfolio/"
+      },
+      {
+        "label": "Lihat jasa pembuatan website",
+        "href": "/"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Apakah harga murah selalu berarti lebih baik?",
+        "a": "Harga perlu dibandingkan bersama ruang lingkup pekerjaan, kualitas desain, fitur, dukungan, dan kebutuhan bisnis."
+      },
+      {
+        "q": "Apa yang perlu saya siapkan sebelum konsultasi?",
+        "a": "Siapkan tujuan website, contoh website yang disukai, informasi bisnis, daftar layanan atau produk, serta materi yang sudah tersedia."
+      }
+    ]
+  },
+  {
+    "slug": "website-bisnis-profesional-manfaat",
+    "keyword": "manfaat website profesional untuk bisnis",
+    "title": "Manfaat Website Profesional untuk Bisnis dan UMKM",
+    "description": "Memahami manfaat website profesional untuk bisnis: informasi resmi, pencarian Google, kredibilitas, katalog, dan jalur komunikasi pelanggan.",
+    "headline": "Apa manfaat website profesional untuk bisnis?",
+    "intro": "Website dapat menjadi pusat informasi yang dimiliki bisnis sendiri. Nilainya bukan hanya pada tampilan, tetapi pada kemampuan menyajikan informasi yang mudah ditemukan dan dihubungkan dengan kanal pemasaran lain.",
+    "sections": [
+      {
+        "heading": "Menjadi pusat informasi bisnis",
+        "text": "Website dapat menggabungkan profil, layanan, produk, lokasi, kontak, portofolio, dan pertanyaan umum dalam satu alamat yang mudah dibagikan."
+      },
+      {
+        "heading": "Mendukung pencarian Google",
+        "text": "Halaman website dapat dioptimalkan untuk kata kunci yang relevan dengan bisnis, lokasi, layanan, dan kebutuhan calon pelanggan."
+      },
+      {
+        "heading": "Menghubungkan pemasaran digital",
+        "text": "Link dari Instagram, TikTok, WhatsApp, iklan, dan profil bisnis dapat diarahkan ke halaman yang menjelaskan penawaran secara lebih lengkap."
+      },
+      {
+        "heading": "Membangun aset digital sendiri",
+        "text": "Berbeda dari profil di platform pihak ketiga, website adalah aset digital yang dapat dikembangkan dengan struktur dan konten sesuai kebutuhan bisnis."
+      }
+    ],
+    "links": [
+      {
+        "label": "Lihat jasa pembuatan website company profile",
+        "href": "/website-company-profile/"
+      },
+      {
+        "label": "Lihat jasa pembuatan website UMKM",
+        "href": "/website-umkm/"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Apakah UMKM kecil juga membutuhkan website?",
+        "a": "Bisa. Kebutuhannya bergantung pada tujuan bisnis, tetapi website sederhana dapat menjadi pusat informasi dan jalur kontak yang mudah dibagikan."
+      },
+      {
+        "q": "Apakah website menggantikan media sosial?",
+        "a": "Tidak. Website dan media sosial dapat saling melengkapi: media sosial membantu distribusi konten, sedangkan website menjadi pusat informasi yang lebih terstruktur."
+      }
+    ]
+  },
+  {
+    "slug": "website-company-profile-isi",
+    "keyword": "isi website company profile",
+    "title": "Isi Website Company Profile: Halaman yang Perlu Disiapkan",
+    "description": "Panduan isi website company profile: profil, layanan, portofolio, tim, area kerja, legalitas yang relevan, kontak, dan FAQ.",
+    "headline": "Isi website company profile sebaiknya apa saja?",
+    "intro": "Company profile yang efektif membantu calon pelanggan, mitra, atau pihak lain memahami perusahaan tanpa harus mencari informasi di banyak tempat.",
+    "sections": [
+      {
+        "heading": "Profil dan identitas perusahaan",
+        "text": "Tampilkan ringkasan perusahaan, bidang usaha, sejarah atau latar belakang yang relevan, serta informasi yang membantu pengunjung memahami organisasi."
+      },
+      {
+        "heading": "Layanan dan solusi",
+        "text": "Jelaskan layanan utama dengan bahasa yang mudah dipahami. Setiap layanan dapat memiliki halaman sendiri bila informasi yang dibutuhkan cukup banyak."
+      },
+      {
+        "heading": "Portofolio dan bukti pekerjaan",
+        "text": "Proyek, klien yang dapat dipublikasikan, studi kasus, atau dokumentasi pekerjaan dapat membantu pengunjung memahami pengalaman perusahaan."
+      },
+      {
+        "heading": "Kontak dan area layanan",
+        "text": "Alamat, nomor kontak, email, WhatsApp, jam operasional, dan area layanan perlu mudah ditemukan agar calon pelanggan tahu langkah berikutnya."
+      }
+    ],
+    "links": [
+      {
+        "label": "Lihat jasa pembuatan website company profile",
+        "href": "/website-company-profile/"
+      },
+      {
+        "label": "Lihat portfolio Nakama Digital",
+        "href": "/portfolio/"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Apakah company profile harus memiliki banyak halaman?",
+        "a": "Tidak. Jumlah halaman sebaiknya mengikuti informasi yang benar-benar diperlukan oleh pengunjung dan tujuan perusahaan."
+      },
+      {
+        "q": "Apakah portofolio wajib ditampilkan?",
+        "a": "Tidak wajib, tetapi portofolio yang dapat dipublikasikan dapat membantu memberikan gambaran tentang pengalaman dan jenis pekerjaan."
+      }
+    ]
+  },
+  {
+    "slug": "website-sekolah-untuk-ppdb",
+    "keyword": "website sekolah untuk PPDB",
+    "title": "Website Sekolah untuk PPDB: Informasi yang Perlu Ditampilkan",
+    "description": "Struktur website sekolah untuk mendukung PPDB: profil, program, persyaratan, jadwal, alur pendaftaran, FAQ, dan kontak.",
+    "headline": "Website sekolah untuk PPDB perlu menampilkan apa?",
+    "intro": "Saat masa penerimaan peserta didik baru, calon siswa dan orang tua membutuhkan informasi yang cepat ditemukan. Website sekolah dapat menjadi pusat informasi resmi untuk kebutuhan tersebut.",
+    "sections": [
+      {
+        "heading": "Informasi penerimaan yang mudah ditemukan",
+        "text": "Tampilkan jadwal, persyaratan, jalur pendaftaran, biaya bila memang dipublikasikan, serta dokumen yang perlu disiapkan."
+      },
+      {
+        "heading": "Alur pendaftaran",
+        "text": "Jelaskan langkah pendaftaran dari awal sampai selesai. Jika menggunakan formulir eksternal, berikan tombol atau tautan yang jelas."
+      },
+      {
+        "heading": "Profil dan program sekolah",
+        "text": "Calon siswa juga membutuhkan konteks tentang program, fasilitas, kegiatan, dan lingkungan sekolah sebelum memilih."
+      },
+      {
+        "heading": "FAQ dan kontak panitia",
+        "text": "Pertanyaan umum dapat dijawab di halaman FAQ, sedangkan nomor kontak atau WhatsApp panitia perlu mudah ditemukan."
+      }
+    ],
+    "links": [
+      {
+        "label": "Lihat jasa pembuatan website sekolah",
+        "href": "/website-sekolah/"
+      },
+      {
+        "label": "Lihat panduan struktur website sekolah",
+        "href": "/blog/website-sekolah-harus-punya-halaman-apa/"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Apakah website PPDB harus memiliki sistem pendaftaran sendiri?",
+        "a": "Tidak selalu. Website dapat menjadi pusat informasi dan mengarahkan calon pendaftar ke formulir atau sistem PPDB yang sudah digunakan sekolah."
+      },
+      {
+        "q": "Apakah informasi PPDB perlu diperbarui setiap tahun?",
+        "a": "Ya. Jadwal, persyaratan, biaya, kontak, dan informasi lain yang berubah perlu diperbarui pada periode penerimaan."
+      }
+    ]
   }
 ]
