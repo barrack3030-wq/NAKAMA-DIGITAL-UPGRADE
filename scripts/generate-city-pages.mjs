@@ -55,6 +55,12 @@ const staticCityContent = (city) => [
   '      <p>Lihat contoh website yang dikerjakan Nakama Digital untuk bisnis dan organisasi.</p>',
   '      <p><a href="/portfolio/">Lihat portfolio dan contoh proyek</a></p>',
   '    </section>',
+  '    <section><h2>Panduan terkait ' + escapeHtml(city.city) + '</h2><p>Beberapa panduan yang relevan untuk memahami kebutuhan website bisnis.</p>' +
+    (() => { const links = relatedPosts((internalLinks.cities[city.slug] || {}).posts); return links.length ? '<ul>' + links.map((post) => '<li><a href="/blog/' + escapeHtml(post.slug) + '/">' + escapeHtml(post.title) + '</a></li>').join('') + '</ul>' : '<p>Belum ada artikel terkait.</p>'; })() +
+  '</section>',
+  '    <section><h2>Contoh proyek terkait</h2><p>Contoh proyek yang dapat menjadi referensi struktur dan kebutuhan website.</p>' +
+    (() => { const links = relatedCaseStudies((internalLinks.cities[city.slug] || {}).caseStudies); return links.length ? '<ul>' + links.map((item) => '<li><a href="/portfolio/' + escapeHtml(item.slug) + '/">' + escapeHtml(item.name) + '</a></li>').join('') + '</ul>' : '<p>Belum ada proyek lokal yang dipublikasikan.</p>'; })() +
+  '</section>',
   '    <section>',
   '      <h2>FAQ ' + escapeHtml(city.city) + '</h2>',
   '      <dl>' + faqItems(city).slice(0, 6).map(({ name, acceptedAnswer }) => '<dt>' + escapeHtml(name) + '</dt><dd>' + escapeHtml(acceptedAnswer.text) + '</dd>').join('') + '</dl>',
