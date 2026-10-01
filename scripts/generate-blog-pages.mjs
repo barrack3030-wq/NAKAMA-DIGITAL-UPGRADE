@@ -47,13 +47,14 @@ for (const post of posts) {
   const url = 'https://nakamadigital.biz.id/blog/' + post.slug + '/';
   const articleSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@type': 'WebPage',
     headline: post.headline,
+    name: post.title,
     description: post.description,
-    mainEntityOfPage: url,
-    author: { '@type': 'Organization', name: 'Nakama Digital' },
-    publisher: { '@type': 'Organization', name: 'Nakama Digital', url: 'https://nakamadigital.biz.id/' },
+    url,
     inLanguage: 'id-ID',
+    isPartOf: { '@type': 'WebSite', name: 'Nakama Digital', url: 'https://nakamadigital.biz.id/' },
+    publisher: { '@type': 'Organization', name: 'Nakama Digital', url: 'https://nakamadigital.biz.id/', logo: 'https://nakamadigital.biz.id/images/logo/logo.png' },
   };
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
