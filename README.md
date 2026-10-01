@@ -1,6 +1,10 @@
 # NAKAMA DIGITAL UPGRADE
 
-Premium website + lightweight CMS foundation.
+Website development platform for **Nakama Digital Indonesia**.
+
+Website: https://nakamadigital.biz.id/
+
+Nakama Digital provides website development for businesses, SMEs/UMKM, schools, travel companies, organizations, and local businesses in Indonesia.
 
 ## CMS scope
 
