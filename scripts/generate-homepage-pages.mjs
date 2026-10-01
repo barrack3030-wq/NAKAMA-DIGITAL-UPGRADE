@@ -28,7 +28,7 @@ const homepageContent = [
   '<p>Nakama Digital adalah layanan pengembangan website berbasis Indonesia untuk bisnis, UMKM, sekolah, travel, dan organisasi.</p>',
   '<a href="https://wa.me/6285820830530?text=' + encodeURIComponent('Halo Nakama Digital, saya ingin konsultasi website.') + '">Mulai Konsultasi</a>',
   '</section>',
-  '<section><h2>Tentang Nakama Digital</h2><p>Nakama Digital membantu bisnis membangun kehadiran online melalui website company profile, website UMKM, landing page, website sekolah, website travel, dan toko online. Fokus kami adalah membuat website yang responsif, ringan, mudah dipahami pengunjung, dan memiliki struktur yang siap mendukung pemasaran digital.</p></section>',
+  '<section><h2>Tentang Nakama Digital</h2><p>Nakama Digital membantu bisnis membangun kehadiran online melalui website company profile, website UMKM, landing page, website sekolah, website travel, dan toko online. Fokus kami adalah membuat website yang responsif, ringan, mudah dipahami pengunjung, dan memiliki struktur yang siap mendukung pemasaran digital.</p></section><p><a href="/tentang-nakama-digital/">Kenali Nakama Digital</a></p></section>',
   '<section><h2>Layanan website untuk kebutuhan bisnis</h2><p>Company profile, website UMKM, landing page, website sekolah, website travel, dan toko online.</p><ul>' + services.map((service) => '<li><a href="/' + escapeHtml(service.slug) + '/">' + escapeHtml(service.title) + '</a></li>').join('') + '</ul><p><a href="/portfolio/">Lihat portfolio website</a></p></section>',
   '<section id="blog"><h2>Panduan Website untuk Bisnis</h2><p>Artikel praktis untuk membantu menentukan jenis website dan kebutuhan proyek.</p><ul>' +
   posts.map((post) => '<li><a href="/blog/' + escapeHtml(post.slug) + '/">' + escapeHtml(post.title) + '</a></li>').join('') +
@@ -46,7 +46,7 @@ const englishContent = [
   '<p>Nakama Digital is an Indonesia-based website development service for businesses, SMEs, schools, travel companies, and organizations.</p>',
   '<a href="https://wa.me/6285820830530?text=' + encodeURIComponent('Hello Nakama Digital, I would like to consult about a website.') + '">Start a Consultation</a>',
   '</section>',
-  '<section><h2>About Nakama Digital</h2><p>Nakama Digital helps businesses build a stronger online presence through company profile websites, SME websites, landing pages, school websites, travel websites, and online stores. Our approach focuses on responsive, lightweight websites with clear information architecture that supports digital marketing.</p></section>',
+  '<section><h2>About Nakama Digital</h2><p>Nakama Digital helps businesses build a stronger online presence through company profile websites, SME websites, landing pages, school websites, travel websites, and online stores. Our approach focuses on responsive, lightweight websites with clear information architecture that supports digital marketing.</p></section><p><a href="/en/about/">About Nakama Digital</a></p></section>',
   '<section><h2>Website services for different business needs</h2><p>Company profiles, SME websites, landing pages, school websites, travel websites, and online stores.</p><ul>' + services.map((service) => '<li><a href="/' + escapeHtml(service.slug) + '/">' + escapeHtml(service.title) + '</a></li>').join('') + '</ul><p><a href="/portfolio/">View website portfolio</a></p></section>',
   '<section><h2>Business website guides</h2><ul>' +
   posts.map((post) => '<li><a href="/blog/' + escapeHtml(post.slug) + '/">' + escapeHtml(post.title) + '</a></li>').join('') +
