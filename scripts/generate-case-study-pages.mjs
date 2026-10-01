@@ -6,6 +6,7 @@ const dist = path.join(root, 'dist');
 const source = path.join(dist, 'index.html');
 if (!fs.existsSync(source)) throw new Error('dist/index.html tidak ditemukan setelah vite build.');
 const baseHtml = fs.readFileSync(source, 'utf8');
+const { internalLinks, relatedPosts } = await import('./internal-links.mjs');
 
 const projects = [
   { slug:'pelita-dental-luwuk', name:'Pelita Dental Luwuk', category:'Website Klinik', city:'Luwuk', region:'Banggai, Sulawesi Tengah', url:'https://barrack3030-wq.github.io/pelita-dental-luwuk/', service:'website-company-profile', title:'Website Klinik Pelita Dental Luwuk | Case Study Nakama Digital', description:'Case study website Pelita Dental Luwuk oleh Nakama Digital, dengan fokus pada profil klinik, informasi layanan, dan akses kontak.' },
@@ -33,6 +34,9 @@ for (const project of projects) {
     '<p><a href="' + esc(project.url) + '">Lihat website project</a></p></section>',
     '<section><h2>Kebutuhan website</h2><p>Struktur website disesuaikan dengan kebutuhan informasi dan karakter bisnis atau organisasi. Fokus dapat mencakup profil, layanan atau produk, informasi penting, dan jalur kontak yang mudah ditemukan.</p></section>',
     '<section><h2>Layanan terkait</h2><p><a href="/' + esc(project.service) + '/">Lihat layanan ' + esc(project.category.toLowerCase()) + '</a></p></section>',
+    '<section><h2>Artikel terkait</h2><ul>' +
+      (() => { const links = relatedPosts((internalLinks.caseStudies[project.slug] || {}).posts); return links.map((item) => '<li><a href="/blog/' + esc(item.slug) + '/">' + esc(item.title) + '</a></li>').join(''); })() +
+    '</ul></section>',
     '<section><h2>Project lainnya</h2><p><a href="/portfolio/">Lihat seluruh portfolio Nakama Digital</a></p></section>',
     '<section><h2>Ingin website dengan kebutuhan serupa?</h2><p>Diskusikan jenis bisnis, kebutuhan halaman, fitur, dan tujuan website Anda.</p><p><a href="' + wa(project.name) + '">Konsultasi via WhatsApp</a></p></section>',
     '</article></main>'
