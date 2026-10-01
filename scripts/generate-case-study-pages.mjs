@@ -53,7 +53,7 @@ for (const project of projects) {
     .replace(/<meta property="og:url"[^>]*>/i, '<meta property="og:url" content="' + url + '">')
     .replace('<div id="root"></div>', '<div id="root">' + content + '</div>')
     .replace('</head>', '<meta property="og:type" content="article"><script type="application/ld+json">' + JSON.stringify({
-      '@context':'https://schema.org','@type':'Article',headline:project.title,description:project.description,url,inLanguage:'id-ID',
+      '@context':'https://schema.org','@type':'CreativeWork',name:project.title,description:project.description,url,inLanguage:'id-ID',
       about:{'@type':'Thing',name:project.category},
       isPartOf:{'@type':'WebSite',name:'Nakama Digital',url:'https://nakamadigital.biz.id/'}
     }) + '</script></head>');
