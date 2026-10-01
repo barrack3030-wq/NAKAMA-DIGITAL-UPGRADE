@@ -20,35 +20,51 @@ const escapeHtml = (value) => String(value)
   .replaceAll('"', '&quot;')
   .replaceAll("'", '&#39;');
 
-const staticCityContent = (city) => `
-  <main>
-    <section>
-      <p>Jasa pembuatan website ${escapeHtml(city.city)}</p>
-      <p>${escapeHtml(city.locationLabel)}</p>
-      <h1>${escapeHtml(city.headline)}</h1>
-      <p>${escapeHtml(city.intro)}</p>
-      <a href="https://wa.me/6285820830530?text=${encodeURIComponent(`Halo Nakama Digital, saya ingin konsultasi website untuk bisnis saya di ${city.city}.`)}">Konsultasi Website Gratis</a>
-    </section>
-    <section>
-      <h2>Website untuk bisnis di ${escapeHtml(city.city)}</h2>
-      <p>${escapeHtml(city.context)}</p>
-      <div>${city.highlights.slice(0, 4).map((item) => `<span>${escapeHtml(item)}</span> `).join('')}</div>
-    </section>
-    <section>
-      <h2>Layanan website di ${escapeHtml(city.city)}</h2>
-      <p>Butuh jasa website ${escapeHtml(city.city)}, jasa web design, atau jasa desain website? Struktur dan fitur dapat disesuaikan dengan kebutuhan bisnis.</p>
-      <ul>
-        ${services.slice(0, 4).map((service) => `<li><a href="/${escapeHtml(service.slug)}/">${escapeHtml(service.title)}</a></li>`).join('')}
-      </ul>
-    </section>
-    <section>
-      <h2>FAQ ${escapeHtml(city.city)}</h2>
-      <dl>
-        ${faqItems(city).slice(0, 4).map(({ name, acceptedAnswer }) => `<dt>${escapeHtml(name)}</dt><dd>${escapeHtml(acceptedAnswer.text)}</dd>`).join("")}
-      </dl>
-    </section>
-  </main>
-`;
+const staticCityContent = (city) => [
+  '  <main>',
+  '    <nav aria-label="Breadcrumb"><a href="/">Nakama Digital</a> / <span>Website ' + escapeHtml(city.city) + '</span></nav>',
+  '    <section>',
+  '      <p>Jasa pembuatan website ' + escapeHtml(city.city) + '</p>',
+  '      <p>' + escapeHtml(city.locationLabel) + '</p>',
+  '      <h1>' + escapeHtml(city.headline) + '</h1>',
+  '      <p>' + escapeHtml(city.intro) + '</p>',
+  '      <p><a href="https://wa.me/6285820830530?text=' + encodeURIComponent('Halo Nakama Digital, saya ingin konsultasi website untuk bisnis saya di ' + city.city + '.') + '">Konsultasi Website Gratis</a> <a href="/portfolio/">Lihat Portfolio</a></p>',
+  '    </section>',
+  '    <section>',
+  '      <h2>Website untuk bisnis di ' + escapeHtml(city.city) + '</h2>',
+  '      <p>' + escapeHtml(city.context) + '</p>',
+  '      <h3>Jenis bisnis yang dapat dilayani</h3>',
+  '      <ul>' + city.highlights.map((item) => '<li>' + escapeHtml(item) + '</li>').join('') + '</ul>',
+  '    </section>',
+  '    <section>',
+  '      <h2>Layanan website yang tersedia di ' + escapeHtml(city.city) + '</h2>',
+  '      <ul>' + city.serviceFocus.map((item) => '<li>' + escapeHtml(item) + '</li>').join('') + '</ul>',
+  '      <p>Butuh layanan yang lebih spesifik? Lihat pilihan jasa website Nakama Digital.</p>',
+  '      <ul>' + services.map((service) => '<li><a href="/' + escapeHtml(service.slug) + '/">' + escapeHtml(service.title) + '</a></li>').join('') + '</ul>',
+  '    </section>',
+  '    <section>',
+  '      <h2>' + escapeHtml(city.seoHeading) + '</h2>',
+  '      <p>' + escapeHtml(city.seoParagraph) + '</p>',
+  '      <h2>' + escapeHtml(city.seoSecondHeading) + '</h2>',
+  '      <p>' + escapeHtml(city.seoSecondParagraph) + '</p>',
+  '      <p>' + escapeHtml(city.keywordCoverage) + '</p>',
+  '    </section>',
+  '    <section>',
+  '      <h2>Contoh proyek website</h2>',
+  '      <p>Lihat contoh website yang dikerjakan Nakama Digital untuk bisnis dan organisasi.</p>',
+  '      <p><a href="/portfolio/">Lihat portfolio dan contoh proyek</a></p>',
+  '    </section>',
+  '    <section>',
+  '      <h2>FAQ ' + escapeHtml(city.city) + '</h2>',
+  '      <dl>' + faqItems(city).slice(0, 6).map(({ name, acceptedAnswer }) => '<dt>' + escapeHtml(name) + '</dt><dd>' + escapeHtml(acceptedAnswer.text) + '</dd>').join('') + '</dl>',
+  '    </section>',
+  '    <section>',
+  '      <h2>Butuh website untuk bisnis di ' + escapeHtml(city.city) + '?</h2>',
+  '      <p>Ceritakan jenis bisnis, target pelanggan, dan kebutuhan website Anda. Kami dapat membantu menentukan struktur yang sesuai.</p>',
+  '      <p><a href="https://wa.me/6285820830530?text=' + encodeURIComponent('Halo Nakama Digital, saya ingin konsultasi website untuk bisnis saya di ' + city.city + '.') + '">Mulai konsultasi via WhatsApp</a></p>',
+  '    </section>',
+  '  </main>'
+].join('\\n');
 
 function faqItems(city) {
   return [
