@@ -8,6 +8,7 @@ const serviceConfigPath = path.join(root, 'src', 'data', 'serviceSeoPages.json')
 
 const cities = JSON.parse(fs.readFileSync(cityConfigPath, 'utf8'));
 const services = JSON.parse(fs.readFileSync(serviceConfigPath, 'utf8'));
+const { internalLinks, relatedPosts, relatedCaseStudies } = await import('./internal-links.mjs');
 
 const source = path.join(dist, 'index.html');
 if (!fs.existsSync(source)) throw new Error('dist/index.html tidak ditemukan setelah vite build.');
@@ -52,6 +53,12 @@ const staticServiceContent = (service) => [
   '    <section><h2>Portfolio website</h2><p>Lihat beberapa proyek website yang pernah dikerjakan Nakama Digital untuk bisnis dan organisasi.</p><p><a href="/portfolio/">Lihat portfolio dan contoh proyek</a></p></section>',
   '    <section><h2>Layanan website lainnya</h2><p>Kebutuhan website bisa berkembang. Bandingkan layanan lain yang mungkin relevan.</p><ul>' + services.filter((item) => item.slug !== service.slug).map((item) => '<li><a href="/' + escapeHtml(item.slug) + '/">' + escapeHtml(item.title) + '</a></li>').join('') + '</ul></section>',
   '    <section><h2>Area layanan</h2><p>Nakama Digital melayani kebutuhan website dari berbagai kota di Indonesia.</p><ul>' + cities.map((city) => '<li><a href="/' + escapeHtml(city.slug) + '/">Jasa website ' + escapeHtml(city.city) + '</a></li>').join('') + '</ul></section>',
+  '    <section><h2>Artikel terkait</h2><p>Pelajari panduan yang masih satu topik dengan layanan ini.</p>' +
+    '      ' + (() => { const links = relatedPosts((internalLinks.services[service.slug] || {}).posts); return links.length ? '<ul>' + links.map((post) => '<li><a href="/blog/' + escapeHtml(post.slug) + '/">' + escapeHtml(post.title) + '</a></li>').join('') + '</ul>' : '<p>Belum ada artikel terkait.</p>'; })() +
+  '</section>',
+  '    <section><h2>Contoh proyek terkait</h2><p>Lihat case study yang menggunakan pendekatan website serupa.</p>' +
+    (() => { const links = relatedCaseStudies((internalLinks.services[service.slug] || {}).caseStudies); return links.length ? '<ul>' + links.map((item) => '<li><a href="/portfolio/' + escapeHtml(item.slug) + '/">' + escapeHtml(item.name) + '</a></li>').join('') + '</ul>' : '<p>Belum ada case study terkait.</p>'; })() +
+  '</section>',
   '    <section><h2>Pertanyaan yang sering ditanyakan</h2><dl>' + service.faqs.map((faq) => '<dt>' + escapeHtml(faq.q) + '</dt><dd>' + escapeHtml(faq.a) + '</dd>').join('') + '</dl></section>',
   '    <section><h2>Siap membahas kebutuhan website?</h2><p>Ceritakan jenis bisnis, target pelanggan, dan kebutuhan website Anda. Kami dapat membantu menentukan struktur yang sesuai sebelum proyek dimulai.</p><p><a href="https://wa.me/6285820830530?text=' + encodeURIComponent('Halo Nakama Digital, saya ingin konsultasi ' + service.keyword + '.') + '">Mulai konsultasi via WhatsApp</a></p></section>',
   '  </main>'
