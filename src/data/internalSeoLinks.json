@@ -1,0 +1,253 @@
+{
+  "services": {
+    "website-company-profile": {
+      "posts": [
+        "website-company-profile-isi",
+        "website-bisnis-profesional-manfaat",
+        "cara-memilih-jasa-pembuatan-website"
+      ],
+      "caseStudies": [
+        "pelita-dental-luwuk",
+        "osaka-residence",
+        "bmt-al-muhajirin"
+      ]
+    },
+    "website-umkm": {
+      "posts": [
+        "website-umkm-perlu-apa-saja",
+        "website-bisnis-profesional-manfaat",
+        "website-toko-online-perlu-apa-saja"
+      ],
+      "caseStudies": [
+        "british-propolis-toili",
+        "the-common-cafe",
+        "deho-cafe"
+      ]
+    },
+    "landing-page": {
+      "posts": [
+        "company-profile-vs-landing-page",
+        "berapa-biaya-membuat-website-untuk-bisnis",
+        "cara-memilih-jasa-pembuatan-website"
+      ],
+      "caseStudies": []
+    },
+    "website-sekolah": {
+      "posts": [
+        "website-sekolah-harus-punya-halaman-apa",
+        "website-sekolah-untuk-ppdb"
+      ],
+      "caseStudies": []
+    },
+    "website-travel": {
+      "posts": [
+        "website-travel-harus-menampilkan-apa",
+        "berapa-biaya-membuat-website-untuk-bisnis"
+      ],
+      "caseStudies": [
+        "banggai-wonderland"
+      ]
+    },
+    "website-toko-online": {
+      "posts": [
+        "website-toko-online-perlu-apa-saja",
+        "website-umkm-perlu-apa-saja"
+      ],
+      "caseStudies": [
+        "british-propolis-toili"
+      ]
+    }
+  },
+  "cities": {
+    "luwuk": {
+      "caseStudies": [
+        "pelita-dental-luwuk",
+        "banggai-wonderland"
+      ],
+      "posts": [
+        "website-bisnis-profesional-manfaat",
+        "cara-memilih-jasa-pembuatan-website"
+      ]
+    },
+    "sintang": {
+      "caseStudies": [],
+      "posts": [
+        "website-bisnis-profesional-manfaat",
+        "website-umkm-perlu-apa-saja"
+      ]
+    },
+    "surabaya": {
+      "caseStudies": [],
+      "posts": [
+        "website-bisnis-profesional-manfaat",
+        "cara-memilih-jasa-pembuatan-website"
+      ]
+    },
+    "manado": {
+      "caseStudies": [],
+      "posts": [
+        "website-bisnis-profesional-manfaat",
+        "cara-memilih-jasa-pembuatan-website"
+      ]
+    },
+    "gorontalo": {
+      "caseStudies": [],
+      "posts": [
+        "website-bisnis-profesional-manfaat",
+        "website-umkm-perlu-apa-saja"
+      ]
+    },
+    "palu": {
+      "caseStudies": [],
+      "posts": [
+        "website-bisnis-profesional-manfaat",
+        "cara-memilih-jasa-pembuatan-website"
+      ]
+    }
+  },
+  "posts": {
+    "website-umkm-perlu-apa-saja": {
+      "posts": [
+        "website-toko-online-perlu-apa-saja",
+        "website-bisnis-profesional-manfaat"
+      ],
+      "caseStudies": [
+        "british-propolis-toili",
+        "the-common-cafe",
+        "deho-cafe"
+      ]
+    },
+    "company-profile-vs-landing-page": {
+      "posts": [
+        "website-company-profile-isi",
+        "website-bisnis-profesional-manfaat"
+      ],
+      "caseStudies": [
+        "pelita-dental-luwuk",
+        "osaka-residence"
+      ]
+    },
+    "website-sekolah-harus-punya-halaman-apa": {
+      "posts": [
+        "website-sekolah-untuk-ppdb"
+      ],
+      "caseStudies": []
+    },
+    "website-travel-harus-menampilkan-apa": {
+      "posts": [
+        "website-bisnis-profesional-manfaat"
+      ],
+      "caseStudies": [
+        "banggai-wonderland"
+      ]
+    },
+    "website-toko-online-perlu-apa-saja": {
+      "posts": [
+        "website-umkm-perlu-apa-saja"
+      ],
+      "caseStudies": [
+        "british-propolis-toili"
+      ]
+    },
+    "cara-memilih-jasa-pembuatan-website": {
+      "posts": [
+        "berapa-biaya-membuat-website-untuk-bisnis",
+        "website-bisnis-profesional-manfaat"
+      ],
+      "caseStudies": [
+        "pelita-dental-luwuk",
+        "british-propolis-toili",
+        "banggai-wonderland"
+      ]
+    },
+    "website-bisnis-profesional-manfaat": {
+      "posts": [
+        "cara-memilih-jasa-pembuatan-website",
+        "berapa-biaya-membuat-website-untuk-bisnis"
+      ],
+      "caseStudies": [
+        "pelita-dental-luwuk",
+        "british-propolis-toili",
+        "banggai-wonderland"
+      ]
+    },
+    "website-company-profile-isi": {
+      "posts": [
+        "company-profile-vs-landing-page",
+        "website-bisnis-profesional-manfaat"
+      ],
+      "caseStudies": [
+        "pelita-dental-luwuk",
+        "osaka-residence",
+        "bmt-al-muhajirin"
+      ]
+    },
+    "website-sekolah-untuk-ppdb": {
+      "posts": [
+        "website-sekolah-harus-punya-halaman-apa"
+      ],
+      "caseStudies": []
+    },
+    "berapa-biaya-membuat-website-untuk-bisnis": {
+      "posts": [
+        "cara-memilih-jasa-pembuatan-website",
+        "company-profile-vs-landing-page"
+      ],
+      "caseStudies": [
+        "pelita-dental-luwuk",
+        "british-propolis-toili",
+        "banggai-wonderland"
+      ]
+    }
+  },
+  "caseStudies": {
+    "pelita-dental-luwuk": {
+      "service": "website-company-profile",
+      "city": "luwuk",
+      "posts": [
+        "website-company-profile-isi",
+        "cara-memilih-jasa-pembuatan-website"
+      ]
+    },
+    "british-propolis-toili": {
+      "service": "website-umkm",
+      "posts": [
+        "website-umkm-perlu-apa-saja",
+        "website-toko-online-perlu-apa-saja"
+      ]
+    },
+    "banggai-wonderland": {
+      "service": "website-travel",
+      "city": "luwuk",
+      "posts": [
+        "website-travel-harus-menampilkan-apa",
+        "cara-memilih-jasa-pembuatan-website"
+      ]
+    },
+    "the-common-cafe": {
+      "service": "website-umkm",
+      "posts": [
+        "website-umkm-perlu-apa-saja"
+      ]
+    },
+    "osaka-residence": {
+      "service": "website-company-profile",
+      "posts": [
+        "website-company-profile-isi"
+      ]
+    },
+    "deho-cafe": {
+      "service": "website-umkm",
+      "posts": [
+        "website-umkm-perlu-apa-saja"
+      ]
+    },
+    "bmt-al-muhajirin": {
+      "service": "website-company-profile",
+      "city": "luwuk",
+      "posts": [
+        "website-company-profile-isi"
+      ]
+    }
+  }
+}
