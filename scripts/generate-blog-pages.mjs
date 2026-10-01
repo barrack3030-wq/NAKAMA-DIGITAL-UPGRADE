@@ -93,7 +93,7 @@ for (const post of posts) {
   fs.writeFileSync(path.join(dir, 'index.html'), html);
 }
 
-const blogIndexContent = '<main><section><p>Panduan website</p><h1>Panduan Website untuk Bisnis</h1><p>Artikel praktis tentang biaya, struktur, pilihan jenis website, dan kebutuhan bisnis.</p><ul>' +
+const blogIndexContent = '<main><section><p>Panduan website</p><h1>Panduan Website untuk Bisnis</h1><p>Panduan praktis tentang biaya, struktur, pilihan jenis website, SEO dasar, dan kebutuhan bisnis. Gunakan artikel di bawah untuk memahami kebutuhan website sebelum menentukan fitur atau penyedia jasa.</p><section><h2>Mulai dari kebutuhan website</h2><p>Company profile cocok untuk bisnis yang perlu menjelaskan layanan dan portofolio. UMKM dapat memulai dari profil, katalog, lokasi, dan WhatsApp. Sekolah membutuhkan informasi lembaga dan penerimaan siswa, sedangkan travel membutuhkan paket, itinerary, fasilitas, dan jalur reservasi. Toko online dapat dikembangkan bertahap sesuai alur transaksi.</p></section><section><h2>Panduan yang tersedia</h2><p>Artikel di bawah membahas pertanyaan yang umum muncul sebelum menentukan desain, fitur, biaya, dan pengembangan website.</p></section><ul>' +
   posts.map((post) => '<li><a href="/blog/' + escapeHtml(post.slug) + '/">' + escapeHtml(post.title) + '</a></li>').join('') +
   '</ul></section></main>';
 const blogIndexHtml = baseHtml
