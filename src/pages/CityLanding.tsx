@@ -12,7 +12,17 @@ export default function CityLanding() {
   const city = getLocalSeoCity(citySlug);
 
   useEffect(() => {
-    if (!city) return;
+    if (!city) {
+      let robots = document.querySelector('meta[name="robots"]');
+      if (!robots) {
+        robots = document.createElement('meta');
+        robots.setAttribute('name', 'robots');
+        document.head.appendChild(robots);
+      }
+      robots.setAttribute('content', 'noindex,nofollow');
+      document.title = 'Halaman tidak ditemukan | Nakama Digital';
+      return;
+    }
 
     document.title = city.seoTitle;
 
