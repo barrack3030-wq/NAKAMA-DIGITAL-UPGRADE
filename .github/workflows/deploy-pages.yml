@@ -42,6 +42,9 @@ jobs:
             public/images/logo/logo-web.png
       - name: Install dependencies
         run: npm install
+      - name: Type check
+        run: npm run lint
+        continue-on-error: true
       - name: Build
         run: npm run build
       - name: Setup Pages
