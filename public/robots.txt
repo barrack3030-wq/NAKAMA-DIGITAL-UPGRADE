@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /admin
+Disallow: /workflow
+Disallow: /client-intake
 
 Sitemap: https://nakamadigital.biz.id/sitemap.xml
