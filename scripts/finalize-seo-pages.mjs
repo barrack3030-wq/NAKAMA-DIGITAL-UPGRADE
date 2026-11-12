@@ -66,6 +66,8 @@ for (const file of htmlFiles) {
   let html = fs.readFileSync(file, 'utf8');
   const route = routeFromFile(file);
   const canonical = site + (route === '/' ? '/' : route);
+  // Halaman internal (CMS admin) tidak boleh diindeks.
+  const isPrivateRoute = /^\/(admin|workflow|client-intake)(\/|$)/.test(route);
   const title = titleFromHtml(html);
   const description = descriptionFromHtml(html);
   const locale = route.startsWith('/en/') || route === '/en/' ? 'en' : 'id';
@@ -92,7 +94,7 @@ for (const file of htmlFiles) {
   const meta = [
     '<link rel="canonical" href="' + esc(canonical) + '">',
     '<meta name="description" content="' + esc(description) + '">',
-    '<meta name="robots" content="index,follow,max-image-preview:large">',
+    '<meta name="robots" content="' + (isPrivateRoute ? 'noindex,nofollow' : 'index,follow,max-image-preview:large') + '">',
     '<meta property="og:title" content="' + esc(title) + '">',
     '<meta property="og:description" content="' + esc(description) + '">',
     '<meta property="og:url" content="' + esc(canonical) + '">',
@@ -121,7 +123,12 @@ for (const file of htmlFiles) {
     publisher:{'@type':'Organization',name:'Nakama Digital',url:site+'/',logo:{'@type':'ImageObject',url:logo}}
   };
 
-  html = html.replace('</head>', '<script type="application/ld+json">' + JSON.stringify(schema) + '</script>\n</head>');
+  // Artikel blog sudah punya schema BlogPosting sendiri (generate-blog-pages.mjs);
+  // jangan tambahkan schema Article generik kedua agar tidak saling bertentangan.
+  const isBlogPost = route.startsWith('/blog/') && route !== '/blog/';
+  if (!isBlogPost && !isPrivateRoute) {
+    html = html.replace('</head>', '<script type="application/ld+json">' + JSON.stringify(schema) + '</script>\n</head>');
+  }
   fs.writeFileSync(file, html);
 }
 

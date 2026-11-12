@@ -8,6 +8,8 @@ const posts = JSON.parse(fs.readFileSync(path.join(root, 'src', 'data', 'blogSeo
 const cities = JSON.parse(fs.readFileSync(path.join(root, 'src', 'data', 'localSeoCities.json'), 'utf8'));
 const services = JSON.parse(fs.readFileSync(path.join(root, 'src', 'data', 'serviceSeoPages.json'), 'utf8'));
 const { internalLinks, relatedPosts, relatedCaseStudies } = await import('./internal-links.mjs');
+const { lastModified } = await import('./git-date.mjs');
+const postsModified = lastModified('src/data/blogSeoPosts.json');
 
 if (!fs.existsSync(source)) throw new Error('dist/index.html tidak ditemukan setelah vite build.');
 
@@ -47,14 +49,19 @@ for (const post of posts) {
   const url = 'https://nakamadigital.biz.id/blog/' + post.slug + '/';
   const articleSchema = {
     '@context': 'https://schema.org',
-    '@type': 'WebPage',
+    '@type': 'BlogPosting',
     headline: post.headline,
     name: post.title,
     description: post.description,
     url,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
     inLanguage: 'id-ID',
+    // datePublished hanya diisi bila ada di data artikel (post.datePublished); tanggal tidak dikarang.
+    ...(post.datePublished ? { datePublished: post.datePublished } : {}),
+    dateModified: post.dateModified || postsModified,
+    author: { '@type': 'Organization', name: 'Nakama Digital', url: 'https://nakamadigital.biz.id/' },
     isPartOf: { '@type': 'WebSite', name: 'Nakama Digital', url: 'https://nakamadigital.biz.id/' },
-    publisher: { '@type': 'Organization', name: 'Nakama Digital', url: 'https://nakamadigital.biz.id/', logo: 'https://nakamadigital.biz.id/images/logo/logo.png' },
+    publisher: { '@type': 'Organization', name: 'Nakama Digital', url: 'https://nakamadigital.biz.id/', logo: { '@type': 'ImageObject', url: 'https://nakamadigital.biz.id/images/logo/logo.png' } },
   };
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
