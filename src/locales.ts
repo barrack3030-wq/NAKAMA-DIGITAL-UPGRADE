@@ -12,12 +12,13 @@ export const dict = {
       cta: 'Mulai Konsultasi'
     },
     hero: {
-      eyebrow: 'Untuk bisnis yang ingin tampil lebih jelas di internet',
-      title1: 'Jasa pembuatan website untuk\nbisnis & UMKM',
-      titleHighlight: 'yang dibuat mengikuti kebutuhan bisnis Anda.',
-      desc: '',
-      cta1: 'Ceritakan Kebutuhan Anda',
-      cta2: 'Lihat Contoh Website'
+      eyebrow: 'Jadi dalam 3–7 hari',
+      title1: 'Jasa pembuatan website',
+      titleHighlight: 'yang bikin bisnis Anda dicari & dipercaya.',
+      desc: 'Rapi di HP, cepat dibuka, siap tampil di Google.',
+      cta1: 'Chat via WhatsApp',
+      cta2: 'Lihat Contoh',
+      cardTitle: 'Menjawab pelanggan sebelum mereka bertanya.'
     },
     stats: [
       { label: 'Website & proyek', value: '100+' },
@@ -118,12 +119,13 @@ export const dict = {
       cta: 'Start Consultation'
     },
     hero: {
-      eyebrow: 'For businesses that want a clearer presence online',
-      title1: 'Websites that make\nyour business easier to understand',
-      titleHighlight: 'and easier to trust.',
-      desc: 'We shape the design, content, and flow so visitors quickly understand what you do, what you offer, and how to contact you.',
-      cta1: 'Tell Us What You Need',
-      cta2: 'See Website Examples'
+      eyebrow: 'Ready in 3–7 days',
+      title1: 'Professional websites',
+      titleHighlight: 'that get your business found & trusted.',
+      desc: 'Mobile-friendly, fast, and ready for Google.',
+      cta1: 'Chat on WhatsApp',
+      cta2: 'See Examples',
+      cardTitle: 'Answers customers before they ask.'
     },
     stats: [
       { label: 'Websites & projects', value: '100+' },

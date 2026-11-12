@@ -24,7 +24,7 @@ const enUrl = 'https://nakamadigital.biz.id/en/';
 const homepageContent = [
   '<main>',
   '<section><p>Jasa pembuatan website di Indonesia untuk bisnis dan UMKM</p>',
-  '<h1>Jasa Pembuatan Website untuk Bisnis &amp; UMKM</h1>',
+  '<h1>Jasa Pembuatan Website yang Bikin Bisnis Anda Dicari &amp; Dipercaya</h1>',
   '<p>Nakama Digital adalah layanan pengembangan website berbasis Indonesia untuk bisnis, UMKM, sekolah, travel, dan organisasi.</p>',
   '<a href="https://wa.me/6285820830530?text=' + encodeURIComponent('Halo Nakama Digital, saya ingin konsultasi website.') + '">Mulai Konsultasi</a>',
   '</section>',
@@ -42,7 +42,7 @@ const homepageContent = [
 const englishContent = [
   '<main>',
   '<section><p>Professional website services in Indonesia for businesses and SMEs</p>',
-  '<h1>Professional Website Design &amp; Development for Businesses</h1>',
+  '<h1>Professional Websites That Get Your Business Found &amp; Trusted</h1>',
   '<p>Nakama Digital is an Indonesia-based website development service for businesses, SMEs, schools, travel companies, and organizations.</p>',
   '<a href="https://wa.me/6285820830530?text=' + encodeURIComponent('Hello Nakama Digital, I would like to consult about a website.') + '">Start a Consultation</a>',
   '</section>',
